@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N. James' P.P.Web</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="containerDiv">
+        <!--NAVBAR-SECTION-->
+        <div class="navDiv">
+            <div class="identSection">
+                <a href="#homeSectionId"><button><img src="./Assets/myLoogo.png" alt="myLogoImg" id="logoBtn"></button></a>
+            </div>
+            <div class="menuDiv">
+                <a href="#homeSectionId"><button id="homeBtn">Home</button></a>
+                <a href="#aboutSectionId"><button id="aboutBtn">About</button></a>
+                <a href="#projectSectionId"><button id="projectBtn">Projects</button></a>
+                <a href="#skillsSectionId"><button id="skillsBtn">Skills</button></a>
+                <a href="#contactSectionId"><button id="contactBtn">Contact</button></a>
+            </div>
+            <div class="visitSite">
+                <a href="#blogSectionId"><button id="blogBtn">Blog</button></a>
+            </div>
+            <div class="loginSite">
+                <a href="#loginId"><button id="loginBtn">Login</button></a>
+            </div>
+        </div>
+        
+        <!--HOME -SECTION-->
+        <div class="homeDiv" id="homeSectionId">
+                
+            <div class="leftDivIdentification">
+                <div class="myWork">
+                    <p>Hi, I'm <span class="namesColorChange">James Ndayishimiye</span>
+                    <p><span class="linearGrad">-Junior Full-Stack Developer & Mathematics Educator.</span></p>
+                    </span>Building practical web systems while mastering modern full-stack architecture.</p>
+                </div>
+
+                <div class="ctaBtn">
+                    <a href="#contactSectionId"><button id="talkctaBtn">Let's Talk</button></a>
+                    <a href="#projectSectionId"><button id="seeProjectctaBtn">See Projects</button></a>
+                </div>
+            </div>
+
+
+            <div class="rightDivProfile">
+                <img src="./Assets/_JamesPersonalPortifolio-removebg-preview.png" alt="myProfileImg" id="myProfileImg">
+            </div>
+        </div>
+
+        <!--ABOUT PAGE-->
+        <div class="aboutDiv" id="aboutSectionId">
+            <div id="about" class="about-section">
+                <div class="leftAndRightAboutContainer">
+
+                    <!-- LEFT SIDE -->
+                    <div class="leftAboutDiv">
+                        <img src="./Assets/_JamesPersonalPortifolio-removebg-preview.png" alt="James-Web Developer" id="about-Img">
+                    </div>
+
+                    <!-- RIGHT SIDE -->
+                    <div class="rightAboutDiv">
+                        <div class="about-content">
+                            <h2 class="section-title">ABOUT ME</h2>
+                            <h3 class="section-subtitle">
+                                Passionate -Junior Full-Stack Developer & Mathematics Educator
+                            </h3>
+
+                            <p class="about-description">
+                                Currently advancing my expertise in: <br> Full-Stack Development 
+                                (HTML, CSS, JavaScript, React, Node.js, Databases & Deployment) <br>
+                                while building real-world projects.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Highlight Cards -->
+                <div class="about-highlights">
+                    <div class="highlight-card">
+                        <h4>Clean Code</h4>
+                        <p>Structured and maintainable development approach.</p>
+                    </div>
+
+                    <div class="highlight-card">
+                        <h4>UI/UX Focus</h4>
+                        <p>Designing interfaces that meet users' desires.</p>
+                    </div>
+
+                    <div class="highlight-card">
+                        <h4>Performance</h4>
+                        <p>Fast and optimized web applications.</p>
+                    </div>
+                </div>
+
+                <!-- CTA Buttons -->
+                <div class="ctaBtn">
+                    <a href="#contact" class="btn primary-btn"><button id="hireMeBtn">Hire Me</button></a>
+                    <a href="./Assets/CV-NDAYISHIMIYE_James.pdf" download class="btn secondary-btn"><button id="cvBtn">Download CV</button></a>
+                </div>
+            </div>
+        </div>
+
+        <!--PROJECTS SECTION-->
+        <div class="myProjects">
+            <h2>MY PROJECTS</h2>
+        
+            <div class="projectDiv" id="projectSectionId">
+                
+                <div class="projectCard">
+                    <img src="./Assets/webSchoolImg.jpeg" alt="web-school-img" class="project-image">
+                    <h4 class="projectName">Web Development School</h4>
+                    <p class="projectDescription">A platform designed for helping and teaching tech beginners and sharing insights to intermediate and even professionals in software carrier.</p>
+                    <a href="http://127.0.0.1:5502/webDevSchoolFile/home.html"><button id="softwareSchool" class="viewProjectBtn">View Project</button></a>
+                </div>
+
+                <div class="projectCard">
+                    <img src="./Assets/shopMart.png" alt="shop-mart-img" class="project-image">
+                    <h4 class="projectName">Shop-Mart</h4>
+                    <p class="projectDescription">An online shopping system that allows customers to browse products, add items to cart, manage orders, and make secure purchases. It simplifies buying and selling processes while tracking inventory and sales.</p>
+                    <a href="http://127.0.0.1:5502/shopMart.html"><button id="simpleShopMart" class="viewProjectBtn">View Project</button></a>
+                </div>
+
+                <div class="projectCard">
+                    <img src="./Assets/taskFlow.jpeg" alt="loan-cal-img" class="project-image">
+                    <h4 class="projectName">Task Flow</h4>
+                    <p class="projectDescription">A modern productivity web application that helps users create, organize, prioritize, and track daily tasks efficiently. It boosts focus, improves time management, and simplifies personal workflow through a clean and intuitive dashboard.</p>
+                    <a href="http://127.0.0.1:5502/simpleinterestcalc.html"><button id="simpleInterestCalc" class="viewProjectBtn">View Project</button></a>
+                </div>
+
+                <div class="projectCard">
+                    <img src="./Assets/simpleCalc.jpg" alt="simple-calc-img" class="project-image">
+                    <h4 class="projectName">Simple Calculator</h4>
+                    <p class="projectDescription">A lightweight application that performs basic arithmetic operations such as addition, subtraction, multiplication, and division. Designed for fast and accurate everyday mathematical computations.</p>
+                    <a href="http://127.0.0.1:5502/DOM-MANIPULATION/calc.html"><button id="simpleCalc" class="viewProjectBtn">View Project</button></a>
+                </div>
+
+                <div class="projectCard">
+                    <img src="./Assets/loanCalc.jpg" alt="loan-cal-img" class="project-image">
+                    <h4 class="projectName">Loan Calculator</h4>
+                    <p class="projectDescription">A financial tool that calculates monthly repayments, total interest, and total loan cost based on loan amount, interest rate, and repayment period. It helps users make informed borrowing decisions.</p>
+                    <a href="http://127.0.0.1:5502/loancalc.html"><button id="loanCalc" class="viewProjectBtn">View Project</button></a>
+                </div>
+
+                <div class="projectCard">
+                    <img src="./Assets/simpleInterestCalc.jpg" alt="loan-cal-img" class="project-image">
+                    <h4 class="projectName">Simple Interest Calculator</h4>
+                    <p class="projectDescription">A straightforward application that computes interest earned or paid using the simple interest formula. Ideal for students, small businesses, and financial learning purposes.</p>
+                    <a href="http://127.0.0.1:5502/simpleinterestcalc.html"><button id="simpleInterestCalc" class="viewProjectBtn">View Project</button></a>
+                </div>
+                    
+            </div>
+        </div>
+
+        <!--SKILLS SECTION-->
+
+        <div class="skillsDiv" id="skillsSectionId">
+            <div class="section-header">
+                <h4 class="section-Title">PROFESSIONAL & TECHNICAL SKILLS</h4>
+                <h6 class="section-subtitle">Bridging Full-Stack Engineering with Mathematics Education Innovation.</h6>
+            </div>
+    
+            <div class="category-sections">
+                <div class="category-card">
+                    <div class="category-title fullStackSkills">
+                        <h4 class="skillsTitle">Full-Stack Software Development</h4>
+                        <img src="./Assets/fullStackSoftwareDevelopment.jpeg" alt="FullStackSoftwareDevelopment Img" class="skillsImg">
+                    </div>
+                    <h6 class="category-description">Building scalable, responsive, and performance-optimized web applications from frontend interface to backend architecture.</h6>
+                    <a href="./full-stack-subclusters.html"><button class="clustersBtn">Skills Clusters</button></a>
+                </div>
+
+                <div class="category-card">
+                    <div class="category-title mathematicsAndQuantitativeEducationSkills">
+                        <h4 class="skillsTitle">Mathematics & Quantitative Education</h4>
+                        <img src="./Assets/mathematicsQuantitativeEducation.jpeg" alt="MathematicsQuantitativeEducation Img" class="skillsImg">
+                    </div>
+                    <h6 class="category-description">Delivering structured, concept-driven mathematics education aligned with analytical reasoning and real-world problem solving.</h6>
+                    <a href="./maths-education.html"><button class="clustersBtn">Skills Clusters</button></a>
+                </div>
+
+                <div class="category-card">
+                    <div class="category-title mathTechIntegrationSkills">
+                        <h4 class="skillsTitle">Math–Technology Integration</h4>
+                        <img src="./Assets/mathsTechnologyIntegration.jpeg" alt="MathsTechnologyIntegration Img" class="skillsImg">
+                    </div>
+                    <h6 class="category-description">Integrating computational tools with mathematics education to create modern, scalable learning systems.</h6>
+                    <a href="./mathTech.html"><button class="clustersBtn">Skills Clusters</button></a>
+                </div>
+
+                <div class="category-card">
+                    <div class="category-title analyticalAndProfessionalSkills">
+                        <h4 class="skillsTitle">Analytical & Professional Skills</h4>
+                        <img src="./Assets/analyticalAndProfessionalSkills.png" alt="AnalyticalAndProfessionalSkills Img" class="skillsImg">
+                    </div>
+                    <h6 class="category-description">Integrating computational tools with mathematics education to create modern, scalable learning systems.</h6>
+                    <a href="./"><button class="clustersBtn">Skills Clusters</button></a>
+                </div>
+            </div>
+        </div>
+
+        <!--CONTACTS SECTION-->
+
+        <div class="contactsDiv" id="contactSectionId">
+            <div class="ContactHeader">
+                <h4 class="section-Title">Let’s Build Intelligent Digital & Mathematical Solutions Together</h4>
+                <p class="section-subtitle">I am NDAYISHIMIYE James — a Full-Stack Software Developer in advanced training and a Mathematics Educator passionate about integrating technology, logic, and real-world problem solving.
+                    I collaborate with schools, startups, institutions, and mission-driven individuals to design scalable web applications and innovative mathematics learning solutions.
+                    If you are seeking structured thinking, clean development architecture, and measurable educational impact — I would be honored to connect with you.
+                </p>
+            </div>
+        
+            <div class="contact-sections">
+                <div class="left-contacts">
+                    <div class="upperLeftContactDiv">
+                        <div class="contacts-notice">Get in Touch</div>
+                        <div class="contactMe contact-email">
+                            <div><img src="./Assets/emailIcon.png" alt="emailIcon" class="contacts-image"></div>
+                            <div class="contacts-description">jamesndayishimiye01@gmail.com</div>
+                        </div>
+
+                        <div class="contactMe contact-whatsapp">
+                            <div><img src="./Assets/whtspImg.png" alt="whatsappNumber" class="contacts-image"></div>
+                            <div class="contacts-description">+250 785 795 423</div>
+                        </div>
+
+                        <div class="contactMe contact-phoneNumber">
+                            <div><img src="./Assets/callIcon.png" alt="PhoneIcon" class="contacts-image"></div>
+                            <div class="contacts-description">+250 785 795 423</div>
+                        </div>
+
+                        <div class="contactMe contact-location">
+                            <div><img src="./Assets/locationImage.jpeg" alt="locationIcon" class="contacts-image"></div>
+                            <div class="contacts-description">Rwanda-Musanze</div>
+                        </div>
+
+                        <div class="contactMe contact-availability">
+                            <div><img src="./Assets/availabilityIcon.png" alt="availabilityIcon" class="contacts-image"></div>
+                            <div class="contacts-description">Open for freelance & collaborations</div>
+                        </div>
+
+                        <div class="contactMe contact-responseTime">
+                            <div><img src="./Assets/clockImage.png" alt="ResponseTimeIcon" class="contacts-image"></div>
+                            <div class="contacts-description">Response Time: 12–24 hours</div>
+                        </div>
+                    </div>
+
+                    <div class="lowerLeftContactDiv">
+                        <div class="contact-focus">
+                            <div class="contacts-notice">Professional Focus</div>
+                            <div class="contacts-description">Designing structured, scalable, and user-focused web systems.</div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="right-contacts">
+                    <div class="contacts-notice">Initiate Collaboration</div>
+                    <form>
+                        <div class="form-group">
+                            <label for="names">Full Names *</label>
+                            <input type="text" class="form-input" placeholder="eg. John Doe">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="organization">Organization</label>
+                            <input type="text" class="form-input" placeholder="School-name/Company-name/Institution-name">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="text" class="form-input" placeholder="Your professional email">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <select name="subject" id="subject" placeholder="--Select your subject--" class="form-input">
+                                <option value="">--Select your subject--</option>
+                                <option value="WebApplication">Web Application Development Project</option>
+                                <option value="Full-Stack">Full-Stack Collaboration</option>
+                                <option value="MathematicsEducation">Mathematics Education Initiative</option>
+                                <option value="EdTech">EdTech Partnership</option>
+                                <option value="PrivateMentorship">Private Mentorship / Tutoring</option>
+                                <option value="SpeakingEngagement">Speaking Engagement / Workshop</option>
+                                <option value="StrategicBusiness">Strategic Business Collaboration</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="Message">Your Text Message *</label>
+                            <input type="text" class="form-input" placeholder="Briefly describe your project, idea, or inquiry." id="contactClientMessage">
+                        </div>
+
+                        <div class="form-group">
+                            <button id="sendBtn">Send a Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!--BLOG SECTION-->
+
+        <div class="blogSection" id="blogSectionId">
+            <div class="blogNav">
+                <div class="blogHeading">
+                    <div class="blogTitle">BLOG</div>
+                    <div class="blogDescription">Exploring how mathematics powers modern technology — with insights for developers, learners, and forward-thinking educators.</div>
+                </div>
+                <div class="blogIcon">
+                    <img src="./Assets/blogImage.png" alt="BlogImage" id="blogIcon">
+                </div>
+            </div>
+            <div class="blogMainExpertise">
+                <div class="expertise">
+                    <div class="expertisecard">
+                        <div class="card">
+                            <div class="card-image"><img src="./Assets/FullStackImage.jpeg" alt="Full-stack-image" id="expertise-image"></div>
+                            <div class="card-description"><span id="expertiseDescription1">Discover Expertise in </span><span id="expertiseDescription2">Full-stack development</span></div>
+                            <div class="expertise-link"><img src="./Assets/linkImageIcon.jpeg" alt="expertise-link" id="expertise-link"></div>
+                        </div>
+                    </div>
+
+                    <div class="expertisecard">
+                        <div class="card">
+                            <div class="card-image"><img src="./Assets/mathsTechnologyIntegration.jpeg" alt="Math-Tech-image" id="expertise-image"></div>
+                            <div class="card-description"><span id="expertiseDescription1">Discover Expertise in </span><span id="expertiseDescription2">Math–Technology integration</span></div>
+                            <div class="expertise-link"><img src="./Assets/linkImageIcon.jpeg" alt="expertise-link" id="expertise-link"></div>
+                        </div>
+                    </div>
+
+                    <div class="expertisecard">
+                        <div class="card">
+                            <div class="card-image"><img src="./Assets/seoImage.jpg" alt="SEO-image" id="expertise-image"></div>
+                            <div class="card-description"><span id="expertiseDescription1">Discover How To </span><span id="expertiseDescription2">Improve SEO</span></div>
+                            <div class="expertise-link"><img src="./Assets/linkImageIcon.jpeg" alt="expertise-link" id="expertise-link"></div>
+                        </div>
+                    </div>
+
+                    <div class="expertisecard">
+                        <div class="card">
+                            <div class="card-image"><img src="./Assets/mathsEducationImage.jpeg" alt="Maths-Education-image" id="expertise-image"></div>
+                            <div class="card-description"><span id="expertiseDescription1">Teach </span><span id="expertiseDescription2">How To Learn Maths</span></div>
+                            <div class="expertise-link"><img src="./Assets/linkImageIcon.jpeg" alt="expertise-link" id="expertise-link"></div>
+                        </div>
+                    </div>
+
+                    <div class="expertisecard">
+                        <div class="card">
+                            <div class="card-image"><img src="./Assets/UI-UX.png" alt="UI/UX-image" id="expertise-image"></div>
+                            <div class="card-description"><span id="expertiseDescription1">Master </span><span id="expertiseDescription2">UI</span><span id="expertiseDescription1">/</span><span id="expertiseDescription2">UX</span></div>
+                            <div class="expertise-link"><img src="./Assets/linkImageIcon.jpeg" alt="expertise-link" id="expertise-link"></div>
+                        </div>
+                    </div>
+
+                    <div class="expertisecard">
+                        <div class="card">
+                            <div class="card-image"><img src="./Assets/didYouKnow.png" alt="didYouKnow-image" id="expertise-image"></div>
+                            <div class="card-description"><span id="expertiseDescription1">DID YOU </span><span id="expertiseDescription2">Know</span><span id="expertiseDescription1">?</span></div>
+                            <div class="expertise-link"><img src="./Assets/linkImageIcon.jpeg" alt="expertise-link" id="expertise-link"></div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="blogFooter">
+                <div class="closingRemarks">
+                    <span class="contentTitle">Closing Remarks</span>
+                    <p class="closingContent">We are dedicated to helping you master full-stack development, integrate mathematics with technology, and build intelligent, real-world digital solutions. This platform is your learning hub for practical coding skills, modern web architecture, mathematical thinking, and tech-driven problem solving. Through carefully crafted content, structured learning paths, and real project experiences, we guide students, educators, and innovators toward building impactful, scalable, and meaningful digital systems.</p>
+                </div>
+
+                <div class="otherBlogLinks">
+                    <div>
+                        <div class="contentTitle">Related Content</div>
+                        <div class="otherLinksList">
+                            <div>Professional use of Git &GitHub</div>
+                            <div>How JavaScript Really Works</div>
+                            <div>How Maths Really Manages Every Technology</div>
+                        </div>
+                    </div>
+
+                    <div class="myQuickLinks">
+                        <div class="contentTitle">Follow Me</div>
+                            <div class="blogContentLinks">
+                                <div class="linkedIn">
+                                    <a href="https://www.linkedin.com/in/ndayishimiye-james-b54592131/" target="_blank"><button id="lnkdIcon"><img src="./Assets/lnkdInImg.png" alt="lnkdInImg" class="socialMediaBtn"></button></a>
+                                </div>
+                                <div class="gitHub">
+                                    <a href="https://github.com/jamesnda" target="_blank"><button id="gitIcon"><img src="./Assets/gitImg.png" alt="gitImg" class="socialMediaBtn"></button></a>
+                                </div>
+                                <div class="faceBook">
+                                    <a href="" target="_blank"><button id="fbIcon"><img src="./Assets/fbImg.png" alt="fbImg" class="socialMediaBtn"></button></a>
+                                </div>
+                                <div class="xTwitter">
+                                    <a href="" target="_blank"><button id="xIcon"><img src="./Assets/xImg.png" alt="xImg" class="socialMediaBtn"></button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        <!--LOGIN SECTION-->
+
+        <div class="loginDiv" id="loginId">
+
+            <div class="loginContainer">
+                <div class="loginNavBar">
+                    <img src="./Assets/myLoogo.png" alt="mylogo" id="logoBtn">
+                    <p><span class="myFirstName">James </span><span class="myLastName">Ndayishimiye</span></p>
+                </div>
+                
+                <div class="loginCover">
+                    <div class="loginContent">
+                        <span class="loginHeader">LOGIN</span>
+                        <div class="formCover">
+                            <form>
+
+                                <div class="loginFormgroup">
+                                    <label for="email">Email Address</label>
+                                    <input type="email" id="email" class="login-form-input" placeholder="eg. example1@gmail.com">
+                                </div>
+
+                                <div class="loginFormgroup">
+                                    <label for="password">Password</label>
+                                    <input type="password" id="password" class="login-form-input" placeholder="****************">
+                                    <div class="forgotPasswordDiv">
+                                        <a href="" id="forgotPasswordBtn">Forgot Password?</a>
+                                    </div>
+                                </div>
+
+                                <div class="loginFormgroup">
+                                    <a href="./dashboard.html"><button id="realLoginBtn" type="login">LOGIN</button></a>
+                                    <div class="createAccountDiv">Have no account?<a href="./signupform.html" id="createAccountId">Create Account</a></div>
+                                </div>
+                    
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--FOOTER SECTION FOR SOCIAL MEDIA-->
+        <div class="footerSocialMediaDiv">
+            <div class="faceBook">
+                <a href="" target="_blank"><button id="fbIcon"><img src="./Assets/fbImg.png" alt="fbImg" class="socialMediaBtn"></button></a>
+            </div>
+            <div class="xTwitter">
+                <a href="" target="_blank"><button id="xIcon"><img src="./Assets/xImg.png" alt="xImg" class="socialMediaBtn"></button></a>
+            </div>
+            <div class="instagram">
+                <a href="" target="_blank"><button id="instIcon"><img src="./Assets/instImg.png" alt="instImg" class="socialMediaBtn"></button></a>
+            </div>
+            <div class="gitHub">
+                <a href="https://github.com/jamesnda" target="_blank"><button id="gitIcon"><img src="./Assets/gitImg.png" alt="gitImg" class="socialMediaBtn"></button></a>
+            </div>
+            <div class="youTube">
+                <a href="https://www.youtube.com/@mr.ndayishimiyejamesmrs.im226" target="_blank"><button id="ytIcon"><img src="./Assets/ytubeImg.png" alt="ytubeImg" class="socialMediaBtn"></button></a>
+            </div>
+            <div class="whatsApp">
+                <a href="https://wa.me/250785795423?text=Hello%2C%20I’m%20James%20Ndayishimiye.%20I’m%20a%20Full-Stack%20Developer%20and%20Math%20Educator." target="_blank"><button id="whtspIcon"><img src="./Assets/whtspImg.png" alt="whtspImg" class="socialMediaBtn"></button></a>
+            </div>
+            <div class="linkedIn">
+                <a href="https://www.linkedin.com/in/ndayishimiye-james-b54592131/" target="_blank"><button id="lnkdIcon"><img src="./Assets/lnkdInImg.png" alt="lnkdInImg" class="socialMediaBtn"></button></a>
+            </div>
+                
+        </div>
+        
+    </div>
+</body>
+<script src="./index.js"></script>
+</html>
