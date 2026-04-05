@@ -39,6 +39,7 @@ body{
     height: 40px;
     border-radius:50%;
     border: none;
+    cursor: pointer;
 }
 #logoBtn, #homeBtn, #aboutBtn, #projectBtn, #skillsBtn,#blogBtn, #contactBtn, #loginBtn{
     border: none;
@@ -831,7 +832,7 @@ form{
     gap: 10px;
 }
 
-.sideBar{
+.dashboardSideBar{
     background-color: white;
     width: 28%;
     display: flex;
@@ -856,7 +857,7 @@ form{
 }
 .dashboardIcons{
     border-radius: 3px;
-    width: 20%;
+    width: 10%;
     height: 30px;
     display: flex;
     align-items: center;
@@ -869,7 +870,55 @@ form{
     color: rgb(46, 8, 235);  
 }
 
-.mainContent{
-    background-color: white;
+.userDashboard{
+    background-color: rgb(187, 207, 176);
     width: 75%;
 }
+.globalOverviewCards, .platformActivityCards, .businessMetricsCards, .managementPannelsCards, .strategicToolsCards{
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+}
+.cards{
+    background-color: rgb(1, 1, 20);
+    color: white;
+    width: 20%;
+    height: 60px;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cards:hover{
+    cursor: pointer;
+    color:rgb(255, 238, 0);
+}
+
+.superAdminMain{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    padding: 10px;
+}
+.superAdmin{
+    background-color: rgb(76, 76, 207);
+    color: rgb(7, 1, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.superAdmin:hover{
+    cursor: pointer;
+    color: white;
+    font-size: 30px;
+}
+
+.globalOverviewCards, .platformActivityCards, .businessMetricsCards, .managementPannelsCards, .strategicToolsCards{
+    display: none;
+}
+
