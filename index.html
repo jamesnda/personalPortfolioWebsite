@@ -10,22 +10,23 @@
 <body>
     <div class="containerDiv">
         <!--NAVBAR-SECTION-->
-        <div class="navDiv">
+        <div class="navDiv" id="navSectionId">
             <div class="identSection">
-                <a href="#homeSectionId"><button><img src="./Assets/myLoogo.png" alt="myLogoImg" id="logoBtn"></button></a>
+                <a href="#navSectionId"><img src="./Assets/myLoogo.png" alt="myLogoImg" id="logoBtn"></a>
             </div>
             <div class="menuDiv">
-                <a href="#homeSectionId"><button id="homeBtn">Home</button></a>
-                <a href="#aboutSectionId"><button id="aboutBtn">About</button></a>
-                <a href="#projectSectionId"><button id="projectBtn">Projects</button></a>
-                <a href="#skillsSectionId"><button id="skillsBtn">Skills</button></a>
-                <a href="#contactSectionId"><button id="contactBtn">Contact</button></a>
+                <a href="#homeSectionId" id="homeBtn">Home</a>
+                <a href="#aboutSectionId" id="aboutBtn">About</a>
+                <a href="#servicesSectionId" id="servicesBtn">Services</a>
+                <a href="#projectSectionId" id="projectBtn">Projects</a>
+                <a href="#skillsSectionId" id="skillsBtn">Skills</a>
+                <a href="#contactSectionId" id="contactBtn">Contact</a>
             </div>
             <div class="visitSite">
-                <a href="#blogSectionId"><button id="blogBtn">Blog</button></a>
+                <a href="#blogSectionId" id="blogBtn">Blog</a>
             </div>
             <div class="loginSite">
-                <a href="#loginId"><button id="loginBtn">Login</button></a>
+                <a href="#loginId" id="loginBtn">Login</a>
             </div>
         </div>
         
@@ -34,14 +35,14 @@
                 
             <div class="leftDivIdentification">
                 <div class="myWork">
-                    <p>Hi, I'm <span class="namesColorChange">James Ndayishimiye</span>
-                    <p><span class="linearGrad">-Junior Full-Stack Developer & Mathematics Educator.</span></p>
-                    </span>Building practical web systems while mastering modern full-stack architecture.</p>
+                    <p>Hi, I'm <span class="namesColorChange">James Ndayishimiye</span></p>
+                    <p><span class="linearGrad">-Junior Full-Stack Developer, Data Analyst & Mathematics Educator.</span></p>
+                    <p>Building practical web systems while mastering modern full-stack architecture.</p>
                 </div>
 
                 <div class="ctaBtn">
                     <a href="#contactSectionId"><button id="talkctaBtn">Let's Talk</button></a>
-                    <a href="#projectSectionId"><button id="seeProjectctaBtn">See Projects</button></a>
+                    <a href="#projectSectionId"><button id="myProjectctaBtn">My Projects</button></a>
                 </div>
             </div>
 
@@ -54,7 +55,7 @@
         <!--ABOUT PAGE-->
         <div class="aboutDiv" id="aboutSectionId">
             <div id="about" class="about-section">
-                <div class="leftAndRightAboutContainer">
+                <div class="firstAboutContainer">
 
                     <!-- LEFT SIDE -->
                     <div class="leftAboutDiv">
@@ -66,14 +67,22 @@
                         <div class="about-content">
                             <h2 class="section-title">ABOUT ME</h2>
                             <h3 class="section-subtitle">
-                                Passionate -Junior Full-Stack Developer & Mathematics Educator
+                                Passionate -Junior Full-Stack Developer, Data Analyst & Mathematics Educator
                             </h3>
 
-                            <p class="about-description">
-                                Currently advancing my expertise in: <br> Full-Stack Development 
-                                (HTML, CSS, JavaScript, React, Node.js, Databases & Deployment) <br>
-                                while building real-world projects.
-                            </p>
+                            <p class="about-description">Currently advancing my expertise in:</p> <br> 
+                                <ul>
+                                    <li style="color:rgb(239, 81, 18)">Full-Stack Development</li>
+                                    <ul>
+                                        <li>Semantic HTML & CSS</li>
+                                        <li>Vanilla JavaScript</li>
+                                        <li>TypeScript</li>
+                                        <li>React</li>
+                                        <li>Node.js</li>
+                                        <li>Databases & Deployment</li>
+                                    </ul>
+                                </ul>
+                            <p>while building real-world projects.</p>
                         </div>
                     </div>
                 </div>
@@ -103,6 +112,144 @@
             </div>
         </div>
 
+        <!--SERVICES SECTION-->
+        <div class="myServices" id="servicesSectionId">
+            <h2 class="section-title">MY SERVICES</h2>
+            <p id="section-subtitle">Transforming Learning, Technology, and Creativity into Real Solutions</p>
+                <div class="service-card-container">
+
+                    <!-- Tech Services -->
+                        <div class="service-card">
+                            <img src="./Assets/softwarePlatformDevelopment.jpeg" alt="Software Development image" class="serviceImages">
+                            <div class="serviceTitle">System / Platform Development</div>
+                            <div class="serviceDescription">Digitize your services with modern and responsive website.</div>
+                            <div class="serviceDetails">
+                                <ul>
+                                    <li>Custom websites</li>
+                                    <li>Dashboards</li>
+                                    <li>Deployment support</li>
+                                </ul>
+                            </div>
+                            <a href="./signupform.html"><button class="serviceBtn">Build My Platform</button></a>
+                        </div>
+
+                        <div class="service-card">
+                            <img src="./Assets/fullstackDevelopmentTeaching.jpeg" alt="Full-stack Development Teaching image" class="serviceImages">
+                            <div class="serviceTitle">Full-Stack Development Training</div>
+                            <div class="serviceDescription">Learn to build real-world web applications from scratch.</div>
+                            <div class="serviceDetails">
+                                <ul>
+                                    <li>HTML, CSS, JavaScript, React, Node.Js, Data base, Deployment</li>
+                                    <li>Real projects</li>
+                                    <li>GitHub portfolio</li>
+                                </ul>
+                            </div>
+                            <a href="./signupform.html"><button class="serviceBtn">Become a Developer</button></a>
+                        </div>
+
+                        <div class="service-card">
+                            <img src="./Assets/fullstackDevelopmentTeaching.jpeg" alt="Python_advancement image" class="serviceImages">
+                            <div class="serviceTitle">Python programming Training</div>
+                            <div class="serviceDescription">Learn Python programming from scratch and use it to build backend for web applications and also for Data analysis.</div>
+                            <div class="serviceDetails">
+                                <ul>
+                                    <li>Python Fundamentals, NumPy, Pandas, Matplotlib, Django, MongoDB</li>
+                                    <li>Real projects</li>
+                                    <li>GitHub portfolio</li>
+                                </ul>
+                            </div>
+                            <a href="./signupform.html"><button class="serviceBtn">Specialize in Python</button></a>
+                        </div>
+
+                        <!-- Educational Services -->
+                        <div class="service-card">
+                            <img src="./Assets/mathsEducationImage.jpeg" alt="Advanced Math Teaching image" class="serviceImages">
+                            <div class="serviceTitle">Advanced Mathematics Coaching</div>
+                            <div class="serviceDescription">Master mathematics with clarity, confidence, and real-world application.</div>
+                            <div class="serviceDetails">
+                                <ul>
+                                    <li>Live Online interactive lessons</li>
+                                    <li>Exam preparation</li>
+                                    <li>Assignments & feedback</li>
+                                </ul>
+                            </div>
+                            <a href="./signupform.html"><button class="serviceBtn">Start Learning Maths</button></a>
+                        </div>
+
+                        <div class="service-card">
+                            <img src="./Assets/mathTechIntegration .jpg" alt="Math Tech Integration image" class="serviceImages">
+                            <div class="serviceTitle">Maths + Technology Integration</div>
+                            <div class="serviceDescription">Learn how mathematics powers real-world technology systems.</div>
+                            <div class="serviceDetails">
+                                <ul>
+                                    <li>Python for maths</li>
+                                    <li>Data visualization</li>
+                                    <li>Mini tech projects</li>
+                                </ul>
+                            </div>
+                            <a href="./signupform.html"><button class="serviceBtn">Explore Math in Tech</button></a>
+                        </div>
+
+                        <div class="service-card">
+                            <img src="./Assets/musicBasicsImg.jpeg" alt="Music Basics Teaching image" class="serviceImages">
+                            <div class="serviceTitle">Music Lessons</div>
+                            <div class="serviceDescription">Understand and play music from basics to creativity.</div>
+                            <div class="serviceDetails">
+                                <ul>
+                                    <li>Piano & chords</li>
+                                    <li>Music theory</li>
+                                    <li>Song practice</li>
+                                </ul>
+                            </div>
+                            <a href="./signupform.html"><button class="serviceBtn">Start Music Journey</button></a>
+                        </div>
+
+                        <!-- Mentorship Services -->
+                        <div class="service-card">
+                            <img src="./Assets/careerGuidance.jpeg" alt="careerGuidance & Mentorship image" class="serviceImages">
+                            <div class="serviceTitle">Career Guidance & Mentorship</div>
+                            <div class="serviceDescription">Get clarity on your future and build a strong career path.</div>
+                            <div class="serviceDetails">
+                                <ul>
+                                    <li>Career planning</li>
+                                    <li>Skill identification</li>
+                                    <li>Growth coaching</li>
+                                </ul>
+                            </div>
+                            <a href="./signupform.html"><button class="serviceBtn">Get Career Direction</button></a>
+                        </div>
+
+                        <div class="service-card">
+                            <img src="./Assets/academicExcellenceCauching.jpeg" alt="Academic Excellence Coaching image" class="serviceImages">
+                            <div class="serviceTitle">Academic Excellence Coaching</div>
+                            <div class="serviceDescription">Learn how to study smarter and achieve top performance.</div>
+                            <div class="serviceDetails">
+                                <ul>
+                                    <li>Study techniques</li>
+                                    <li>Time management</li>
+                                    <li>Exam strategies</li>
+                                </ul>
+                            </div>
+                            <a href="./signupform.html"><button class="serviceBtn">Raise Performance</button></a>
+                        </div>
+
+                        <!-- Signature Program Services -->
+                        <div class="service-card featured">
+                            <img src="./Assets/mathFullstackMusicImg.jpg" alt="Math Music Tech Mastery image" class="serviceImages">
+                            <div class="serviceTitle">Math + Music + Tech Mastery</div>
+                            <div class="serviceDescription">A unique program combining logic, creativity, and technology.</div>
+                            <div class="serviceDetails">
+                                <ul>
+                                    <li>Math through music</li>
+                                    <li>Coding projects</li>
+                                    <li>Innovation mindset</li>
+                                </ul>
+                            </div>
+                            <a href="./signupform.html"><button class="serviceBtn">Join The Program</button></a>
+                        </div>
+                </div>
+            </div>
+
         <!--PROJECTS SECTION-->
         <div class="myProjects">
             <h2>MY PROJECTS</h2>
@@ -113,7 +260,7 @@
                     <img src="./Assets/webSchoolImg.jpeg" alt="web-school-img" class="project-image">
                     <h4 class="projectName">Web Development School</h4>
                     <p class="projectDescription">A platform designed for helping and teaching tech beginners and sharing insights to intermediate and even professionals in software carrier.</p>
-                    <a href="https://jamesnda.github.io/webschoolProject/"><button id="softwareSchool" class="viewProjectBtn">View Project</button></a>
+                    <a href="https://jamesnda.github.io/webschoolProject/"><button class="viewProjectBtn" id="softwareSchool">View Project</button></a>
                 </div>
 
                 <div class="projectCard">
@@ -161,42 +308,486 @@
                 <h4 class="section-Title">PROFESSIONAL & TECHNICAL SKILLS</h4>
                 <h6 class="section-subtitle">Bridging Full-Stack Engineering with Mathematics Education Innovation.</h6>
             </div>
-    
-            <div class="category-sections">
-                <div class="category-card">
-                    <div class="category-title fullStackSkills">
-                        <h4 class="skillsTitle">Full-Stack Software Development</h4>
-                        <img src="./Assets/fullStackSoftwareDevelopment.jpeg" alt="FullStackSoftwareDevelopment Img" class="skillsImg">
+            <div class="category-sections-cover">
+                <div class="categorySections">
+                    <div class="category-card">
+                        <div class="category-title fullStackSkills">
+                            <h4 class="skillsTitle">Full-Stack Software Development</h4>
+                            <img src="./Assets/fullStackSoftwareDevelopment.jpeg" alt="FullStackSoftwareDevelopment Img" class="skillsImg">
+                        </div>
+                        <h6 class="category-description">Building scalable, responsive, and performance-optimized web applications from frontend interface to backend architecture.</h6>
+                        <button class="clustersBtn">Skills Clusters</button>
                     </div>
-                    <h6 class="category-description">Building scalable, responsive, and performance-optimized web applications from frontend interface to backend architecture.</h6>
-                    <a href="./full-stack-subclusters.html"><button class="clustersBtn">Skills Clusters</button></a>
+
+                    <div class="category-card">
+                        <div class="category-title mathematicsAndQuantitativeEducationSkills">
+                            <h4 class="skillsTitle">Mathematics & Quantitative Education</h4>
+                            <img src="./Assets/mathematicsQuantitativeEducation.jpg" alt="MathematicsQuantitativeEducation Img" class="skillsImg">
+                        </div>
+                        <h6 class="category-description">Delivering structured, concept-driven mathematics education aligned with analytical reasoning and real-world problem solving.</h6>
+                        <a href="./maths-education.html"><button class="clustersBtn">Skills Clusters</button></a>
+                    </div>
+
+                    <div class="category-card">
+                        <div class="category-title mathTechIntegrationSkills">
+                            <h4 class="skillsTitle">Math–Technology Integration</h4>
+                            <img src="./Assets/mathsTechnologyIntegration.jpeg" alt="MathsTechnologyIntegration Img" class="skillsImg">
+                        </div>
+                        <h6 class="category-description">Integrating computational tools with mathematics education to create modern, scalable learning systems.</h6>
+                        <a href="./mathTech.html"><button class="clustersBtn">Skills Clusters</button></a>
+                    </div>
+
+                    <div class="category-card">
+                        <div class="category-title musicSkills">
+                            <h4 class="skillsTitle">Music Theory & Piano Foundations</h4>
+                            <img src="./Assets/musicBasics.jpeg" alt="AnalyticalAndProfessionalSkills Img" class="skillsImg">
+                        </div>
+                        <h6 class="category-description">Developing foundational musicianship through structured music theory and piano practice, with a focus on harmony, composition, and educational application.</h6>
+                        <a href="./"><button class="clustersBtn">Skills Clusters</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="clustersDiv">
+                <!--Fullstack Skills-->
+                <div class="fullstackModal">
+                    <div class="fullstackCover">
+                        <button class="backToCategoryBtn">BACK</button>
+                        <div class="full-stack-subclusters">
+                            <div class="subcluster-card">
+                                <div class="subcluster-title">
+                                    <h4>Frontend Engineering</h4>
+                                </div>
+                                <div class="skills">
+                                    <h5 class="cluster-subtitle">Skills:</h5>
+                                    <ul><li>UI Architecture</li></ul>
+                                    <ul><li>Responsive Design Principles</li></ul>
+                                    <ul><li>Component-based thinking</li></ul>
+                                    <ul><li>Accessibility mindset</li></ul>
+                                    <ul><li>UX optimization</li></ul>
+                                </div>
+                                <div class="competency-indicators">
+                                    <h5 class="cluster-subtitle">Mastery-Level:</h5>
+                                    <span>Intermediate</span>
+                                </div>
+                                <div class="real-worldApplicationTags">
+                                    <h5 class="cluster-subtitle">Real-World Applications:</h5>
+                                    <span>
+                                        <ul><li>LMS Systems</li></ul>
+                                        <ul><li>Educational Platforms</li></ul>
+                                        <ul><li>Data Analytics Dashboards</li></ul>
+                                        <ul><li>Financial Tools</li></ul>
+                                        <ul><li>Automation Systems</li></ul>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="subcluster-card">
+                                <div class="subcluster-title">
+                                    <h4>Backend Development</h4>
+                                </div>
+                                <div class="skills">
+                                    <h5 class="cluster-subtitle">Skills:</h5>
+                                    <ul><li>API architecture thinking</li></ul>
+                                    <ul><li>Authentication & Authorization logic</li></ul>
+                                    <ul><li>Database structuring principles</li></ul>
+                                    <ul><li>Server-side logic modeling</li></ul>
+                                </div>
+                                <div class="competency-indicators">
+                                    <h5 class="cluster-subtitle">Mastery-Level:</h5>
+                                    <span>Academic Foundation</span>
+                                </div>
+                                <div class="real-worldApplicationTags">
+                                    <h5 class="cluster-subtitle">Real-World Applications:</h5>
+                                    <span>
+                                        <ul><li>LMS Systems</li></ul>
+                                        <ul><li>Educational Platforms</li></ul>
+                                        <ul><li>Data Analytics Dashboards</li></ul>
+                                        <ul><li>Financial Tools</li></ul>
+                                        <ul><li>Automation Systems</li></ul>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="subcluster-card">
+                                <div class="subcluster-title">
+                                    <h4>Database & Data Modeling</h4>
+                                </div>
+                                <div class="skills">
+                                    <h5 class="cluster-subtitle">Skills:</h5>
+                                    <ul><li>Relational modeling</li></ul>
+                                    <ul><li>Query optimization logic</li></ul>
+                                    <ul><li>Data normalization mindset</li></ul>
+                                </div>
+                                <div class="competency-indicators">
+                                    <h5 class="cluster-subtitle">Mastery-Level:</h5>
+                                    <span>Academic Foundation</span>
+                                </div>
+                                <div class="real-worldApplicationTags">
+                                    <h5 class="cluster-subtitle">Real-World Applications:</h5>
+                                    <span>
+                                        <ul><li>LMS Systems</li></ul>
+                                        <ul><li>Educational Platforms</li></ul>
+                                        <ul><li>Data Analytics Dashboards</li></ul>
+                                        <ul><li>Financial Tools</li></ul>
+                                        <ul><li>Automation Systems</li></ul>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="subcluster-card">
+                                <div class="subcluster-title">
+                                    <h4>Dev Workflow & Engineering Discipline</h4>
+                                </div>
+                                <div class="skills">
+                                    <h5 class="cluster-subtitle">Skills:</h5>
+                                    <ul><li>Git workflow thinking</li></ul>
+                                    <ul><li>Version control logic</li></ul>
+                                    <ul><li>Deployment awareness</li></ul>
+                                    <ul><li>Clean code principles</li></ul>
+                                </div>
+                                <div class="competency-indicators">
+                                    <h5 class="cluster-subtitle">Mastery-Level:</h5>
+                                    <span>Applied Knowledge</span>
+                                </div>
+                                <div class="real-worldApplicationTags">
+                                    <h5 class="cluster-subtitle">Real-World Applications:</h5>
+                                    <span>
+                                        <ul><li>LMS Systems</li></ul>
+                                        <ul><li>Educational Platforms</li></ul>
+                                        <ul><li>Data Analytics Dashboards</li></ul>
+                                        <ul><li>Financial Tools</li></ul>
+                                        <ul><li>Automation Systems</li></ul>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="subcluster-card">
+                                <div class="subcluster-title">
+                                    <h4>Programming Foundations</h4>
+                                </div>
+                                <div class="skills">
+                                    <h5 class="cluster-subtitle">Skills:</h5>
+                                    <ul><li>Algorithmic thinking</li></ul>
+                                    <ul><li>Data structures understanding</li></ul>
+                                    <ul><li>Debugging methodology</li></ul>
+                                    <ul><li>Computational logic</li></ul>
+                                </div>
+                                <div class="competency-indicators">
+                                    <h5 class="cluster-subtitle">Mastery-Level:</h5>
+                                    <span>Academic Foundation</span>
+                                </div>
+                                <div class="real-worldApplicationTags">
+                                    <h5 class="cluster-subtitle">Real-World Applications:</h5>
+                                    <span>
+                                        <ul><li>LMS Systems</li></ul>
+                                        <ul><li>Educational Platforms</li></ul>
+                                        <ul><li>Data Analytics Dashboards</li></ul>
+                                        <ul><li>Financial Tools</li></ul>
+                                        <ul><li>Automation Systems</li></ul>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="backToCategoryBtn">BACK</button>
+                    </div>
                 </div>
 
-                <div class="category-card">
-                    <div class="category-title mathematicsAndQuantitativeEducationSkills">
-                        <h4 class="skillsTitle">Mathematics & Quantitative Education</h4>
-                        <img src="./Assets/mathematicsQuantitativeEducation.jpeg" alt="MathematicsQuantitativeEducation Img" class="skillsImg">
+                <!--Mathathematics&Quantitative Education Skills-->
+                <div class="mathematicsEducationCover">
+                    <div class="mathematics-subclusters">
+                        <div class="subcluster-card">
+                            <div class="subcluster-title">
+                                <h4>Advanced Mathematical Foundations</h4>
+                            </div>
+                            <div class="skills">
+                                <h5>Skills:</h5>
+                                <ul><li>Calculus & Analysis</li></ul>
+                                <ul><li>Linear Algebra</li></ul>
+                                <ul><li>Probability & Statistics</li></ul>
+                                <ul><li>Differential Equations</li></ul>
+                                <ul><li>Discrete Mathematics</li></ul>
+                            </div>
+                            <div class="competency-indicators">
+                                <h5>Mastery-Level:</h5>
+                                <span>Academic Degree Level & 8+Years Teaching Experience</span>
+                            </div>
+                            <div class="real-worldApplicationTags">
+                                <h5>Real-World Applications:</h5>
+                                <span>
+                                    <ul><li>LMS Systems</li></ul>
+                                    <ul><li>Educational Platforms</li></ul>
+                                    <ul><li>Data Analytics Dashboards</li></ul>
+                                    <ul><li>Financial Tools</li></ul>
+                                    <ul><li>Automation Systems</li></ul>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="subcluster-card">
+                            <div class="subcluster-title">
+                                <h4>Pedagogical Expertise</h4>
+                            </div>
+                            <div class="skills">
+                                <h5>Skills:</h5>
+                                <ul><li>Curriculum interpretation (REB-aligned)</li></ul>
+                                <ul><li>Assessment design</li></ul>
+                                <ul><li>Concept simplification strategy</li></ul>
+                                <ul><li>Exam preparation systems</li></ul>
+                                <ul><li>Learning psychology awareness</li></ul>
+                            </div>
+                            <div class="competency-indicators">
+                                <h5>Mastery-Level:</h5>
+                                <span>8+Years Teaching Experience</span>
+                            </div>
+                            <div class="real-worldApplicationTags">
+                                <h5>Real-World Applications:</h5>
+                                <span>
+                                    <ul><li>LMS Systems</li></ul>
+                                    <ul><li>Educational Platforms</li></ul>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="subcluster-card">
+                            <div class="subcluster-title">
+                                <h4>Applied Quantitative Skills</h4>
+                            </div>
+                            <div class="skills">
+                                <h5>Skills:</h5>
+                                <ul><li>Mathematical modeling</li></ul>
+                                <ul><li>Statistical reasoning</li></ul>
+                                <ul><li>Financial analysis tools</li></ul>
+                                <ul><li>Problem-solving frameworks</li></ul>
+                            </div>
+                            <div class="competency-indicators">
+                                <h5>Mastery-Level:</h5>
+                                <span>Academic Degree Level & 8+Years Teaching Experience</span>
+                            </div>
+                            <div class="real-worldApplicationTags">
+                                <h5>Real-World Applications:</h5>
+                                <span>
+                                    <ul><li>LMS Systems</li></ul>
+                                    <ul><li>Educational Platforms</li></ul>
+                                    <ul><li>Data Analytics Dashboards</li></ul>
+                                    <ul><li>Financial Tools</li></ul>
+                                    <ul><li>Automation Systems</li></ul>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="subcluster-card">
+                            <div class="subcluster-title">
+                                <h4>Educational Technology Integration</h4>
+                            </div>
+                            <div class="skills">
+                                <h5>Skills:</h5>
+                                <ul><li>Digital lesson design</li></ul>
+                                <ul><li>Online content structuring</li></ul>
+                                <ul><li>Educational video systems</li></ul>
+                                <ul><li>Tech-assisted learning strategy</li></ul>
+                            </div>
+                            <div class="competency-indicators">
+                                <h5>Mastery-Level:</h5>
+                                <span>8+Years Teaching Experience</span>
+                            </div>
+                            <div class="real-worldApplicationTags">
+                                <h5>Real-World Applications:</h5>
+                                <span>
+                                    <ul><li>LMS Systems</li></ul>
+                                    <ul><li>Educational Platforms</li></ul>
+                                    <ul><li>Automation Systems</li></ul>
+                                </span>
+                            </div>
+                        </div>
                     </div>
-                    <h6 class="category-description">Delivering structured, concept-driven mathematics education aligned with analytical reasoning and real-world problem solving.</h6>
-                    <a href="./maths-education.html"><button class="clustersBtn">Skills Clusters</button></a>
                 </div>
 
-                <div class="category-card">
-                    <div class="category-title mathTechIntegrationSkills">
-                        <h4 class="skillsTitle">Math–Technology Integration</h4>
-                        <img src="./Assets/mathsTechnologyIntegration.jpeg" alt="MathsTechnologyIntegration Img" class="skillsImg">
-                    </div>
-                    <h6 class="category-description">Integrating computational tools with mathematics education to create modern, scalable learning systems.</h6>
-                    <a href="./mathTech.html"><button class="clustersBtn">Skills Clusters</button></a>
-                </div>
+                <!--Math–Technology Integration Skills-->
+                <div class="mathTechEducationCover">
+                    <div class="mathsTech-subclusters">
+                        <div class="subcluster-card">
+                            <div class="subcluster-title">
+                                <h4>Python for Mathematical Modeling</h4>
+                            </div>
+                            <div class="skills">
+                                <h5 class="cluster-subtitle">Skills:</h5>
+                                <ul><li>Translating mathematical theory into executable code</li></ul>
+                                <ul><li>Building computational simulations</li></ul>
+                                <ul><li>Automating mathematical processes</li></ul>
+                            </div>
+                            <div class="competency-indicators">
+                                <h5 class="cluster-subtitle">Mastery-Level:</h5>
+                                <span>Academic Foundation</span>
+                            </div>
+                            <div class="real-worldApplicationTags">
+                                <h5 class="cluster-subtitle">Real-World Applications:</h5>
+                                <span>
+                                    <ul><li>Student performance prediction models</li></ul>
+                                    <ul><li>Exam analytics systems</li></ul>
+                                    <ul><li>Mathematical simulation tools</li></ul>
+                                    <ul><li>Automated grading prototypes</li></ul>
+                                    <ul><li>Research modeling environments</li></ul>
+                                </span>
+                            </div>
+                        </div>
 
-                <div class="category-card">
-                    <div class="category-title analyticalAndProfessionalSkills">
-                        <h4 class="skillsTitle">Analytical & Professional Skills</h4>
-                        <img src="./Assets/analyticalAndProfessionalSkills.png" alt="AnalyticalAndProfessionalSkills Img" class="skillsImg">
+                        <div class="subcluster-card">
+                            <div class="subcluster-title">
+                                <h4>Data Analysis & Visualization for Mathematics Education</h4>
+                            </div>
+                            <div class="skills">
+                                <h5 class="cluster-subtitle">Skills:</h5>
+                                <ul><li>Statistical analysis of student data</li></ul>
+                                <ul><li>Visualization of learning trends</li></ul>
+                                <ul><li>Quantitative reporting</li></ul>
+                            </div>
+                            <div class="competency-indicators">
+                                <h5 class="cluster-subtitle">Mastery-Level:</h5>
+                                <span>Academic Foundation</span>
+                            </div>
+                            <div class="real-worldApplicationTags">
+                                <h5 class="cluster-subtitle">Real-World Applications:</h5>
+                                <span>
+                                    <ul><li>School performance dashboards</li></ul>
+                                    <ul><li>Exam trend analysis</li></ul>
+                                    <ul><li>Progress tracking systems</li></ul>
+                                    <ul><li>Comparative school analytics</li></ul>
+                                    <ul><li>Educational research reports</li></ul>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="subcluster-card">
+                            <div class="subcluster-title">
+                                <h4>Algorithmic Thinking for Curriculum Design</h4>
+                            </div>
+                            <div class="skills">
+                                <h5 class="cluster-subtitle">Skills:</h5>
+                                <ul><li>Structuring lessons like algorithms</li></ul>
+                                <ul><li>Designing step-by-step logical learning flows</li></ul>
+                                <ul><li>Building problem-solving frameworks</li></ul>
+                            </div>
+                            <div class="competency-indicators">
+                                <h5 class="cluster-subtitle">Mastery-Level:</h5>
+                                <span>Academic Foundation</span>
+                            </div>
+                            <div class="real-worldApplicationTags">
+                                <h5 class="cluster-subtitle">Real-World Applications:</h5>
+                                <span>
+                                    <ul><li>Exam-focused revision systems</li></ul>
+                                    <ul><li>Mathematics learning roadmaps</li></ul>
+                                    <ul><li>Concept mastery frameworks</li></ul>
+                                    <ul><li>Problem-solving training modules</li></ul>
+                                    <ul><li>Standardized assessment systems</li></ul>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="subcluster-card">
+                            <div class="subcluster-title">
+                                <h4>EdTech Product Architecture</h4>
+                            </div>
+                            <div class="skills">
+                                <h5 class="cluster-subtitle">Skills:</h5>
+                                <ul><li>Designing educational platforms</li></ul>
+                                <ul><li>Mapping user learning journeys</li></ul>
+                                <ul><li>Structuring LMS systems</li></ul>
+                            </div>
+                            <div class="competency-indicators">
+                                <h5 class="cluster-subtitle">Mastery-Level:</h5>
+                                <span>Academic Foundation</span>
+                            </div>
+                            <div class="real-worldApplicationTags">
+                                <h5 class="cluster-subtitle">Real-World Applications:</h5>
+                                <span>
+                                    <ul><li>LMS platforms</li></ul>
+                                    <ul><li>Online math academies</li></ul>
+                                    <ul><li>Course management systems</li></ul>
+                                    <ul><li>Interactive practice environments</li></ul>
+                                    <ul><li>Mobile-first learning apps</li></ul>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="subcluster-card">
+                            <div class="subcluster-title">
+                                <h4>Automation & Digital Assessment Systems</h4>
+                            </div>
+                            <div class="skills">
+                                <h5 class="cluster-subtitle">Skills:</h5>
+                                <ul><li>Automating quiz generation</li></ul>
+                                <ul><li>Intelligent feedback systems</li></ul>
+                                <ul><li>Time-efficient evaluation tools</li></ul>
+                            </div>
+                            <div class="competency-indicators">
+                                <h5 class="cluster-subtitle">Mastery-Level:</h5>
+                                <span>Academic Foundation</span>
+                            </div>
+                            <div class="real-worldApplicationTags">
+                                <h5 class="cluster-subtitle">Real-World Applications:</h5>
+                                <span>
+                                    <ul><li>Auto-marking systems</li></ul>
+                                    <ul><li>MCQ generators</li></ul>
+                                    <ul><li>Real-time feedback engines</li></ul>
+                                    <ul><li>Practice test simulators</li></ul>
+                                    <ul><li>Diagnostic testing platforms</li></ul>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="subcluster-card">
+                            <div class="subcluster-title">
+                                <h4>Mathematical Visualization & Interactive Learning Tools</h4>
+                            </div>
+                            <div class="skills">
+                                <h5 class="cluster-subtitle">Skills:</h5>
+                                <ul><li>Transforming abstract math into visual models</li></ul>
+                                <ul><li>Interactive simulations</li></ul>
+                                <ul><li>Conceptual animations</li></ul>
+                            </div>
+                            <div class="competency-indicators">
+                                <h5 class="cluster-subtitle">Mastery-Level:</h5>
+                                <span>Academic Foundation</span>
+                            </div>
+                            <div class="real-worldApplicationTags">
+                                <h5 class="cluster-subtitle">Real-World Applications:</h5>
+                                <span>
+                                    <ul><li>Interactive graphing tools</li></ul>
+                                    <ul><li>Geometry visualizers</li></ul>
+                                    <ul><li>Calculus animation modules</li></ul>
+                                    <ul><li>Probability simulators</li></ul>
+                                    <ul><li>Real-Life Maths Lab prototypes</li></ul>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="subcluster-card">
+                            <div class="subcluster-title">
+                                <h4>Research & Quantitative Innovation Strategy</h4>
+                            </div>
+                            <div class="skills">
+                                <h5 class="cluster-subtitle">Skills:</h5>
+                                <ul><li>Educational data research</li></ul>
+                                <ul><li>Experimental teaching methods</li></ul>
+                                <ul><li>Analytical improvement systems</li></ul>
+                            </div>
+                            <div class="competency-indicators">
+                                <h5 class="cluster-subtitle">Mastery-Level:</h5>
+                                <span>Academic Foundation</span>
+                            </div>
+                            <div class="real-worldApplicationTags">
+                                <h5 class="cluster-subtitle">Real-World Applications:</h5>
+                                <span>
+                                    <ul><li>Educational impact studies</li></ul>
+                                    <ul><li>Curriculum improvement analysis</li></ul>
+                                    <ul><li>School innovation proposals</li></ul>
+                                    <ul><li>Policy-informed analytics</li></ul>
+                                    <ul><li>Research publications</li></ul>
+                                </span>
+                            </div>
+                        </div>
                     </div>
-                    <h6 class="category-description">Integrating computational tools with mathematics education to create modern, scalable learning systems.</h6>
-                    <a href="./"><button class="clustersBtn">Skills Clusters</button></a>
                 </div>
             </div>
         </div>
@@ -252,16 +843,15 @@
                             <div class="contacts-notice">Professional Focus</div>
                             <div class="contacts-description">Designing structured, scalable, and user-focused web systems.</div>
                         </div>
-
                     </div>
                 </div>
 
                 <div class="right-contacts">
                     <div class="contacts-notice">Initiate Collaboration</div>
-                    <form>
+                    <form action="https://formspree.io/f/mojpowwq" method="POST">
                         <div class="form-group">
-                            <label for="names">Full Names *</label>
-                            <input type="text" class="form-input" placeholder="eg. John Doe">
+                            <label for="names">Full Names</label>
+                            <input type="text" class="form-input" placeholder="eg. John Doe" required>
                         </div>
                         
                         <div class="form-group">
@@ -270,13 +860,13 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="email">Email Address *</label>
-                            <input type="text" class="form-input" placeholder="Your professional email">
+                            <label for="email">Email Address</label>
+                            <input type="email" class="form-input" placeholder="Write Here Your professional email" required>
                         </div>
 
                         <div class="form-group">
-                            <label for="subject">Subject *</label>
-                            <select name="subject" id="subject" placeholder="--Select your subject--" class="form-input">
+                            <label for="subject">Subject</label>
+                            <select name="subject" id="subject" placeholder="--Select your subject--" class="form-input" required>
                                 <option value="">--Select your subject--</option>
                                 <option value="WebApplication">Web Application Development Project</option>
                                 <option value="Full-Stack">Full-Stack Collaboration</option>
@@ -290,12 +880,12 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="Message">Your Text Message *</label>
-                            <input type="text" class="form-input" placeholder="Briefly describe your project, idea, or inquiry." id="contactClientMessage">
+                            <label for="Message">Your Text Message</label>
+                            <textarea type="text" class="form-input" placeholder="Briefly describe your project, idea, or inquiry." id="contactClientMessage" required></textarea>
                         </div>
 
                         <div class="form-group">
-                            <button id="sendBtn">Send a Message</button>
+                            <button  type="submit" id="sendBtn">Send a Message</button>
                         </div>
                     </form>
                 </div>
@@ -315,57 +905,138 @@
                 </div>
             </div>
             <div class="blogMainExpertise">
-                <div class="expertise">
+                <div class="blogExpertise">
                     <div class="expertisecard">
-                        <div class="card">
                             <div class="card-image"><img src="./Assets/FullStackImage.jpeg" alt="Full-stack-image" id="expertise-image"></div>
                             <div class="card-description"><span id="expertiseDescription1">Discover Expertise in </span><span id="expertiseDescription2">Full-stack development</span></div>
                             <div class="expertise-link"><img src="./Assets/linkImageIcon.jpeg" alt="expertise-link" id="expertise-link"></div>
-                        </div>
                     </div>
 
                     <div class="expertisecard">
-                        <div class="card">
                             <div class="card-image"><img src="./Assets/mathsTechnologyIntegration.jpeg" alt="Math-Tech-image" id="expertise-image"></div>
                             <div class="card-description"><span id="expertiseDescription1">Discover Expertise in </span><span id="expertiseDescription2">Math–Technology integration</span></div>
                             <div class="expertise-link"><img src="./Assets/linkImageIcon.jpeg" alt="expertise-link" id="expertise-link"></div>
-                        </div>
                     </div>
 
                     <div class="expertisecard">
-                        <div class="card">
                             <div class="card-image"><img src="./Assets/seoImage.jpg" alt="SEO-image" id="expertise-image"></div>
                             <div class="card-description"><span id="expertiseDescription1">Discover How To </span><span id="expertiseDescription2">Improve SEO</span></div>
                             <div class="expertise-link"><img src="./Assets/linkImageIcon.jpeg" alt="expertise-link" id="expertise-link"></div>
-                        </div>
                     </div>
 
                     <div class="expertisecard">
-                        <div class="card">
                             <div class="card-image"><img src="./Assets/mathsEducationImage.jpeg" alt="Maths-Education-image" id="expertise-image"></div>
                             <div class="card-description"><span id="expertiseDescription1">Teach </span><span id="expertiseDescription2">How To Learn Maths</span></div>
                             <div class="expertise-link"><img src="./Assets/linkImageIcon.jpeg" alt="expertise-link" id="expertise-link"></div>
-                        </div>
                     </div>
 
                     <div class="expertisecard">
-                        <div class="card">
                             <div class="card-image"><img src="./Assets/UI-UX.png" alt="UI/UX-image" id="expertise-image"></div>
                             <div class="card-description"><span id="expertiseDescription1">Master </span><span id="expertiseDescription2">UI</span><span id="expertiseDescription1">/</span><span id="expertiseDescription2">UX</span></div>
                             <div class="expertise-link"><img src="./Assets/linkImageIcon.jpeg" alt="expertise-link" id="expertise-link"></div>
-                        </div>
                     </div>
 
                     <div class="expertisecard">
-                        <div class="card">
                             <div class="card-image"><img src="./Assets/didYouKnow.png" alt="didYouKnow-image" id="expertise-image"></div>
                             <div class="card-description"><span id="expertiseDescription1">DID YOU </span><span id="expertiseDescription2">Know</span><span id="expertiseDescription1">?</span></div>
                             <div class="expertise-link"><img src="./Assets/linkImageIcon.jpeg" alt="expertise-link" id="expertise-link"></div>
+                    </div>
+                </div>
+
+                <div class="realExpertiseFullstackStyle">
+                    <div class="articleStyle"><span class="articleSpan">Article1:</span>From Frontend to Backend: Understanding Full-Stack Architecture</div>
+                    <div class="articleStyle"><span class="articleSpan">Article4:</span>How Search Engines Rank Your Website</div>
+                    <div class="articleStyle"><span class="articleSpan">Article2:</span>How JavaScript Powers Modern Web Applications</div>
+                    <div class="articleStyle"><span class="articleSpan">Article5:</span>Semantic HTML for Better Ranking</div>
+                    <div class="articleStyle"><span class="articleSpan">Article3:</span>Website Speed & SEO Performance</div>
+                    <div class="articleStyle"><span class="articleSpan">Article6:</span>REST APIs Explained for Growing Developers</div>
+                </div>
+
+                <div class="realExpertiseFullstackContent">
+                    <div class="articleContent">
+                        <div class="articleModal">
+                            <div class="articleCard">
+                                <span class="close">&times;</span>
+                                <img src="./Assets/fullStackSoftwareDevelopment.jpeg" alt="From Frontend to Backend: Understanding Full-Stack Architecture image">
+                                <div class="articleTitle">From Frontend to Backend: Understanding Full-Stack</div>
+                                <div class="articleDate"><em>April 04, 2026</em></div>
+                                <div class="articleAuthor"><em>Author: Mr.James Ndayishimiye</em></div>
+                                <div class="articleContent">
+                                    <p id="normalParagraph">In the modern digital landscape, the "Full-Stack" developer is often viewed as the Swiss Army knife of the tech world. But as technologies evolve and architectures become more complex, what does it actually mean to bridge the gap between the user’s screen and the server’s database?
+                                    <br>
+                                    Whether you are an aspiring developer or a business owner looking to scale your product, understanding the synergy between frontend and backend is essential.</p>
+                                    <hr>
+                                    <br>
+                                    <ol type="1">
+                                        <li><strong>The Frontend: The Art of the Visible</strong></li>
+                                        <p id="normalParagraph"><strong>The Frontend</strong> (Client-Side) is everything a user touches, sees, and experiences. It’s about transforming code into a visual interface that is both intuitive and performant.</p>
+                                        
+                                            <ul>
+                                                <li><strong>The Core Trio:</strong> HTML for structure, CSS for styling, and JavaScript for interactivity.</li>
+                                                <li><strong>Modern Frameworks:</strong> Today’s frontend isn’t just static pages. It’s built on robust libraries like React, Vue.js, or Next.js that manage complex "states"—ensuring the UI updates instantly without refreshing the page.</li>
+                                                <li><strong>The Goal:</strong> User Experience (UX) and Accessibility. A great frontend must be responsive across devices and inclusive for all users.</li>
+                                            </ul>
+                                        <br>
+                                        <li><strong>The Backend: The Engine Under the Hood</strong></li>
+                                        <p id="normalParagraph">The Frontend is the car's dashboard, the <strong>Backend</strong> (Server-Side) is the engine. It’s the logic that powers the application, manages data, and ensures security.</p>
+                                        
+                                            <ul>
+                                                <li><strong>The Languages::</strong> This is where you’ll find <strong>Node.js (JavaScript/TypeScript), Python, Go</strong> or <strong>Rust.</strong></li>
+                                                <li><strong>The Database:</strong> Where the "memory" lives. Developers choose between <br>
+                                                <strong>Relational (SQL)</strong> like PostgreSQL for structured data, or <strong>Non-Relational (NoSQL)</strong> like MongoDB for flexibility.</li>
+                                                <li><strong>APIs (The Bridge):</strong> Most modern stacks use <strong>REST</strong> or <strong>GraphQL</strong> to allow the frontend to "talk" to the backend. When you click "Like" on a post, an API carries that request to the server to update the database.</li>
+                                            </ul>
+                                        <br>
+                                        <li><strong>The "Glue": Middleware and DevOps</strong></li>
+                                        <p id="normalParagraph">Being a Full-Stack developer isn't just about knowing two different languages; it’s about understanding how they interact. This middle layer involves:</p>
+                                        
+                                            <ul>
+                                                <li><strong>Authentication:</strong> Making sure users are who they say they are (OAuth, JWT).</li>
+                                                <li><strong>Cloud Hosting:</strong> Deploying applications using services like <strong>AWS, Vercel,</strong> or <strong>Docker</strong> containers.</li>
+                                                <li><strong>State Management:</strong> Ensuring the data seen on the screen is perfectly synced with what is stored on the server.</li>
+                                            </ul>
+                                        <br>
+                                        <li><strong>Why Full-Stack Matters in 2026</strong></li>
+                                        <p id="normalParagraph">In an era where "Time to Market" is the ultimate competitive advantage, Full-Stack development offers several strategic benefits:</p>
+                                        
+                                            <ol type="i">
+                                                <li><strong>Streamlined Communication:</strong> One developer (or a small team) can handle a feature from start to finish, reducing the friction of handing off tasks between departments.</li>
+                                                <li><strong>Cost Efficiency:</strong> For startups, hiring versatile talent who can pivot between UI tweaks and database optimization is a game-changer.</li>
+                                                <li><strong>A full-stack mindset allows for better debugging. If a feature is slow, a full-stack dev can tell if the bottleneck is a poorly written API or a heavy frontend component.</li>
+                                            </ol>
+                                        <hr>
+                                        <br>
+                                        <strong>Final Thoughts</strong>
+                                        <p id="normalParagraph">The journey from frontend to backend is more than just learning a list of tools; it’s about understanding the <strong>lifecycle of data.</strong> As we move toward more AI-integrated development environments, the "Full-Stack" definition continues to expand, now often including basic AI orchestration and cloud architecture.</p>
+                                        <br>
+                                        <p id="normalParagraph">Whether you're building the next big social platform or a simple internal tool, the ability to see the "whole picture" is what transforms a coder into a creator.</p>
+                                        <br>
+                                        <strong>Key Takeaway: </strong>
+                                        <p id="normalParagraph">The frontend is the "How it looks," the backend is the "How it works," and Full-Stack is the "How it all connects."</p>
+                                    </ol>
+                                </div>                  
+                                
+                                <p>How was this content to you?</p> <br>
+                                <div class="articleCta">
+                                    <button id="likeBtn">Like</button>
+                                    <button id="dislikeBtn">Dislike</button>
+                                    <button id="subscribeBtn">Subscribe</button>
+                                    <button id="buyBlogLesson">Buy a full lesson</button>
+                                    <a href="https://www.youtube.com/@mr.ndayishimiyejamesmrs.im226" target="_blank"><button id="visitMyChannel">Visit My Channel</button></a>
+                                </div>
+                                <form action="submit" class="commentForm">
+                                    
+                                    <label for="blogComment">Leave a comment here:</label>
+                                    <textarea name="text" id="blogComment" placeholder="Give us any suggestion"></textarea>
+                                    <button id="blogCommentBtn">Send us your insight</button>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
-                
             </div>
+
+
             <div class="blogFooter">
                 <div class="closingRemarks">
                     <span class="contentTitle">Closing Remarks</span>
@@ -403,7 +1074,7 @@
                 </div>
                 
             </div>
-
+        </div>
         <!--LOGIN SECTION-->
 
         <div class="loginDiv" id="loginId">
@@ -418,7 +1089,7 @@
                     <div class="loginContent">
                         <span class="loginHeader">LOGIN</span>
                         <div class="formCover">
-                            <form>
+                            <form class="loginFormStyle">
 
                                 <div class="loginFormgroup">
                                     <label for="email">Email Address</label>
@@ -437,7 +1108,6 @@
                                     <a href="./dashboard.html" id="realLoginBtn">LOGIN</a>
                                     <div class="createAccountDiv">Have no account?<a href="./signupform.html" id="createAccountId">Create Account</a></div>
                                 </div>
-                    
                             </form>
                         </div>
                     </div>
@@ -470,7 +1140,6 @@
             </div>
                 
         </div>
-        
     </div>
 </body>
 <script src="./index.js"></script>
