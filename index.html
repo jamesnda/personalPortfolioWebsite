@@ -4,12 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>N. James' P.P.Web</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="containerDiv">
-        <!--NAVBAR-SECTION-->
+    <!--NAVBAR-SECTION-->
         <div class="navDiv" id="navSectionId">
             <div class="identSection">
                 <a href="#navSectionId"><img src="./Assets/myLoogo.png" alt="myLogoImg" id="logoBtn"></a>
@@ -22,6 +20,7 @@
                 <a href="#skillsSectionId" id="skillsBtn">Skills</a>
                 <a href="#contactSectionId" id="contactBtn">Contact</a>
             </div>
+            <button id="changeModeBtn">Switch Mode</button>
             <div class="visitSite">
                 <a href="#blogSectionId" id="blogBtn">Blog</a>
             </div>
@@ -30,6 +29,7 @@
             </div>
         </div>
         
+    <div class="containerDiv">
         <!--HOME -SECTION-->
         <div class="homeDiv" id="homeSectionId">
                 
@@ -48,6 +48,7 @@
 
 
             <div class="rightDivProfile">
+                
                 <img src="./Assets/_JamesPersonalPortifolio-removebg-preview.png" alt="myProfileImg" id="myProfileImg">
             </div>
         </div>
@@ -56,47 +57,43 @@
         <div class="aboutDiv" id="aboutSectionId">
             <div id="about" class="about-section">
                 <div class="firstAboutContainer">
-
-                    <!-- LEFT SIDE -->
-                    <div class="leftAboutDiv">
-                        <img src="./Assets/_JamesPersonalPortifolio-removebg-preview.png" alt="James-Web Developer" id="about-Img">
+                    <h1>ABOUT ME</h1>
+                    <div class="aboutDisplay">
+                        
                     </div>
 
-                    <!-- RIGHT SIDE -->
-                    <div class="rightAboutDiv">
-                        <div class="about-content">
-                            <h2 class="section-title">ABOUT ME</h2>
-                            <h3 class="section-subtitle">
-                                <p>Turning Mathematics, Data & Technology into Practical Solutions <br>
-                                    
-                                    <hr>Junior Full-Stack Developer • Data Analyst • Mathematics Educator<hr><br></p>
-                            </h3>
-                            <p>I combine mathematical thinking, data analysis, and software development to build useful digital solutions, uncover meaningful insights from data, and make complex ideas easier to understand.</p>
-                        </div>
+                    <div class="modal">
+                        
                     </div>
                 </div>
                 <!-- Highlight Cards -->
-                <div class="about-highlights">
-                    <div class="highlight-card">
-                        <h4>Clean Code</h4>
-                        <p>Structured and maintainable development approach.</p>
+                 <div class="myPotentials">
+                    <h2>What I Bring to the Table</h2>
+                
+                    <div class="about-highlights">
+                        
+                        <div class="highlightCard" data-id="1">
+                            <h4>Mathematics</h4>
+                        </div>
+
+                        <div class="highlightCard" data-id="2">
+                            <h4>Data Analysis</h4>
+                        </div>
+
+                        <div class="highlightCard" data-id="3">
+                            <h4>Software Development</h4>
+                        </div>
                     </div>
 
-                    <div class="highlight-card">
-                        <h4>UI/UX Focus</h4>
-                        <p>Designing interfaces that meet users' desires.</p>
-                    </div>
+                    <div class="myRealPotentials">
 
-                    <div class="highlight-card">
-                        <h4>Performance</h4>
-                        <p>Fast and optimized web applications.</p>
                     </div>
                 </div>
 
                 <!-- CTA Buttons -->
                 <div class="ctaBtn">
                     <a href="#contact" class="btn primary-btn"><button id="hireMeBtn">Hire Me</button></a>
-                    <a href="./Assets/CV-NDAYISHIMIYE_James.pdf" download class="btn secondary-btn"><button id="cvBtn">Download CV</button></a>
+                    <a href="./Assets/NDAYISHIMIYE James' CV.pdf" download class="btn secondary-btn"><button id="cvBtn">Download CV</button></a>
                 </div>
             </div>
         </div>
@@ -105,9 +102,31 @@
         <div class="myServices" id="servicesSectionId">
             <h2 class="section-title">MY SERVICES</h2>
             <p id="section-subtitle">Transforming Learning, Technology, and Creativity into Real Solutions</p>
+                
+            <div class="serviceCardDisplay"></div>
+            <div class="serviceCardContainer">
                 <div class="service-card-container">
-
-                    <!-- Tech Services -->
+                    <div class="techServicesCard myServiceCard">
+                        <img src="./Assets/softwareDevImage.png" alt="softawareDevImage" class="serviceImages">
+                        <p>Explore Software Development Services</p>
+                    </div>
+                    <div class="dataServicesCard myServiceCard">
+                        <img src="./Assets/dataAnalysisImage.png" alt="softawareDevImage" class="serviceImages">
+                        <p>Explore Data Analysis Services</p>
+                    </div>
+                    <div class="mathServicesCard myServiceCard">
+                        <img src="./Assets/mathReasoningImage.png" alt="softawareDevImage" class="serviceImages">
+                        <p>Explore Mathematics Education Services</p>
+                    </div>
+                    <div class="musicServicesCard myServiceCard">
+                        <img src="./Assets/musicBusinessImage.png" alt="softawareDevImage" class="serviceImages">
+                        <p>Explore Music Education & Music Business Services</p>
+                    </div>
+                </div>
+            </div>
+                <!-- Tech Services -->
+                <div class="techServices">
+                    <div class="realService">
                         <div class="service-card">
                             <img src="./Assets/softwarePlatformDevelopment.jpeg" alt="Software Development image" class="serviceImages">
                             <div class="serviceTitle">System / Platform Development</div>
@@ -135,22 +154,72 @@
                             </div>
                             <a href="./signupform.html"><button class="serviceBtn">Become a Developer</button></a>
                         </div>
-
+                    </div>
+                        
+                </div>
+                <!-- Data Analysis Services -->
+                <div class="dataServices">
+                    <div class="realService">
                         <div class="service-card">
-                            <img src="./Assets/fullstackDevelopmentTeaching.jpeg" alt="Python_advancement image" class="serviceImages">
-                            <div class="serviceTitle">Python programming Training</div>
-                            <div class="serviceDescription">Learn Python programming from scratch and use it to build backend for web applications and also for Data analysis.</div>
-                            <div class="serviceDetails">
-                                <ul>
-                                    <li>Python Fundamentals, NumPy, Pandas, Matplotlib, Django, MongoDB</li>
-                                    <li>Real projects</li>
-                                    <li>GitHub portfolio</li>
-                                </ul>
-                            </div>
-                            <a href="./signupform.html"><button class="serviceBtn">Specialize in Python</button></a>
+                                <img src="./Assets/fullstackDevelopmentTeaching.jpeg" alt="Python_advancement image" class="serviceImages">
+                                <div class="serviceTitle">Python programming Training</div>
+                                <div class="serviceDescription">Learn Python programming from scratch and use it to build backend for web applications and also for Data analysis.</div>
+                                <div class="serviceDetails">
+                                    <ul>
+                                        <li>Python Fundamentals, NumPy, Pandas, Matplotlib, Django, MongoDB</li>
+                                        <li>Real projects</li>
+                                        <li>GitHub portfolio</li>
+                                    </ul>
+                                </div>
+                                <a href="./signupform.html"><button class="serviceBtn">Specialize in Python</button></a>
                         </div>
 
-                        <!-- Educational Services -->
+                        <div class="service-card">
+                                <img src="./Assets/fullstackDevelopmentTeaching.jpeg" alt="Python_advancement image" class="serviceImages">
+                                <div class="serviceTitle">R programming Training</div>
+                                <div class="serviceDescription">Learn R programming for Statistical analysis.</div>
+                                <div class="serviceDetails">
+                                    <ul>
+                                        <li>R Fundamentals, NumPy, Pandas, Matplotlib, Django, MongoDB</li>
+                                        <li>Real projects</li>
+                                        <li>GitHub portfolio</li>
+                                    </ul>
+                                </div>
+                                <a href="./signupform.html"><button class="serviceBtn">Specialize in R</button></a>
+                        </div>
+
+                        <div class="service-card">
+                                <img src="./Assets/fullstackDevelopmentTeaching.jpeg" alt="Python_advancement image" class="serviceImages">
+                                <div class="serviceTitle">STATA Training</div>
+                                <div class="serviceDescription">Learn STATA for Statistical analysis.</div>
+                                <div class="serviceDetails">
+                                    <ul>
+                                        <li>Fundamentals to Advanced STATA Skills</li>
+                                        <li>Real projects</li>
+                                        <li>GitHub portfolio</li>
+                                    </ul>
+                                </div>
+                                <a href="./signupform.html"><button class="serviceBtn">Specialize in STATA</button></a>
+                        </div>
+
+                        <div class="service-card">
+                                <img src="./Assets/fullstackDevelopmentTeaching.jpeg" alt="Python_advancement image" class="serviceImages">
+                                <div class="serviceTitle">PowerBI Training</div>
+                                <div class="serviceDescription">Learn PowerBI for Designing Dashboards.</div>
+                                <div class="serviceDetails">
+                                    <ul>
+                                        <li>Fundamentals to Advanced PowerBI Skills</li>
+                                        <li>Learn via Real projects</li>
+                                        <li>Gain Connections for PowerBI Projects</li>
+                                    </ul>
+                                </div>
+                                <a href="./signupform.html"><button class="serviceBtn">Specialize in PowerBI</button></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Math Services -->
+                <div class="mathServices">
+                    <div class="realService">
                         <div class="service-card">
                             <img src="./Assets/mathsEducationImage.jpeg" alt="Advanced Math Teaching image" class="serviceImages">
                             <div class="serviceTitle">Advanced Mathematics Coaching</div>
@@ -178,7 +247,11 @@
                             </div>
                             <a href="./signupform.html"><button class="serviceBtn">Explore Math in Tech</button></a>
                         </div>
-
+                    </div>
+                </div>
+                <!-- Music Services -->
+                <div class="musicServices">
+                    <div class="realService">
                         <div class="service-card">
                             <img src="./Assets/musicBasicsImg.jpeg" alt="Music Basics Teaching image" class="serviceImages">
                             <div class="serviceTitle">Music Lessons</div>
@@ -193,37 +266,7 @@
                             <a href="./signupform.html"><button class="serviceBtn">Start Music Journey</button></a>
                         </div>
 
-                        <!-- Mentorship Services -->
                         <div class="service-card">
-                            <img src="./Assets/careerGuidance.jpeg" alt="careerGuidance & Mentorship image" class="serviceImages">
-                            <div class="serviceTitle">Career Guidance & Mentorship</div>
-                            <div class="serviceDescription">Get clarity on your future and build a strong career path.</div>
-                            <div class="serviceDetails">
-                                <ul>
-                                    <li>Career planning</li>
-                                    <li>Skill identification</li>
-                                    <li>Growth coaching</li>
-                                </ul>
-                            </div>
-                            <a href="./signupform.html"><button class="serviceBtn">Get Career Direction</button></a>
-                        </div>
-
-                        <div class="service-card">
-                            <img src="./Assets/academicExcellenceCauching.jpeg" alt="Academic Excellence Coaching image" class="serviceImages">
-                            <div class="serviceTitle">Academic Excellence Coaching</div>
-                            <div class="serviceDescription">Learn how to study smarter and achieve top performance.</div>
-                            <div class="serviceDetails">
-                                <ul>
-                                    <li>Study techniques</li>
-                                    <li>Time management</li>
-                                    <li>Exam strategies</li>
-                                </ul>
-                            </div>
-                            <a href="./signupform.html"><button class="serviceBtn">Raise Performance</button></a>
-                        </div>
-
-                        <!-- Signature Program Services -->
-                        <div class="service-card featured">
                             <img src="./Assets/mathFullstackMusicImg.jpg" alt="Math Music Tech Mastery image" class="serviceImages">
                             <div class="serviceTitle">Math + Music + Tech Mastery</div>
                             <div class="serviceDescription">A unique program combining logic, creativity, and technology.</div>
@@ -236,7 +279,9 @@
                             </div>
                             <a href="./signupform.html"><button class="serviceBtn">Join The Program</button></a>
                         </div>
+                    </div>
                 </div>
+            
             </div>
 
         <!--PROJECTS SECTION-->
