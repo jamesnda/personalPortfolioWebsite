@@ -31,30 +31,42 @@
         
     <div class="containerDiv">
         <!--HOME -SECTION-->
-        <div class="homeDiv" id="homeSectionId">
-                
-            <div class="leftDivIdentification">
-                <div class="myWork">
-                    <p>Hi, I'm <span class="namesColorChange">James Ndayishimiye</span></p>
-                    <p><span class="linearGrad">-Junior Full-Stack Developer, Data Analyst & Mathematics Educator.</span></p>
-                    <p>Building practical web systems while mastering modern full-stack architecture.</p>
-                </div>
+<main>
+    <section class="homeHero" id="homeSectionId">
+        <div class="heroCopy">
+            <p class="eyebrow">Web Development · Data Analysis · Mathematics</p>
+            <h1>James Ndayishimiye</h1>
+            <p class="heroRole">
+                I build useful web experiences and make data and mathematical
+                ideas easier to work with.
+            </p>
+            <p class="heroDetail">
+                Frontend development, analytical tools, and mathematics education
+                for practical problems.
+            </p>
 
-                <div class="ctaBtn">
-                    <a href="#contactSectionId"><button id="talkctaBtn">Let's Talk</button></a>
-                    <a href="#projectSectionId"><button id="myProjectctaBtn">My Projects</button></a>
-                </div>
+            <div class="heroActions">
+                <a class="button buttonPrimary" href="#contactSectionId">Contact me</a>
+                <a class="button buttonSecondary" href="#projectSectionId">View projects</a>
             </div>
 
-
-            <div class="rightDivProfile">
-                
-                <img src="./Assets/_JamesPersonalPortifolio-removebg-preview.png" alt="myProfileImg" id="myProfileImg">
-            </div>
+            <p class="heroLinks">
+                <a href="YOUR_GITHUB_URL">GitHub</a>
+                <a href="YOUR_LINKEDIN_URL">LinkedIn</a>
+            </p>
         </div>
 
+        <div class="heroPortrait">
+        <img
+            src="./Assets/_JamesPersonalPortifolio-removebg-preview.png"
+            alt="James Ndayishimiye"
+        >
+        </div>
+    </section>
+
+
         <!--ABOUT PAGE-->
-        <div class="aboutDiv" id="aboutSectionId">
+        <section class="aboutDiv" id="aboutSectionId">
             <div id="about" class="about-section">
                 <div class="firstAboutContainer">
                     <h1>ABOUT ME</h1>
@@ -88,7 +100,6 @@
                     <div class="myRealPotentials">
 
                     </div>
-                </div>
 
                 <!-- CTA Buttons -->
                 <div class="ctaBtn">
@@ -97,249 +108,48 @@
                 </div>
             </div>
         </div>
+        </section>
 
         <!--SERVICES SECTION-->
-        <div class="myServices" id="servicesSectionId">
-            <h2 class="section-title">MY SERVICES</h2>
-            <p id="section-subtitle">Transforming Learning, Technology, and Creativity into Real Solutions</p>
-                
-            <div class="serviceCardDisplay"></div>
-            <div class="serviceCardContainer">
-                <div class="service-card-container">
-                    <div class="techServicesCard myServiceCard">
-                        <img src="./Assets/softwareDevImage.png" alt="softawareDevImage" class="serviceImages">
-                        <p>Explore Software Development Services</p>
-                    </div>
-                    <div class="dataServicesCard myServiceCard">
-                        <img src="./Assets/dataAnalysisImage.png" alt="softawareDevImage" class="serviceImages">
-                        <p>Explore Data Analysis Services</p>
-                    </div>
-                    <div class="mathServicesCard myServiceCard">
-                        <img src="./Assets/mathReasoningImage.png" alt="softawareDevImage" class="serviceImages">
-                        <p>Explore Mathematics Education Services</p>
-                    </div>
-                    <div class="musicServicesCard myServiceCard">
-                        <img src="./Assets/musicBusinessImage.png" alt="softawareDevImage" class="serviceImages">
-                        <p>Explore Music Education & Music Business Services</p>
-                    </div>
-                </div>
-            </div>
-                <!-- Tech Services -->
-                <div class="techServices">
-                    <div class="realService">
-                        <div class="service-card">
-                            <img src="./Assets/softwarePlatformDevelopment.jpeg" alt="Software Development image" class="serviceImages">
-                            <div class="serviceTitle">System / Platform Development</div>
-                            <div class="serviceDescription">Digitize your services with modern and responsive website.</div>
-                            <div class="serviceDetails">
-                                <ul>
-                                    <li>Custom websites</li>
-                                    <li>Dashboards</li>
-                                    <li>Deployment support</li>
-                                </ul>
-                            </div>
-                            <a href="./signupform.html"><button class="serviceBtn">Build My Platform</button></a>
-                        </div>
-
-                        <div class="service-card">
-                            <img src="./Assets/fullstackDevelopmentTeaching.jpeg" alt="Full-stack Development Teaching image" class="serviceImages">
-                            <div class="serviceTitle">Full-Stack Development Training</div>
-                            <div class="serviceDescription">Learn to build real-world web applications from scratch.</div>
-                            <div class="serviceDetails">
-                                <ul>
-                                    <li>HTML, CSS, JavaScript, React, Node.Js, Data base, Deployment</li>
-                                    <li>Real projects</li>
-                                    <li>GitHub portfolio</li>
-                                </ul>
-                            </div>
-                            <a href="./signupform.html"><button class="serviceBtn">Become a Developer</button></a>
-                        </div>
-                    </div>
-                        
-                </div>
-                <!-- Data Analysis Services -->
-                <div class="dataServices">
-                    <div class="realService">
-                        <div class="service-card">
-                                <img src="./Assets/fullstackDevelopmentTeaching.jpeg" alt="Python_advancement image" class="serviceImages">
-                                <div class="serviceTitle">Python programming Training</div>
-                                <div class="serviceDescription">Learn Python programming from scratch and use it to build backend for web applications and also for Data analysis.</div>
-                                <div class="serviceDetails">
-                                    <ul>
-                                        <li>Python Fundamentals, NumPy, Pandas, Matplotlib, Django, MongoDB</li>
-                                        <li>Real projects</li>
-                                        <li>GitHub portfolio</li>
-                                    </ul>
-                                </div>
-                                <a href="./signupform.html"><button class="serviceBtn">Specialize in Python</button></a>
-                        </div>
-
-                        <div class="service-card">
-                                <img src="./Assets/fullstackDevelopmentTeaching.jpeg" alt="Python_advancement image" class="serviceImages">
-                                <div class="serviceTitle">R programming Training</div>
-                                <div class="serviceDescription">Learn R programming for Statistical analysis.</div>
-                                <div class="serviceDetails">
-                                    <ul>
-                                        <li>R Fundamentals, NumPy, Pandas, Matplotlib, Django, MongoDB</li>
-                                        <li>Real projects</li>
-                                        <li>GitHub portfolio</li>
-                                    </ul>
-                                </div>
-                                <a href="./signupform.html"><button class="serviceBtn">Specialize in R</button></a>
-                        </div>
-
-                        <div class="service-card">
-                                <img src="./Assets/fullstackDevelopmentTeaching.jpeg" alt="Python_advancement image" class="serviceImages">
-                                <div class="serviceTitle">STATA Training</div>
-                                <div class="serviceDescription">Learn STATA for Statistical analysis.</div>
-                                <div class="serviceDetails">
-                                    <ul>
-                                        <li>Fundamentals to Advanced STATA Skills</li>
-                                        <li>Real projects</li>
-                                        <li>GitHub portfolio</li>
-                                    </ul>
-                                </div>
-                                <a href="./signupform.html"><button class="serviceBtn">Specialize in STATA</button></a>
-                        </div>
-
-                        <div class="service-card">
-                                <img src="./Assets/fullstackDevelopmentTeaching.jpeg" alt="Python_advancement image" class="serviceImages">
-                                <div class="serviceTitle">PowerBI Training</div>
-                                <div class="serviceDescription">Learn PowerBI for Designing Dashboards.</div>
-                                <div class="serviceDetails">
-                                    <ul>
-                                        <li>Fundamentals to Advanced PowerBI Skills</li>
-                                        <li>Learn via Real projects</li>
-                                        <li>Gain Connections for PowerBI Projects</li>
-                                    </ul>
-                                </div>
-                                <a href="./signupform.html"><button class="serviceBtn">Specialize in PowerBI</button></a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Math Services -->
-                <div class="mathServices">
-                    <div class="realService">
-                        <div class="service-card">
-                            <img src="./Assets/mathsEducationImage.jpeg" alt="Advanced Math Teaching image" class="serviceImages">
-                            <div class="serviceTitle">Advanced Mathematics Coaching</div>
-                            <div class="serviceDescription">Master mathematics with clarity, confidence, and real-world application.</div>
-                            <div class="serviceDetails">
-                                <ul>
-                                    <li>Live Online interactive lessons</li>
-                                    <li>Exam preparation</li>
-                                    <li>Assignments & feedback</li>
-                                </ul>
-                            </div>
-                            <a href="./signupform.html"><button class="serviceBtn">Start Learning Maths</button></a>
-                        </div>
-
-                        <div class="service-card">
-                            <img src="./Assets/mathTechIntegration .jpg" alt="Math Tech Integration image" class="serviceImages">
-                            <div class="serviceTitle">Maths + Technology Integration</div>
-                            <div class="serviceDescription">Learn how mathematics powers real-world technology systems.</div>
-                            <div class="serviceDetails">
-                                <ul>
-                                    <li>Python for maths</li>
-                                    <li>Data visualization</li>
-                                    <li>Mini tech projects</li>
-                                </ul>
-                            </div>
-                            <a href="./signupform.html"><button class="serviceBtn">Explore Math in Tech</button></a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Music Services -->
-                <div class="musicServices">
-                    <div class="realService">
-                        <div class="service-card">
-                            <img src="./Assets/musicBasicsImg.jpeg" alt="Music Basics Teaching image" class="serviceImages">
-                            <div class="serviceTitle">Music Lessons</div>
-                            <div class="serviceDescription">Understand and play music from basics to creativity.</div>
-                            <div class="serviceDetails">
-                                <ul>
-                                    <li>Piano & chords</li>
-                                    <li>Music theory</li>
-                                    <li>Song practice</li>
-                                </ul>
-                            </div>
-                            <a href="./signupform.html"><button class="serviceBtn">Start Music Journey</button></a>
-                        </div>
-
-                        <div class="service-card">
-                            <img src="./Assets/mathFullstackMusicImg.jpg" alt="Math Music Tech Mastery image" class="serviceImages">
-                            <div class="serviceTitle">Math + Music + Tech Mastery</div>
-                            <div class="serviceDescription">A unique program combining logic, creativity, and technology.</div>
-                            <div class="serviceDetails">
-                                <ul>
-                                    <li>Math through music</li>
-                                    <li>Coding projects</li>
-                                    <li>Innovation mindset</li>
-                                </ul>
-                            </div>
-                            <a href="./signupform.html"><button class="serviceBtn">Join The Program</button></a>
-                        </div>
-                    </div>
-                </div>
+        <section class="myServices" id="servicesSectionId" aria-labelledby="servicesTitle">
+            <header>
+                <p>Capabilities</p>
+                <h2 id="servicesTitle">Ways I can help</h2>
+                <p>Practical work across web development, data, and mathematics.</p>
+            </header>
             
+            <div class="serviceFilters" role="group" aria-label="Filter services">
+                <button type="button" data-filter="all" aria-pressed="true">All</button>
+                <button type="button" data-filter="web" aria-pressed="false">Web</button>
+                <button type="button" data-filter="data" aria-pressed="false">Data</button>
+                <button type="button" data-filter="teaching" aria-pressed="false">Teaching</button>
             </div>
+
+        <div class="serviceGrid" id="serviceGrid" aria-live="polite"></div>
+        </section>
 
         <!--PROJECTS SECTION-->
-        <div class="myProjects">
-            <h2>MY PROJECTS</h2>
-        
-            <div class="projectDiv" id="projectSectionId">
-                
-                <div class="projectCard">
-                    <img src="./Assets/webSchoolImg.jpeg" alt="web-school-img" class="project-image">
-                    <h4 class="projectName">Web Development School</h4>
-                    <p class="projectDescription">A platform designed for helping and teaching tech beginners and sharing insights to intermediate and even professionals in software carrier.</p>
-                    <a href="https://jamesnda.github.io/webschoolProject/"><button class="viewProjectBtn" id="softwareSchool">View Project</button></a>
-                </div>
+        <section class="myProjects" id="projectSectionId" aria-labelledby="projectsTitle">
+            <header class="projectsHeader">
+                <p>Selected work</p>
+                <h2 id="projectsTitle">Projects</h2>
+                <p>Small, practical applications built around real user needs.</p>
+            </header>
 
-                <div class="projectCard">
-                    <img src="./Assets/shopMart.png" alt="shop-mart-img" class="project-image">
-                    <h4 class="projectName">Shop-Mart</h4>
-                    <p class="projectDescription">An online shopping system that allows customers to browse products, add items to cart, manage orders, and make secure purchases. It simplifies buying and selling processes while tracking inventory and sales.</p>
-                    <a href="http://127.0.0.1:5502/shopMart.html"><button id="simpleShopMart" class="viewProjectBtn">View Project</button></a>
-                </div>
-
-                <div class="projectCard">
-                    <img src="./Assets/taskFlow.jpeg" alt="loan-cal-img" class="project-image">
-                    <h4 class="projectName">Task Flow</h4>
-                    <p class="projectDescription">A modern productivity web application that helps users create, organize, prioritize, and track daily tasks efficiently. It boosts focus, improves time management, and simplifies personal workflow through a clean and intuitive dashboard.</p>
-                    <a href="http://127.0.0.1:5502/simpleinterestcalc.html"><button id="simpleInterestCalc" class="viewProjectBtn">View Project</button></a>
-                </div>
-
-                <div class="projectCard">
-                    <img src="./Assets/simpleCalc.jpg" alt="simple-calc-img" class="project-image">
-                    <h4 class="projectName">Simple Calculator</h4>
-                    <p class="projectDescription">A lightweight application that performs basic arithmetic operations such as addition, subtraction, multiplication, and division. Designed for fast and accurate everyday mathematical computations.</p>
-                    <a href="http://127.0.0.1:5502/DOM-MANIPULATION/calc.html"><button id="simpleCalc" class="viewProjectBtn">View Project</button></a>
-                </div>
-
-                <div class="projectCard">
-                    <img src="./Assets/loanCalc.jpg" alt="loan-cal-img" class="project-image">
-                    <h4 class="projectName">Loan Calculator</h4>
-                    <p class="projectDescription">A financial tool that calculates monthly repayments, total interest, and total loan cost based on loan amount, interest rate, and repayment period. It helps users make informed borrowing decisions.</p>
-                    <a href="http://127.0.0.1:5502/loancalc.html"><button id="loanCalc" class="viewProjectBtn">View Project</button></a>
-                </div>
-
-                <div class="projectCard">
-                    <img src="./Assets/simpleInterestCalc.jpg" alt="loan-cal-img" class="project-image">
-                    <h4 class="projectName">Simple Interest Calculator</h4>
-                    <p class="projectDescription">A straightforward application that computes interest earned or paid using the simple interest formula. Ideal for students, small businesses, and financial learning purposes.</p>
-                    <a href="http://127.0.0.1:5502/simpleinterestcalc.html"><button id="simpleInterestCalc" class="viewProjectBtn">View Project</button></a>
-                </div>
-                    
+            <div class="projectFilters" role="group" aria-label="Filter projects">
+                <button type="button" data-project-filter="all" aria-pressed="true">All</button>
+                <button type="button" data-project-filter="web" aria-pressed="false">Web apps</button>
+                <button type="button" data-project-filter="math" aria-pressed="false">Math tools</button>
             </div>
-        </div>
+
+            <div class="projectGrid" id="projectGrid" aria-live="polite"></div>
+        </section>
 
         <!--SKILLS SECTION-->
 
-        <div class="skillsDiv" id="skillsSectionId">
+        <section class="skillsDiv" id="skillsSectionId">
             <div class="section-header">
-                <h4 class="section-Title">PROFESSIONAL & TECHNICAL SKILLS</h4>
+                <h4 class="section-title">PROFESSIONAL & TECHNICAL SKILLS</h4>
                 <h6 class="section-subtitle">Bridging Full-Stack Engineering with Mathematics Education Innovation.</h6>
             </div>
             <div class="category-sections-cover">
@@ -350,7 +160,7 @@
                             <img src="./Assets/fullStackSoftwareDevelopment.jpeg" alt="FullStackSoftwareDevelopment Img" class="skillsImg">
                         </div>
                         <h6 class="category-description">Building scalable, responsive, and performance-optimized web applications from frontend interface to backend architecture.</h6>
-                        <button class="clustersBtn">Skills Clusters</button>
+                        <button class="clustersBtn" data-skill-panel="fullstack">View skills</button>
                     </div>
 
                     <div class="category-card">
@@ -359,7 +169,7 @@
                             <img src="./Assets/mathematicsQuantitativeEducation.jpg" alt="MathematicsQuantitativeEducation Img" class="skillsImg">
                         </div>
                         <h6 class="category-description">Delivering structured, concept-driven mathematics education aligned with analytical reasoning and real-world problem solving.</h6>
-                        <a href="./maths-education.html"><button class="clustersBtn">Skills Clusters</button></a>
+                        <button class="clustersBtn" data-skill-panel="math">View skills</button>
                     </div>
 
                     <div class="category-card">
@@ -368,7 +178,7 @@
                             <img src="./Assets/mathsTechnologyIntegration.jpeg" alt="MathsTechnologyIntegration Img" class="skillsImg">
                         </div>
                         <h6 class="category-description">Integrating computational tools with mathematics education to create modern, scalable learning systems.</h6>
-                        <a href="./mathTech.html"><button class="clustersBtn">Skills Clusters</button></a>
+                        <button class="clustersBtn" data-skill-panel="mathTech">View skills</button>
                     </div>
 
                     <div class="category-card">
@@ -377,7 +187,7 @@
                             <img src="./Assets/musicBasics.jpeg" alt="AnalyticalAndProfessionalSkills Img" class="skillsImg">
                         </div>
                         <h6 class="category-description">Developing foundational musicianship through structured music theory and piano practice, with a focus on harmony, composition, and educational application.</h6>
-                        <a href="./"><button class="clustersBtn">Skills Clusters</button></a>
+                        <button class="clustersBtn" data-skill-panel="music">View skills</button>
                     </div>
                 </div>
             </div>
@@ -824,11 +634,11 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
         <!--CONTACTS SECTION-->
 
-        <div class="contactsDiv" id="contactSectionId">
+        <section class="contactsDiv" id="contactSectionId">
             <div class="ContactHeader">
                 <h4 class="section-Title">Let’s Build Intelligent Digital & Mathematical Solutions Together</h4>
                 <p class="section-subtitle">I am NDAYISHIMIYE James — a Full-Stack Software Developer in advanced training and a Mathematics Educator passionate about integrating technology, logic, and real-world problem solving.
@@ -841,20 +651,21 @@
                 <div class="left-contacts">
                     <div class="upperLeftContactDiv">
                         <div class="contacts-notice">Get in Touch</div>
-                        <div class="contactMe contact-email">
-                            <div><img src="./Assets/emailIcon.png" alt="emailIcon" class="contacts-image"></div>
-                            <div class="contacts-description">jamesndayishimiye01@gmail.com</div>
-                        </div>
+                        
+                        <a class="contactMe" href="mailto:jamesndayishimiye01@gmail.com">
+                            <img src="./Assets/emailIcon.png" alt="" class="contacts-image">
+                            <span class="contacts-description">jamesndayishimiye01@gmail.com</span>
+                        </a>
 
-                        <div class="contactMe contact-whatsapp">
-                            <div><img src="./Assets/whtspImg.png" alt="whatsappNumber" class="contacts-image"></div>
-                            <div class="contacts-description">+250 785 795 423</div>
-                        </div>
+                        <a class="contactMe" href="https://wa.me/250785795423" target="_blank" rel="noopener noreferrer">
+                            <img src="./Assets/whtspImg.png" alt="" class="contacts-image">
+                            <span class="contacts-description">WhatsApp: +250 785 795 423</span>
+                        </a>
 
-                        <div class="contactMe contact-phoneNumber">
-                            <div><img src="./Assets/callIcon.png" alt="PhoneIcon" class="contacts-image"></div>
-                            <div class="contacts-description">+250 785 795 423</div>
-                        </div>
+                        <a class="contactMe" href="tel:+250785795423">
+                            <img src="./Assets/callIcon.png" alt="" class="contacts-image">
+                            <span class="contacts-description">Call: +250 785 795 423</span>
+                        </a>
 
                         <div class="contactMe contact-location">
                             <div><img src="./Assets/locationImage.jpeg" alt="locationIcon" class="contacts-image"></div>
@@ -882,236 +693,64 @@
 
                 <div class="right-contacts">
                     <div class="contacts-notice">Initiate Collaboration</div>
-                    <form action="https://formspree.io/f/mojpowwq" method="POST">
+                    <form id="contactForm" action="https://formspree.io/f/mojpowwq" method="POST">
                         <div class="form-group">
-                            <label for="names">Full Names</label>
-                            <input type="text" class="form-input" placeholder="eg. John Doe" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="organization">Organization</label>
-                            <input type="text" class="form-input" placeholder="School-name/Company-name/Institution-name">
+                            <label for="name">Full name</label>
+                            <input id="name" name="name" class="form-input" type="text"
+                                autocomplete="name" required>
                         </div>
 
                         <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" class="form-input" placeholder="Write Here Your professional email" required>
+                            <label for="organization">Organization</label>
+                            <input id="organization" name="organization" class="form-input" type="text"
+                                autocomplete="organization">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email address</label>
+                            <input id="email" name="email" class="form-input" type="email"
+                                autocomplete="email" required>
                         </div>
 
                         <div class="form-group">
                             <label for="subject">Subject</label>
-                            <select name="subject" id="subject" placeholder="--Select your subject--" class="form-input" required>
-                                <option value="">--Select your subject--</option>
-                                <option value="WebApplication">Web Application Development Project</option>
-                                <option value="Full-Stack">Full-Stack Collaboration</option>
-                                <option value="MathematicsEducation">Mathematics Education Initiative</option>
-                                <option value="EdTech">EdTech Partnership</option>
-                                <option value="PrivateMentorship">Private Mentorship / Tutoring</option>
-                                <option value="SpeakingEngagement">Speaking Engagement / Workshop</option>
-                                <option value="StrategicBusiness">Strategic Business Collaboration</option>
+                            <select id="subject" name="subject" class="form-input" required>
+                                <option value="">Select a subject</option>
+                                <option value="Web application development">Web application development</option>
+                                <option value="Full-stack collaboration">Full-stack collaboration</option>
+                                <option value="Mathematics education">Mathematics education</option>
+                                <option value="EdTech partnership">EdTech partnership</option>
                                 <option value="Other">Other</option>
                             </select>
                         </div>
 
                         <div class="form-group">
-                            <label for="Message">Your Text Message</label>
-                            <textarea type="text" class="form-input" placeholder="Briefly describe your project, idea, or inquiry." id="contactClientMessage" required></textarea>
+                            <label for="message">Your message</label>
+                            <textarea id="message" name="message" class="form-input"
+                                    rows="6" required></textarea>
                         </div>
 
-                        <div class="form-group">
-                            <button  type="submit" id="sendBtn">Send a Message</button>
-                        </div>
+                        <button type="submit" id="sendBtn">Send message</button>
+                        <p id="formStatus" role="status" aria-live="polite"></p>
                     </form>
                 </div>
             </div>
-        </div>
+        </section>
 
         <!--BLOG SECTION-->
 
-        <div class="blogSection" id="blogSectionId">
-            <div class="blogNav">
-                <div class="blogHeading">
-                    <div class="blogTitle">BLOG</div>
-                    <div class="blogDescription">Exploring how mathematics powers modern technology — with insights for developers, learners, and forward-thinking educators.</div>
-                </div>
-                <div class="blogIcon">
-                    <img src="./Assets/blogImage.png" alt="BlogImage" id="blogIcon">
-                </div>
-            </div>
-            <div class="blogMainExpertise">
-                <div class="blogExpertise">
-                    <div class="expertisecard">
-                            <div class="card-image"><img src="./Assets/FullStackImage.jpeg" alt="Full-stack-image" id="expertise-image"></div>
-                            <div class="card-description"><span id="expertiseDescription1">Discover Expertise in </span><span id="expertiseDescription2">Full-stack development</span></div>
-                            <div class="expertise-link"><img src="./Assets/linkImageIcon.jpeg" alt="expertise-link" id="expertise-link"></div>
-                    </div>
+        <section class="blogSection" id="blogSectionId">
+            <header class="blogHeader">
+                <p class="blogEyebrow">Ideas in practice</p>
+                <h2>Notes on code, data, and learning</h2>
+                <p>Articles connecting software development, mathematics, data, and education.</p>
+            </header>
 
-                    <div class="expertisecard">
-                            <div class="card-image"><img src="./Assets/mathsTechnologyIntegration.jpeg" alt="Math-Tech-image" id="expertise-image"></div>
-                            <div class="card-description"><span id="expertiseDescription1">Discover Expertise in </span><span id="expertiseDescription2">Math–Technology integration</span></div>
-                            <div class="expertise-link"><img src="./Assets/linkImageIcon.jpeg" alt="expertise-link" id="expertise-link"></div>
-                    </div>
-
-                    <div class="expertisecard">
-                            <div class="card-image"><img src="./Assets/seoImage.jpg" alt="SEO-image" id="expertise-image"></div>
-                            <div class="card-description"><span id="expertiseDescription1">Discover How To </span><span id="expertiseDescription2">Improve SEO</span></div>
-                            <div class="expertise-link"><img src="./Assets/linkImageIcon.jpeg" alt="expertise-link" id="expertise-link"></div>
-                    </div>
-
-                    <div class="expertisecard">
-                            <div class="card-image"><img src="./Assets/mathsEducationImage.jpeg" alt="Maths-Education-image" id="expertise-image"></div>
-                            <div class="card-description"><span id="expertiseDescription1">Teach </span><span id="expertiseDescription2">How To Learn Maths</span></div>
-                            <div class="expertise-link"><img src="./Assets/linkImageIcon.jpeg" alt="expertise-link" id="expertise-link"></div>
-                    </div>
-
-                    <div class="expertisecard">
-                            <div class="card-image"><img src="./Assets/UI-UX.png" alt="UI/UX-image" id="expertise-image"></div>
-                            <div class="card-description"><span id="expertiseDescription1">Master </span><span id="expertiseDescription2">UI</span><span id="expertiseDescription1">/</span><span id="expertiseDescription2">UX</span></div>
-                            <div class="expertise-link"><img src="./Assets/linkImageIcon.jpeg" alt="expertise-link" id="expertise-link"></div>
-                    </div>
-
-                    <div class="expertisecard">
-                            <div class="card-image"><img src="./Assets/didYouKnow.png" alt="didYouKnow-image" id="expertise-image"></div>
-                            <div class="card-description"><span id="expertiseDescription1">DID YOU </span><span id="expertiseDescription2">Know</span><span id="expertiseDescription1">?</span></div>
-                            <div class="expertise-link"><img src="./Assets/linkImageIcon.jpeg" alt="expertise-link" id="expertise-link"></div>
-                    </div>
-                </div>
-
-                <div class="realExpertiseFullstackStyle">
-                    <div class="articleStyle"><span class="articleSpan">Article1:</span>From Frontend to Backend: Understanding Full-Stack Architecture</div>
-                    <div class="articleStyle"><span class="articleSpan">Article4:</span>How Search Engines Rank Your Website</div>
-                    <div class="articleStyle"><span class="articleSpan">Article2:</span>How JavaScript Powers Modern Web Applications</div>
-                    <div class="articleStyle"><span class="articleSpan">Article5:</span>Semantic HTML for Better Ranking</div>
-                    <div class="articleStyle"><span class="articleSpan">Article3:</span>Website Speed & SEO Performance</div>
-                    <div class="articleStyle"><span class="articleSpan">Article6:</span>REST APIs Explained for Growing Developers</div>
-                </div>
-
-                <div class="realExpertiseFullstackContent">
-                    <div class="articleContent">
-                        <div class="articleModal">
-                            <div class="articleCard">
-                                <span class="close">&times;</span>
-                                <img src="./Assets/fullStackSoftwareDevelopment.jpeg" alt="From Frontend to Backend: Understanding Full-Stack Architecture image">
-                                <div class="articleTitle">From Frontend to Backend: Understanding Full-Stack</div>
-                                <div class="articleDate"><em>April 04, 2026</em></div>
-                                <div class="articleAuthor"><em>Author: Mr.James Ndayishimiye</em></div>
-                                <div class="articleContent">
-                                    <p id="normalParagraph">In the modern digital landscape, the "Full-Stack" developer is often viewed as the Swiss Army knife of the tech world. But as technologies evolve and architectures become more complex, what does it actually mean to bridge the gap between the user’s screen and the server’s database?
-                                    <br>
-                                    Whether you are an aspiring developer or a business owner looking to scale your product, understanding the synergy between frontend and backend is essential.</p>
-                                    <hr>
-                                    <br>
-                                    <ol type="1">
-                                        <li><strong>The Frontend: The Art of the Visible</strong></li>
-                                        <p id="normalParagraph"><strong>The Frontend</strong> (Client-Side) is everything a user touches, sees, and experiences. It’s about transforming code into a visual interface that is both intuitive and performant.</p>
-                                        
-                                            <ul>
-                                                <li><strong>The Core Trio:</strong> HTML for structure, CSS for styling, and JavaScript for interactivity.</li>
-                                                <li><strong>Modern Frameworks:</strong> Today’s frontend isn’t just static pages. It’s built on robust libraries like React, Vue.js, or Next.js that manage complex "states"—ensuring the UI updates instantly without refreshing the page.</li>
-                                                <li><strong>The Goal:</strong> User Experience (UX) and Accessibility. A great frontend must be responsive across devices and inclusive for all users.</li>
-                                            </ul>
-                                        <br>
-                                        <li><strong>The Backend: The Engine Under the Hood</strong></li>
-                                        <p id="normalParagraph">The Frontend is the car's dashboard, the <strong>Backend</strong> (Server-Side) is the engine. It’s the logic that powers the application, manages data, and ensures security.</p>
-                                        
-                                            <ul>
-                                                <li><strong>The Languages::</strong> This is where you’ll find <strong>Node.js (JavaScript/TypeScript), Python, Go</strong> or <strong>Rust.</strong></li>
-                                                <li><strong>The Database:</strong> Where the "memory" lives. Developers choose between <br>
-                                                <strong>Relational (SQL)</strong> like PostgreSQL for structured data, or <strong>Non-Relational (NoSQL)</strong> like MongoDB for flexibility.</li>
-                                                <li><strong>APIs (The Bridge):</strong> Most modern stacks use <strong>REST</strong> or <strong>GraphQL</strong> to allow the frontend to "talk" to the backend. When you click "Like" on a post, an API carries that request to the server to update the database.</li>
-                                            </ul>
-                                        <br>
-                                        <li><strong>The "Glue": Middleware and DevOps</strong></li>
-                                        <p id="normalParagraph">Being a Full-Stack developer isn't just about knowing two different languages; it’s about understanding how they interact. This middle layer involves:</p>
-                                        
-                                            <ul>
-                                                <li><strong>Authentication:</strong> Making sure users are who they say they are (OAuth, JWT).</li>
-                                                <li><strong>Cloud Hosting:</strong> Deploying applications using services like <strong>AWS, Vercel,</strong> or <strong>Docker</strong> containers.</li>
-                                                <li><strong>State Management:</strong> Ensuring the data seen on the screen is perfectly synced with what is stored on the server.</li>
-                                            </ul>
-                                        <br>
-                                        <li><strong>Why Full-Stack Matters in 2026</strong></li>
-                                        <p id="normalParagraph">In an era where "Time to Market" is the ultimate competitive advantage, Full-Stack development offers several strategic benefits:</p>
-                                        
-                                            <ol type="i">
-                                                <li><strong>Streamlined Communication:</strong> One developer (or a small team) can handle a feature from start to finish, reducing the friction of handing off tasks between departments.</li>
-                                                <li><strong>Cost Efficiency:</strong> For startups, hiring versatile talent who can pivot between UI tweaks and database optimization is a game-changer.</li>
-                                                <li><strong>A full-stack mindset allows for better debugging. If a feature is slow, a full-stack dev can tell if the bottleneck is a poorly written API or a heavy frontend component.</li>
-                                            </ol>
-                                        <hr>
-                                        <br>
-                                        <strong>Final Thoughts</strong>
-                                        <p id="normalParagraph">The journey from frontend to backend is more than just learning a list of tools; it’s about understanding the <strong>lifecycle of data.</strong> As we move toward more AI-integrated development environments, the "Full-Stack" definition continues to expand, now often including basic AI orchestration and cloud architecture.</p>
-                                        <br>
-                                        <p id="normalParagraph">Whether you're building the next big social platform or a simple internal tool, the ability to see the "whole picture" is what transforms a coder into a creator.</p>
-                                        <br>
-                                        <strong>Key Takeaway: </strong>
-                                        <p id="normalParagraph">The frontend is the "How it looks," the backend is the "How it works," and Full-Stack is the "How it all connects."</p>
-                                    </ol>
-                                </div>                  
-                                
-                                <p>How was this content to you?</p> <br>
-                                <div class="articleCta">
-                                    <button id="likeBtn">Like</button>
-                                    <button id="dislikeBtn">Dislike</button>
-                                    <button id="subscribeBtn">Subscribe</button>
-                                    <button id="buyBlogLesson">Buy a full lesson</button>
-                                    <a href="https://www.youtube.com/@mr.ndayishimiyejamesmrs.im226" target="_blank"><button id="visitMyChannel">Visit My Channel</button></a>
-                                </div>
-                                <form action="submit" class="commentForm">
-                                    
-                                    <label for="blogComment">Leave a comment here:</label>
-                                    <textarea name="text" id="blogComment" placeholder="Give us any suggestion"></textarea>
-                                    <button id="blogCommentBtn">Send us your insight</button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="blogFooter">
-                <div class="closingRemarks">
-                    <span class="contentTitle">Closing Remarks</span>
-                    <p class="closingContent">We are dedicated to helping you master full-stack development, integrate mathematics with technology, and build intelligent, real-world digital solutions. This platform is your learning hub for practical coding skills, modern web architecture, mathematical thinking, and tech-driven problem solving. Through carefully crafted content, structured learning paths, and real project experiences, we guide students, educators, and innovators toward building impactful, scalable, and meaningful digital systems.</p>
-                </div>
-
-                <div class="otherBlogLinks">
-                    <div>
-                        <div class="contentTitle">Related Content</div>
-                        <div class="otherLinksList">
-                            <div>Professional use of Git &GitHub</div>
-                            <div>How JavaScript Really Works</div>
-                            <div>How Maths Really Manages Every Technology</div>
-                        </div>
-                    </div>
-
-                    <div class="myQuickLinks">
-                        <div class="contentTitle">Follow Me</div>
-                            <div class="blogContentLinks">
-                                <div class="linkedIn">
-                                    <a href="https://www.linkedin.com/in/ndayishimiye-james-b54592131/" target="_blank"><button id="lnkdIcon"><img src="./Assets/lnkdInImg.png" alt="lnkdInImg" class="socialMediaBtn"></button></a>
-                                </div>
-                                <div class="gitHub">
-                                    <a href="https://github.com/jamesnda" target="_blank"><button id="gitIcon"><img src="./Assets/gitImg.png" alt="gitImg" class="socialMediaBtn"></button></a>
-                                </div>
-                                <div class="faceBook">
-                                    <a href="" target="_blank"><button id="fbIcon"><img src="./Assets/fbImg.png" alt="fbImg" class="socialMediaBtn"></button></a>
-                                </div>
-                                <div class="xTwitter">
-                                    <a href="" target="_blank"><button id="xIcon"><img src="./Assets/xImg.png" alt="xImg" class="socialMediaBtn"></button></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
+            <div class="blogGrid" id="blogGrid" aria-live="polite"></div>
+        </section>
         <!--LOGIN SECTION-->
 
-        <div class="loginDiv" id="loginId">
+        <section class="loginDiv" id="loginId">
 
             <div class="loginContainer">
                 <div class="loginNavBar">
@@ -1123,34 +762,33 @@
                     <div class="loginContent">
                         <span class="loginHeader">LOGIN</span>
                         <div class="formCover">
-                            <form class="loginFormStyle">
-
+                            <form id="loginForm" class="loginFormStyle">
                                 <div class="loginFormgroup">
-                                    <label for="email">Email Address</label>
-                                    <input type="email" id="email" class="login-form-input" placeholder="eg. example1@gmail.com">
+                                    <label for="loginEmail">Email address</label>
+                                    <input id="loginEmail" name="email" type="email"
+                                        class="login-form-input" autocomplete="username" required>
                                 </div>
 
                                 <div class="loginFormgroup">
-                                    <label for="password">Password</label>
-                                    <input type="password" id="password" class="login-form-input" placeholder="****************">
-                                    <div class="forgotPasswordDiv">
-                                        <a href="" id="forgotPasswordBtn">Forgot Password?</a>
-                                    </div>
+                                    <label for="loginPassword">Password</label>
+                                    <input id="loginPassword" name="password" type="password"
+                                        class="login-form-input" autocomplete="current-password" required>
                                 </div>
 
-                                <div class="loginFormgroup">
-                                    <a href="./dashboard.html" id="realLoginBtn">LOGIN</a>
-                                    <div class="createAccountDiv">Have no account?<a href="./signupform.html" id="createAccountId">Create Account</a></div>
-                                </div>
+                                <button id="realLoginBtn" type="submit">Sign in</button>
+                                <p id="loginStatus" role="status" aria-live="polite"></p>
+
+                                <a id="forgotPasswordBtn" href="./reset-password.html">Forgot password?</a>
+                                <a href="./signupform.html">Create account</a>
                             </form>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
         <!--FOOTER SECTION FOR SOCIAL MEDIA-->
-        <div class="footerSocialMediaDiv">
+        <section class="footerSocialMediaDiv">
             <div class="faceBook">
                 <a href="" target="_blank"><button id="fbIcon"><img src="./Assets/fbImg.png" alt="fbImg" class="socialMediaBtn"></button></a>
             </div>
@@ -1172,9 +810,8 @@
             <div class="linkedIn">
                 <a href="https://www.linkedin.com/in/ndayishimiye-james-b54592131/" target="_blank"><button id="lnkdIcon"><img src="./Assets/lnkdInImg.png" alt="lnkdInImg" class="socialMediaBtn"></button></a>
             </div>
-                
-        </div>
-    </div>
+    </section>
+</main>
 </body>
 <script src="./index.js"></script>
 </html>

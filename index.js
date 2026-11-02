@@ -1,8 +1,3 @@
-// The page must load with hidding the Software, Data analysis, Math and Music Cards
-
-window.onload=function(){
-    loadPage();
-}
 
 // Light and Dark Modes Designing
 const lightMode = false;
@@ -31,7 +26,7 @@ function changeMode(){
     }
 }
 
-// DESIGNING THE INTERACTIVE ABOUT ME PAGE
+// ABOUT-ME PAGE WITH JS
 
 const aboutCards =[
     {
@@ -197,79 +192,294 @@ highlightCards.forEach((card)=>{
     });
 })
 
-// Services
+// SERVICES PAGE WITH JS
 
-const techServices=document.querySelector(".techServices");
-const dataServices=document.querySelector(".dataServices");
-const mathServices=document.querySelector(".mathServices");
-const musicServices=document.querySelector(".musicServices");
-const serviceCardContainer=document.querySelector(".serviceCardContainer");
-const serviceCardDisplay=document.querySelector(".serviceCardDisplay");
+const services = [
+  { title: "Frontend Development", category: "web",
+    summary: "Build responsive, accessible interfaces for websites and dashboards.",
+    tools: ["HTML", "CSS", "JavaScript"],
+    includes: ["Responsive layouts", "Interactive features", "Interface improvements"] },
+  { title: "Python", category: "data",
+    summary: "Use Python to explore data and automate repeatable tasks.",
+    tools: ["Python"],
+    includes: ["Data preparation", "Analysis", "Small automation scripts"] },
+  { title: "R", category: "data",
+    summary: "Analyze data and communicate results with clear visuals and reports.",
+    tools: ["R"],
+    includes: ["Statistical analysis", "Visualization", "Reproducible reports"] },
+  { title: "Stata", category: "data",
+    summary: "Prepare datasets and carry out documented statistical analysis.",
+    tools: ["Stata"],
+    includes: ["Data management", "Statistical workflows", "Results reporting"] },
+  { title: "Power BI", category: "data",
+    summary: "Turn data into interactive dashboards for exploring key measures.",
+    tools: ["Power BI"],
+    includes: ["Data modeling", "Dashboard design", "Reporting"] },
+  { title: "Mathematics Education", category: "teaching",
+    summary: "Make mathematical ideas understandable through guided reasoning.",
+    tools: ["Mathematics", "Teaching"],
+    includes: ["Tutoring", "Exam preparation", "Learning resources"] }
+];
 
-function loadPage(){
-    serviceCardContainer.style.display="block";
-    techServices.style.display = "none";
-    dataServices.style.display = "none";
-    mathServices.style.display = "none";
-    musicServices.style.display = "none";
+const serviceGrid = document.querySelector("#serviceGrid");
+
+function renderServices(filter = "all") {
+  serviceGrid.innerHTML = services
+    .filter(service => filter === "all" || service.category === filter)
+    .map(service => `
+      <article class="service-card">
+        <p class="serviceCategory">${service.category}</p>
+        <h3>${service.title}</h3>
+        <p>${service.summary}</p>
+        <p class="serviceTools">${service.tools.join(" · ")}</p>
+        <details>
+          <summary>What this can include</summary>
+          <ul>${service.includes.map(item => `<li>${item}</li>`).join("")}</ul>
+        </details>
+        <a class="serviceLink" href="#contactSectionId">Discuss a project</a>
+      </article>
+    `).join("");
 }
 
+document.querySelector(".serviceFilters").addEventListener("click", event => {
+  const button = event.target.closest("[data-filter]");
+  if (!button) return;
+
+  document.querySelectorAll(".serviceFilters button").forEach(item => {
+    item.setAttribute("aria-pressed", String(item === button));
+  });
+
+  renderServices(button.dataset.filter);
+});
+renderServices();
+
+// PROJECTS PAGE WITH JS
+
+const projects = [
+  {
+    title: "M- TECH School",
+    category: "web",
+    image: "./Assets/webSchoolImg.jpeg",
+    alt: "Web Development School website",
+    summary: "A learning platform for people building practical web development skills.",
+    tools: ["HTML", "CSS", "JavaScript"],
+    demo: "https://jamesnda.github.io/webschoolProject/",
+    source: null
+  },
+  {
+    title: "Shop-Mart",
+    category: "web",
+    image: "./Assets/shopMart.png",
+    alt: "Shop-Mart storefront interface",
+    summary: "A shopping application concept for browsing products and managing orders.",
+    tools: ["HTML", "CSS", "JavaScript"],
+    demo: null,
+    source: null
+  },
+  {
+    title: "Task Flow",
+    category: "web",
+    image: "./Assets/taskFlow.jpeg",
+    alt: "Task Flow task management interface",
+    summary: "A task organizer for creating, prioritizing, and tracking daily work.",
+    tools: ["HTML", "CSS", "JavaScript"],
+    demo: null,
+    source: null
+  },
+  {
+    title: "Simple Calculator",
+    category: "math",
+    image: "./Assets/simpleCalc.jpg",
+    alt: "Simple calculator interface",
+    summary: "A calculator for everyday arithmetic operations.",
+    tools: ["HTML", "CSS", "JavaScript"],
+    demo: null,
+    source: null
+  },
+  {
+    title: "Loan Calculator",
+    category: "math",
+    image: "./Assets/loanCalc.jpg",
+    alt: "Loan calculator interface",
+    summary: "Estimates repayments and interest from loan details.",
+    tools: ["HTML", "CSS", "JavaScript"],
+    demo: null,
+    source: null
+  },
+  {
+    title: "Simple Interest Calculator",
+    category: "math",
+    image: "./Assets/simpleInterestCalc.jpg",
+    alt: "Simple interest calculator interface",
+    summary: "Calculates simple interest from principal, rate, and time.",
+    tools: ["HTML", "CSS", "JavaScript"],
+    demo: null,
+    source: null
+  }
+];
+
+const projectGrid = document.querySelector("#projectGrid");
+const projectFilters = document.querySelector(".projectFilters");
+
+function renderProjects(filter = "all") {
+  const visibleProjects = projects.filter(project =>
+    filter === "all" || project.category === filter
+  );
+
+  projectGrid.innerHTML = visibleProjects.map(project => `
+    <article class="projectCard">
+      <img class="project-image" src="${project.image}" alt="${project.alt}">
+      <div class="projectInfo">
+        <p class="projectCategory">${project.category === "math" ? "Math tool" : "Web app"}</p>
+        <h3>${project.title}</h3>
+        <p class="projectDescription">${project.summary}</p>
+        <ul class="projectTools">
+          ${project.tools.map(tool => `<li>${tool}</li>`).join("")}
+        </ul>
+        <div class="projectActions">
+          ${project.demo ? `<a href="${project.demo}" target="_blank" rel="noopener noreferrer">Live demo</a>` : ""}
+          ${project.source ? `<a href="${project.source}" target="_blank" rel="noopener noreferrer">Source code</a>` : ""}
+        </div>
+      </div>
+    </article>
+  `).join("");
+}
+
+projectFilters.addEventListener("click", event => {
+  const button = event.target.closest("[data-project-filter]");
+  if (!button) return;
+
+  projectFilters.querySelectorAll("button").forEach(filterButton => {
+    filterButton.setAttribute("aria-pressed", String(filterButton === button));
+  });
+
+  renderProjects(button.dataset.projectFilter);
+});
+renderProjects();
+
+// SKILLS SECTION WITH VANILLA JS
+
+const categorySections = document.querySelector(".categorySections");
+const clustersDiv = document.querySelector(".clustersDiv");
+
+const skillPanels = {
+    fullstack: document.querySelector(".fullstackModal"),
+    math: document.querySelector(".mathematicsEducationCover"),
+    mathTech: document.querySelector(".mathTechEducationCover"),
+    music: document.querySelector(".musicEducationCover")
+};
+
+let lastSkillButton;
+
+categorySections.addEventListener("click", (event) => {
+    const button = event.target.closest("[data-skill-panel]");
+    if (!button) return;
+
+    const panel = skillPanels[button.dataset.skillPanel];
+    if (!panel) return;
+
+    lastSkillButton = button;
+    Object.values(skillPanels).forEach((item) => {
+        item?.classList.remove("is-active");
+    });
+
+    categorySections.classList.add("is-hidden");
+    panel.classList.add("is-active");
+    panel.querySelector(".backToCategoryBtn")?.focus();
+});
+
+clustersDiv.addEventListener("click", (event) => {
+    if (!event.target.closest(".backToCategoryBtn")) return;
+
+    Object.values(skillPanels).forEach((panel) => {
+        panel?.classList.remove("is-active");
+    });
+
+    categorySections.classList.remove("is-hidden");
+    lastSkillButton?.focus();
+});
 
 
-// Revealing minor cards only when major services cards are clicked
-const techServicesCard=document.querySelector(".techServicesCard");
-const dataServicesCard=document.querySelector(".dataServicesCard");
-const mathServicesCard=document.querySelector(".mathServicesCard");
-const musicServicesCard=document.querySelector(".musicServicesCard");
+// CONTACTS PAGE WITH JS
 
-const techCards=[
+const contactForm = document.querySelector("#contactForm");
+const formStatus = document.querySelector("#formStatus");
+
+contactForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    const sendButton = contactForm.querySelector("#sendBtn");
+    sendButton.disabled = true;
+    formStatus.textContent = "Sending your message...";
+
+    try {
+        const response = await fetch(contactForm.action, {
+            method: "POST",
+            body: new FormData(contactForm),
+            headers: { Accept: "application/json" }
+        });
+
+        if (!response.ok) throw new Error("Submission failed");
+
+        contactForm.reset();
+        formStatus.textContent = "Message sent. Thank you for getting in touch.";
+    } catch {
+        formStatus.textContent =
+            "The message could not be sent. Please email jamesndayishimiye01@gmail.com.";
+    } finally {
+        sendButton.disabled = false;
+    }
+});
+
+// BLOG SECTION WITH JS
+
+const blogSubjects = [
     {
-        id: 1,
-        image: "./Assets/softwarePlatformDevelopment.jpeg",
-        serviceTitle: "System / Platform Development",
-        serviceDescription: "Digitize your services with modern and responsive website.",
-        serviceDetail_1: "Custom websites",
-        serviceDetail_2: "Dashboards",
-        serviceDetail_3: "Deployment support",
+        title: "Web Development",
+        description: "Frontend, backend, and the ideas that connect them.",
+        image: "./Assets/FullStackImage.jpeg",
+        page: "./blogs/web-development.html",
+        featuredArticle: {
+            title: "From Frontend to Backend: Understanding Full-Stack",
+            excerpt: "An introduction to how user interfaces, server logic, APIs, and databases work together.",
+            date: "2026-04-04",
+            page: "./blogs/full-stack-architecture.html"
+        }
     },
     {
-        id: 2,
-        image: "./Assets/fullstackDevelopmentTeaching.jpeg",
-        serviceTitle: "Full-Stack Development Training",
-        serviceDescription: "Learn to build real-world web applications from scratch.",
-        serviceDetail_1: "HTML, CSS, JavaScript, React, Node.Js, Data base, Deployment",
-        serviceDetail_2: "Real projects",
-        serviceDetail_3: "GitHub portfolio",
+        title: "Mathematics & Education",
+        description: "Clear explanations and practical approaches to teaching mathematics.",
+        image: "./Assets/mathsEducationImage.jpeg",
+        page: "./blogs/mathematics-education.html"
+    },
+    {
+        title: "Data Analysis",
+        description: "Working with data to find evidence and communicate useful insights.",
+        image: "./Assets/mathsTechnologyIntegration.jpeg",
+        page: "./blogs/data-analysis.html"
     }
-]
-techServicesCard.addEventListener("click",()=>{
-    serviceCardContainer.style.display="block";
-    dataServices.style.display = "none";
-    mathServices.style.display = "none";
-    musicServices.style.display = "none";
-    serviceCardDisplay.style.display = "block";
-});
+];
 
-dataServicesCard.addEventListener("click",()=>{
-    serviceCardContainer.style.display="none";
-    techServices.style.display = "none";
-    dataServices.style.display = "block";
-    mathServices.style.display = "none";
-    musicServices.style.display = "none";
-});
+const blogGrid = document.querySelector("#blogGrid");
 
-mathServicesCard.addEventListener("click",()=>{
-    serviceCardContainer.style.display="none";
-    techServices.style.display = "none";
-    dataServices.style.display = "none";
-    mathServices.style.display = "block";
-    musicServices.style.display = "none";
-});
+blogGrid.innerHTML = blogSubjects.map(subject => `
+    <article class="blogCard">
+        <a class="blogCardImageLink" href="${subject.page}">
+            <img src="${subject.image}" alt="" class="blogCardImage">
+        </a>
+        <div class="blogCardBody">
+            <h3><a href="${subject.page}">${subject.title}</a></h3>
+            <p>${subject.description}</p>
+            ${
+                subject.featuredArticle
+                    ? `<a class="blogReadLink" href="${subject.featuredArticle.page}">
+                           Latest: ${subject.featuredArticle.title}
+                       </a>`
+                    : `<a class="blogReadLink" href="${subject.page}">Explore articles</a>`
+            }
+        </div>
+    </article>
+`).join("");
 
-musicServicesCard.addEventListener("click",()=>{
-    serviceCardContainer.style.display="none";
-    techServices.style.display = "none";
-    dataServices.style.display = "none";
-    mathServices.style.display = "none";
-    musicServices.style.display = "block";
-});
+// LOGIN PAGE WITH JS
+
