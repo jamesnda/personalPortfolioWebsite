@@ -372,7 +372,9 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 290px), 1fr));
   gap: 1.25rem;
+  cursor: pointer;
 }
+
 
 .projectCard {
   display: flex;
@@ -388,7 +390,7 @@
 .project-image {
   display: block;
   width: 100%;
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 16 / 9;
   object-fit: cover;
 }
 

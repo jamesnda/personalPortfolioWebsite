@@ -31,17 +31,17 @@ function changeMode(){
 const aboutCards =[
     {
         id:1,
-        title: "Mathematics. Data. Code. Real-World Solutions",
+        title: "Math. Data. Coding",
         description: "I am James NDAYISHIMIYE, a Mathematics Educator, Data Analyst, and Frontend Development practitioner with a strong foundation in mathematical reasoning, statistical thinking, and interactive web development. My professional journey brings together three complementary disciplines: mathematics helps me understand problems, data analysis helps me discover evidence and insights, and software development helps me transform ideas into practical digital solutions."
     },
     {
         id:2,
-        title: "My Professional Background",
+        title: "My Background",
         description: "I hold a Bachelor's degree in Mathematics from the University of Rwanda, College of Science and Technology, and I bring experience as a secondary-school Mathematics Educator. Teaching has strengthened my ability to break down complex concepts, communicate clearly, think logically, and guide others through problem-solving. Alongside education, I have been developing my data analysis capabilities, working with tools and methods for data preparation, statistical analysis, research, and visualization. My learning and project work also extend into frontend development, where I use HTML, CSS, and JavaScript to build interactive and responsive web experiences."
     },
     {
         id:3,
-        title: "The Problems I Want to Solve",
+        title: "Problems I Solve",
         description: "I am particularly interested in helping educational institutions, organizations, researchers, and businesses make better decisions through data and technology. From analyzing school performance and attendance to developing interactive dashboards, educational tools, calculators, and web applications, I enjoy exploring how analytical thinking and software can work together to address practical challenges. My long-term vision is to develop integrated digital solutions that connect data collection, analysis, visualization, and software applications."
     },
     {
@@ -51,13 +51,13 @@ const aboutCards =[
     },
     {
         id:5,
-        title: "Let's Build Something Meaningful",
+        title: "Meaningful Building",
         description: "If you need someone who combines mathematical thinking, analytical curiosity, educational experience, and growing software development skills, I would welcome the opportunity to connect. Let's turn problems into insights, and insights into solutions."
     },
     {
         id:6,
-        title: "My Professional Background",
-        description: "I hold a Bachelor's degree in Mathematics from the University of Rwanda, College of Science and Technology, and I bring experience as a secondary-school Mathematics Educator. Teaching has strengthened my ability to break down complex concepts, communicate clearly, think logically, and guide others through problem-solving. Alongside education, I have been developing my data analysis capabilities, working with tools and methods for data preparation, statistical analysis, research, and visualization. My learning and project work also extend into frontend development, where I use HTML, CSS, and JavaScript to build interactive and responsive web experiences."
+        title: "My Vision",
+        description: "To establish a leading educational and technological institution integrating Teaching, Mathematics, Data Analysis, and Software Development to empower people, deliver innovative solutions, provide professional services, and promote informed, mathematics-driven decision-making for sustainable development."
     }
 ]
 
@@ -96,7 +96,7 @@ aboutCards.forEach(aboutCard=>{
 
         if(text.length>60){
             p.title=text;
-            p.textContent=text.substring(0,50)+"..."
+            p.textContent=text.substring(0,90)+"..."
         }
     });
 })
@@ -195,30 +195,39 @@ highlightCards.forEach((card)=>{
 // SERVICES PAGE WITH JS
 
 const services = [
-  { title: "Frontend Development", category: "web",
+  { title: "Frontend Development", category: "Software",
     summary: "Build responsive, accessible interfaces for websites and dashboards.",
     tools: ["HTML", "CSS", "JavaScript"],
     includes: ["Responsive layouts", "Interactive features", "Interface improvements"] },
-  { title: "Python", category: "data",
+  { title: "Python", category: "Data Analysis",
     summary: "Use Python to explore data and automate repeatable tasks.",
     tools: ["Python"],
     includes: ["Data preparation", "Analysis", "Small automation scripts"] },
-  { title: "R", category: "data",
+  { title: "R", category: "Data Analysis",
     summary: "Analyze data and communicate results with clear visuals and reports.",
     tools: ["R"],
     includes: ["Statistical analysis", "Visualization", "Reproducible reports"] },
-  { title: "Stata", category: "data",
+  { title: "Stata", category: "Data Analysis",
     summary: "Prepare datasets and carry out documented statistical analysis.",
     tools: ["Stata"],
     includes: ["Data management", "Statistical workflows", "Results reporting"] },
-  { title: "Power BI", category: "data",
+  { title: "Power BI", category: "Data Analysis",
     summary: "Turn data into interactive dashboards for exploring key measures.",
     tools: ["Power BI"],
     includes: ["Data modeling", "Dashboard design", "Reporting"] },
-  { title: "Mathematics Education", category: "teaching",
+  { title: "Mathematics Education", category: "Teaching",
     summary: "Make mathematical ideas understandable through guided reasoning.",
     tools: ["Mathematics", "Teaching"],
-    includes: ["Tutoring", "Exam preparation", "Learning resources"] }
+    includes: ["Tutoring", "Exam preparation", "Learning resources"] },
+    { title: "Music Education", category: "Teaching",
+    summary: "Make music easy to read, play and present.",
+    tools: ["Music Reading", "Piano Basics"],
+    includes: ["Choir Mentorship", "Choir Conducting", "Vocal Arrangement & Training"] },
+    { title: "Career Guidance", category: "Teaching",
+    summary: "Make music easy to read, play and present.",
+    tools: ["Music Reading", "Piano Basics"],
+    includes: ["Choir Mentorship", "Choir Conducting", "Vocal Arrangement & Training"] }
+    
 ];
 
 const serviceGrid = document.querySelector("#serviceGrid");
@@ -259,60 +268,50 @@ const projects = [
   {
     title: "M- TECH School",
     category: "web",
-    image: "./Assets/webSchoolImg.jpeg",
-    alt: "Web Development School website",
-    summary: "A learning platform for people building practical web development skills.",
+    image: "./Assets/mtechSchImg.png",
+    alt: "M-TECH School learning platform",
+    summary: "A learning platform delivering practical knowledge in Mathematics, Data Analysis, and Software Development to empower  and professionals with future-ready skills.",
     tools: ["HTML", "CSS", "JavaScript"],
     demo: "https://jamesnda.github.io/webschoolProject/",
     source: null
   },
   {
-    title: "Shop-Mart",
+    title: "MCC-Initiative",
     category: "web",
-    image: "./Assets/shopMart.png",
-    alt: "Shop-Mart storefront interface",
-    summary: "A shopping application concept for browsing products and managing orders.",
+    image: "./Assets/mccImg.png",
+    alt: "Math-Coding and Creativity Initiative",
+    summary: "A youth-focused initiative inspiring creativity and innovation through Mathematics, Programming, and technology-driven learning.",
     tools: ["HTML", "CSS", "JavaScript"],
     demo: null,
     source: null
   },
   {
-    title: "Task Flow",
+    title: "Smart Calculator",
     category: "web",
-    image: "./Assets/taskFlow.jpeg",
-    alt: "Task Flow task management interface",
-    summary: "A task organizer for creating, prioritizing, and tracking daily work.",
+    image: "./Assets/smartCalc.png",
+    alt: "Smart Calculator application",
+    summary: "An interactive calculation application featuring mathematical, loan, BMI, and currency conversion tools to simplify everyday problem-solving.",
     tools: ["HTML", "CSS", "JavaScript"],
     demo: null,
     source: null
   },
   {
-    title: "Simple Calculator",
-    category: "math",
-    image: "./Assets/simpleCalc.jpg",
-    alt: "Simple calculator interface",
-    summary: "A calculator for everyday arithmetic operations.",
-    tools: ["HTML", "CSS", "JavaScript"],
+    title: "AfriCare Health Solutions",
+    category: "data",
+    image: "./Assets/schoolDashboardImage.png",
+    alt: "AfriCare Health Solutions data analysis dashboard",
+    summary: "A health-based data analysis project applying data cleaning, statistical analysis, regression, and interactive dashboards to generate insights and support data-driven school improvement.",
+    tools: ["Excel", "Python", "STATA", "Power BI"],
     demo: null,
     source: null
   },
   {
-    title: "Loan Calculator",
-    category: "math",
-    image: "./Assets/loanCalc.jpg",
-    alt: "Loan calculator interface",
-    summary: "Estimates repayments and interest from loan details.",
-    tools: ["HTML", "CSS", "JavaScript"],
-    demo: null,
-    source: null
-  },
-  {
-    title: "Simple Interest Calculator",
-    category: "math",
-    image: "./Assets/simpleInterestCalc.jpg",
-    alt: "Simple interest calculator interface",
-    summary: "Calculates simple interest from principal, rate, and time.",
-    tools: ["HTML", "CSS", "JavaScript"],
+    title: "Influencers High School Analysis",
+    category: "data",
+    image: "./Assets/influencersDashboard.png",
+    alt: "Influencers High School data analysis dashboard",
+    summary: "An educational data analysis project applying data cleaning, statistical analysis, regression, and interactive dashboards to generate insights and support data-driven school improvement.",
+    tools: ["Excel", "Python", "STATA", "Power BI"],
     demo: null,
     source: null
   }
