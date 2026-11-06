@@ -103,6 +103,8 @@ html { scroll-padding-top: 5rem; }
     .menuDiv a, #changeModeBtn { text-align: left; }
 }
 
+
+
 .lightMode{
     background: linear-gradient(to right, #2c7a94, #c4dd67);
 }

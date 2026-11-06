@@ -249,9 +249,9 @@ const services = [
     tools: ["Music Reading", "Piano Basics"],
     includes: ["Choir Mentorship", "Choir Conducting", "Vocal Arrangement & Training"] },
     { title: "Career Guidance", category: "Teaching",
-    summary: "Make music easy to read, play and present.",
-    tools: ["Music Reading", "Piano Basics"],
-    includes: ["Choir Mentorship", "Choir Conducting", "Vocal Arrangement & Training"] }
+    summary: "Discover your strengths, explore career opportunities and choose the right pathway for your future.",
+    tools: ["Career Exploration","Skills & Interest Assessment","Academic Pathway Planning","Career Opportunities Awareness"],
+    includes: ["Personal Career Counselling", "Subject & Course Selection Guidance", "Education-to-Career Pathway Mapping","Skills Development Planning","Career Readiness & Goal Setting"] }
     
 ];
 
@@ -303,7 +303,7 @@ const projects = [
   {
     title: "MCC-Initiative",
     category: "web",
-    image: "./Assets/mccImg.png",
+    image: "./Assets/MathAndTechforTomorrow.png",
     alt: "Math-Coding and Creativity Initiative",
     summary: "A youth-focused initiative inspiring creativity and innovation through Mathematics, Programming, and technology-driven learning.",
     tools: ["HTML", "CSS", "JavaScript"],
@@ -323,10 +323,10 @@ const projects = [
   {
     title: "AfriCare Health Solutions",
     category: "data",
-    image: "./Assets/schoolDashboardImage.png",
+    image: "./Assets/AfriCareMedicalCostStudyDashboard.png",
     alt: "AfriCare Health Solutions data analysis dashboard",
     summary: "A health-based data analysis project applying data cleaning, statistical analysis, regression, and interactive dashboards to generate insights and support data-driven school improvement.",
-    tools: ["Excel", "Python", "STATA", "Power BI"],
+    tools: ["R", "Python", "STATA", "Power BI"],
     demo: null,
     source: null
   },
@@ -438,7 +438,7 @@ const skillCategories = [
     {
         id: "data-analysis",
         title: "Data Analysis & Research",
-        image: "./Assets/dataAnalysisImage.jpeg",
+        image: "./Assets/dataAnalysisImage.png",
         alt: "Data analysis and visualization",
         description: "Using quantitative and qualitative methods to analyze data, build models, and communicate insights.",
         groups: [
@@ -576,7 +576,7 @@ const blogSubjects = [
     {
         title: "Data Analysis",
         description: "Working with data to find evidence and communicate useful insights.",
-        image: "./Assets/mathsTechnologyIntegration.jpeg",
+        image: "./Assets/dataAnalysisImage.png",
         page: "./blogs/data-analysis.html"
     }
 ];
