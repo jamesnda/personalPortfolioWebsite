@@ -19,55 +19,88 @@
 }
 
 /*Header~NavBar and Menu Styling*/
-.navDiv{
+html { scroll-padding-top: 5rem; }
+
+.navDiv {
+    position: fixed;
+    inset: 0 0 auto;
+    z-index: 1000;
+    min-height: 64px;
+    padding: .65rem clamp(1rem, 4vw, 3rem);
     display: flex;
-    flex-direction: row;
-    gap: 30px;
-    background: linear-gradient(to right, #ac8cd5, #dd6767, rgb(20, 20, 222));
-    width: 100%;
-    padding: 10px;
     align-items: center;
-    justify-content: space-evenly;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    position:fixed;
-
+    justify-content: space-between;
+    background: linear-gradient(to right, #ac8cd5, #dd6767, rgb(20, 20, 222));
+    box-shadow: 0 2px 8px rgb(0 0 0 / 18%);
 }
 
-#logoBtn,.identSection{
-    width: 40px;
-    height: 40px;
-    border-radius:50%;
-    border: none;
-    cursor: pointer;
-}
-#logoBtn, #homeBtn, #aboutBtn, #servicesBtn,#projectBtn, #skillsBtn,#blogBtn, #contactBtn, #loginBtn, #cvBtn, #hireMeBtn{
-    border: none;
+.brand {
+    display: flex;
+    align-items: center;
+    gap: .65rem;
     color: white;
-    font-size: larger;
-    font-weight: 550;
+    font-weight: 700;
     text-decoration: none;
 }
 
-#homeBtn:hover, #aboutBtn:hover, #servicesBtn:hover,#projectBtn:hover, #skillsBtn:hover,#blogBtn:hover, #contactBtn:hover, #loginBtn:hover{
-    cursor: pointer;
-    color: black;
+.brand img { width: 40px; height: 40px; border-radius: 50%; }
+
+.menuDiv { display: flex; align-items: center; gap: .35rem; }
+
+.menuDiv a {
+    padding: .6rem .7rem;
     border-radius: 5px;
-    width: 110%;
-    text-decoration: underline;
+    color: white;
+    text-decoration: none;
 }
-#loginBtn{
-    color: rgb(13, 237, 233);
-} 
 
-#blogBtn{
-    color: yellow;
-} 
+.menuDiv a:hover,
+.menuDiv a:focus-visible { background: rgb(0 0 0 / 20%); }
 
-.menuDiv{
-    padding: 30px;
-    display: flex;
-    gap: 20px;
-    padding: 10px;
+.menuDiv a:focus-visible,
+.nav-toggle:focus-visible,
+#changeModeBtn:focus-visible { outline: 2px solid white; outline-offset: 3px; }
+
+#changeModeBtn {
+    padding: .65rem .8rem;
+    border: 0;
+    border-radius: 5px;
+    background: linear-gradient(to right, #2c7a94, #b74c12);
+    color: white;
+    cursor: pointer;
+}
+
+.nav-toggle { display: none; }
+
+@media (max-width: 820px) {
+    .nav-toggle {
+        display: grid;
+        gap: 5px;
+        padding: .65rem;
+        border: 1px solid rgb(255 255 255 / 70%);
+        border-radius: 5px;
+        background: transparent;
+        cursor: pointer;
+    }
+
+    .nav-toggle span { width: 22px; height: 2px; background: white; }
+
+    .menuDiv {
+        display: none;
+        position: absolute;
+        top: calc(100% + .5rem);
+        right: 1rem;
+        width: min(24rem, calc(100vw - 2rem));
+        padding: 1rem;
+        flex-direction: column;
+        align-items: stretch;
+        background: linear-gradient(to right, #ac8cd5, #dd6767, rgb(20, 20, 222));
+        border-radius: 6px;
+        box-shadow: 0 8px 24px rgb(0 0 0 / 25%);
+    }
+
+    .navDiv.is-open .menuDiv { display: flex; }
+    .menuDiv a, #changeModeBtn { text-align: left; }
 }
 
 .lightMode{
@@ -432,74 +465,58 @@
     font-size: 15px;
 }
 
-.categorySections{
+.skill-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
-    align-items: stretch;
     gap: 1.25rem;
 }
 
-.category-card{
-    background-color: white;
-    border-radius: 5px;
-    padding: 20px;
+.skill-card {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    gap: 10px;
-    height: auto;
-    transition: 0.3s;
+    gap: 0.75rem;
+    padding: 1rem;
+    background: #fff;
+    border-radius: 6px;
 }
 
-.category-card:hover{
-    background-color: rgba(115, 217, 227, 0.9);
-    
+.skill-card img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
 }
-.category-description{
-    line-height: 1.6;
-}
-.clustersBtn{
+
+.skill-card button,
+.dialog-heading button {
     min-height: 44px;
-    height: auto;
-    margin-top: auto;
-}
-
-.clustersBtn:hover{
+    padding: 0.6rem 1rem;
     cursor: pointer;
-    color: brown;
-}
-.fullStackSkills{
-    background-color: #be8f8f;
-}
-.mathematicsAndQuantitativeEducationSkills{
-    background-color: #4D3C3C;
 }
 
-.mathTechIntegrationSkills{
-    background-color: #2E3C6D;
+.skill-dialog {
+    width: min(52rem, calc(100% - 2rem));
+    max-height: 85vh;
+    padding: 1.5rem;
+    border: 0;
+    border-radius: 8px;
+    overflow: auto;
 }
 
-.musicSkills{
-    background-color: rgb(87, 53, 222);
+.skill-dialog::backdrop {
+    background: rgb(0 0 0 / 60%);
 }
 
-.clustersBtn:focus-visible,
-.backToCategoryBtn:focus-visible {
-    outline: 3px solid #111;
-    outline-offset: 3px;
+.dialog-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
 }
 
-.categorySections.is-hidden {
-    display: none;
+.skill-group {
+    padding-block: 0.75rem;
+    border-top: 1px solid #ccc;
 }
-
-.fullstackModal.is-active,
-.mathematicsEducationCover.is-active,
-.mathTechEducationCover.is-active,
-.musicEducationCover.is-active {
-    display: block;
-}
-
 /*Styling Full-stack Subclusters*/
 
 .fullstackModal,.mathematicsEducationCover,.mathTechEducationCover{

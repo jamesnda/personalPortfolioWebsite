@@ -1,3 +1,28 @@
+// NAVIGATION SECTION with Vanilla JS
+const siteHeader = document.querySelector(".navDiv");
+const navToggle = document.querySelector("#navToggle");
+const primaryNav = document.querySelector("#primaryNav");
+
+function setNavOpen(isOpen) {
+    siteHeader.classList.toggle("is-open", isOpen);
+    navToggle.setAttribute("aria-expanded", String(isOpen));
+    navToggle.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
+}
+
+navToggle.addEventListener("click", () => {
+    setNavOpen(navToggle.getAttribute("aria-expanded") !== "true");
+});
+
+primaryNav.addEventListener("click", event => {
+    if (event.target.closest("a")) setNavOpen(false);
+});
+
+document.addEventListener("keydown", event => {
+    if (event.key === "Escape") {
+        setNavOpen(false);
+        navToggle.focus();
+    }
+});
 
 // Light and Dark Modes Designing
 const lightMode = false;
@@ -79,24 +104,24 @@ aboutCards.forEach(aboutCard=>{
     `
 
 // Management of string lengths of titles on each of the about cards
-    const aboutCardTitle=document.querySelectorAll("h1");
-    aboutCardTitle.forEach(h1=>{
-        let aboutTitle=h1.textContent;
+    const aboutCardTit=document.querySelectorAll("h1");
+    aboutCardTit.forEach(e=>{
+        let aboutTitle=e.textContent;
 
         if(aboutTitle.length>20){
-            h1.title=aboutTitle;
-            h1.textContent=aboutTitle.substring(0,19)+"..."
+            e.title=aboutTitle;
+            e.textContent=aboutTitle.substring(0,15)+"..."
         }
     });
 
 // Management of string lengths of titles on each of the about cards
-    const aboutCardDescription=document.querySelectorAll("p");
-    aboutCardDescription.forEach(p=>{
-        let text=p.textContent;
+    const aboutCardDescription=document.querySelectorAll(".aboutCardDescription");
+    aboutCardDescription.forEach(el=>{
+        let text=el.textContent;
 
         if(text.length>60){
-            p.title=text;
-            p.textContent=text.substring(0,90)+"..."
+            el.title=text;
+            el.textContent=text.substring(0,200)+"..."
         }
     });
 })
@@ -358,44 +383,141 @@ renderProjects();
 
 // SKILLS SECTION WITH VANILLA JS
 
-const categorySections = document.querySelector(".categorySections");
-const clustersDiv = document.querySelector(".clustersDiv");
+const skillCategories = [
+    {
+        id: "frontend",
+        title: "Frontend Software Development",
+        image: "./Assets/fullStackSoftwareDevelopment.jpeg",
+        alt: "Web development",
+        description: "Building responsive web applications and interfaces.",
+        groups: [
+            {
+                title: "Frontend Engineering",
+                skills: [
+                    "UI architecture",
+                    "Responsive design",
+                    "Accessibility",
+                    "UX optimization"
+                ],
+                level: "Intermediate",
+                applications: ["Educational platforms", "Dashboards"]
+            },
+            {
+                title: "Backend and Data Foundations",
+                skills: [
+                    "API architecture",
+                    "Database structuring",
+                    "Git workflow",
+                    "Debugging"
+                ],
+                level: "Academic foundation",
+                applications: ["Learning systems", "Web applications"]
+            }
+        ]
+    },
+    {
+        id: "mathematics",
+        title: "Mathematics & Quantitative Education",
+        image: "./Assets/mathematicsQuantitativeEducation.jpg",
+        alt: "Mathematics education",
+        description: "Mathematics education grounded in analytical reasoning.",
+        groups: [
+            {
+                title: "Mathematical Foundations",
+                skills: [
+                    "Calculus",
+                    "Linear algebra",
+                    "Probability and statistics",
+                    "Differential equations"
+                ],
+                level: "Academic degree and teaching experience",
+                applications: ["Tutoring", "Assessment design"]
+            }
+        ]
+    },
+    {
+        id: "data-analysis",
+        title: "Data Analysis & Research",
+        image: "./Assets/dataAnalysisImage.jpeg",
+        alt: "Data analysis and visualization",
+        description: "Using quantitative and qualitative methods to analyze data, build models, and communicate insights.",
+        groups: [
+            {
+                title: "Data Analysis, Modeling & Visualization",
+                skills: [
+                    "Power BI for Interactive dashboards",
+                    "Python for Quantitative analysis and modeling",
+                    "R for Quantitative analysis and modeling",
+                    "STATA for Quantitative analysis and modeling",
+                    "MaxQDA for Qualitative analysis and modeling",
+                    "Excel for Data analysis"
+                ],
+                level: "Full skill package",
+                applications: [
+                    "Interactive dashboards and reporting",
+                    "Quantitative research and modeling",
+                    "Qualitative data analysis",
+                    "Evidence-based decision-making"
+                ]
+            }
+        ]
+    },
+    {
+        id: "music",
+        title: "Music Theory & Piano Foundations",
+        image: "./Assets/musicBasics.jpeg",
+        alt: "Music theory and piano",
+        description: "Foundational musicianship through theory and piano practice.",
+        groups: [
+            {
+                title: "Music Foundations",
+                skills: ["Music theory", "Piano foundations", "Harmony"],
+                level: "Foundational",
+                applications: ["Music learning", "Educational practice"]
+            }
+        ]
+    }
+];
 
-const skillPanels = {
-    fullstack: document.querySelector(".fullstackModal"),
-    math: document.querySelector(".mathematicsEducationCover"),
-    mathTech: document.querySelector(".mathTechEducationCover"),
-    music: document.querySelector(".musicEducationCover")
-};
+const skillGrid = document.querySelector("#skillGrid");
+const skillDialog = document.querySelector("#skillDialog");
+const skillDialogTitle = document.querySelector("#skillDialogTitle");
+const skillDialogContent = document.querySelector("#skillDialogContent");
 
-let lastSkillButton;
+skillGrid.innerHTML = skillCategories.map(category => `
+    <article class="skill-card">
+        <img src="${category.image}" alt="${category.alt}">
+        <h3>${category.title}</h3>
+        <p>${category.description}</p>
+        <button type="button" data-category="${category.id}">View skills</button>
+    </article>
+`).join("");
 
-categorySections.addEventListener("click", (event) => {
-    const button = event.target.closest("[data-skill-panel]");
+skillGrid.addEventListener("click", event => {
+    const button = event.target.closest("[data-category]");
     if (!button) return;
 
-    const panel = skillPanels[button.dataset.skillPanel];
-    if (!panel) return;
+    const category = skillCategories.find(
+        item => item.id === button.dataset.category
+    );
+    if (!category) return;
 
-    lastSkillButton = button;
-    Object.values(skillPanels).forEach((item) => {
-        item?.classList.remove("is-active");
-    });
+    skillDialogTitle.textContent = category.title;
+    skillDialogContent.innerHTML = category.groups.map(group => `
+        <section class="skill-group">
+            <h4>${group.title}</h4>
+            <h5>Skills</h5>
+            <ul>${group.skills.map(skill => `<li>${skill}</li>`).join("")}</ul>
+            <p><strong>Level:</strong> ${group.level}</p>
+            <p><strong>Applications:</strong> ${group.applications.join(", ")}</p>
+        </section>
+    `).join("");
 
-    categorySections.classList.add("is-hidden");
-    panel.classList.add("is-active");
-    panel.querySelector(".backToCategoryBtn")?.focus();
+    skillDialog.showModal();
 });
 
-clustersDiv.addEventListener("click", (event) => {
-    if (!event.target.closest(".backToCategoryBtn")) return;
-
-    Object.values(skillPanels).forEach((panel) => {
-        panel?.classList.remove("is-active");
-    });
-
-    categorySections.classList.remove("is-hidden");
-    lastSkillButton?.focus();
+document.querySelector("#closeSkillDialog").addEventListener("click", () => {
+    skillDialog.close();
 });
 
 

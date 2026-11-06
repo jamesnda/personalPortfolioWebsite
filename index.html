@@ -8,26 +8,29 @@
 </head>
 <body>
     <!--NAVBAR-SECTION-->
-        <div class="navDiv" id="navSectionId">
-            <div class="identSection">
-                <a href="#navSectionId"><img src="./Assets/myLoogo.png" alt="myLogoImg" id="logoBtn"></a>
-            </div>
-            <div class="menuDiv">
-                <a href="#homeSectionId" id="homeBtn">Home</a>
-                <a href="#aboutSectionId" id="aboutBtn">About</a>
-                <a href="#servicesSectionId" id="servicesBtn">Services</a>
-                <a href="#projectSectionId" id="projectBtn">Projects</a>
-                <a href="#skillsSectionId" id="skillsBtn">Skills</a>
-                <a href="#contactSectionId" id="contactBtn">Contact</a>
-            </div>
-            <button id="changeModeBtn">Switch Mode</button>
-            <div class="visitSite">
-                <a href="#blogSectionId" id="blogBtn">Blog</a>
-            </div>
-            <div class="loginSite">
-                <a href="#loginId" id="loginBtn">Login</a>
-            </div>
-        </div>
+        <header class="navDiv">
+    <a class="brand" href="#homeSectionId" aria-label="James Ndayishimiye, home">
+        <img src="./Assets/myLoogo.png" alt="">
+        <span>James Ndayishimiye</span>
+    </a>
+
+    <button class="nav-toggle" id="navToggle" type="button"
+        aria-label="Open navigation" aria-expanded="false" aria-controls="primaryNav">
+        <span></span><span></span><span></span>
+    </button>
+
+    <nav class="menuDiv" id="primaryNav" aria-label="Main navigation">
+        <a href="#homeSectionId">Home</a>
+        <a href="#aboutSectionId">About</a>
+        <a href="#servicesSectionId">Services</a>
+        <a href="#projectSectionId">Projects</a>
+        <a href="#skillsSectionId">Skills</a>
+        <a href="#contactSectionId">Contact</a>
+        <a href="#blogSectionId">Blog</a>
+        <a href="#loginId">Login</a>
+        <button id="changeModeBtn" type="button">Switch Mode</button>
+    </nav>
+</header>
         
     <div class="containerDiv">
         <!--HOME -SECTION-->
@@ -50,10 +53,10 @@
                 <a class="button buttonSecondary" href="#projectSectionId">View projects</a>
             </div>
 
-            <p class="heroLinks">
-                <a href="YOUR_GITHUB_URL">GitHub</a>
-                <a href="YOUR_LINKEDIN_URL">LinkedIn</a>
-            </p>
+            <div class="heroLinks">
+                <a href="https://github.com/jamesnda">GitHub</a>
+                <a href="https://www.linkedin.com/in/ndayishimiye-james-b54592131/">LinkedIn</a>
+            </div>
         </div>
 
         <div class="heroPortrait">
@@ -148,490 +151,18 @@
         <section class="skillsDiv" id="skillsSectionId">
             <div class="section-header">
                 <h4 class="section-title">PROFESSIONAL & TECHNICAL SKILLS</h4>
-                <h6 class="section-subtitle">Bridging Full-Stack Engineering with Mathematics Education Innovation.</h6>
+                <h6 class="section-subtitle">Bridging Data analysis, Software development with Mathematics Education Innovation.</h6>
             </div>
-            <div class="category-sections-cover">
-                <div class="categorySections">
-                    <div class="category-card">
-                        <div class="category-title fullStackSkills">
-                            <h4 class="skillsTitle">Full-Stack Software Development</h4>
-                            <img src="./Assets/fullStackSoftwareDevelopment.jpeg" alt="FullStackSoftwareDevelopment Img" class="skillsImg">
-                        </div>
-                        <h6 class="category-description">Building scalable, responsive, and performance-optimized web applications from frontend interface to backend architecture.</h6>
-                        <button class="clustersBtn" data-skill-panel="fullstack">View skills</button>
-                    </div>
+            <div id="skillGrid" class="skill-grid"></div>
 
-                    <div class="category-card">
-                        <div class="category-title mathematicsAndQuantitativeEducationSkills">
-                            <h4 class="skillsTitle">Mathematics & Quantitative Education</h4>
-                            <img src="./Assets/mathematicsQuantitativeEducation.jpg" alt="MathematicsQuantitativeEducation Img" class="skillsImg">
-                        </div>
-                        <h6 class="category-description">Delivering structured, concept-driven mathematics education aligned with analytical reasoning and real-world problem solving.</h6>
-                        <button class="clustersBtn" data-skill-panel="math">View skills</button>
-                    </div>
-
-                    <div class="category-card">
-                        <div class="category-title mathTechIntegrationSkills">
-                            <h4 class="skillsTitle">Math–Technology Integration</h4>
-                            <img src="./Assets/mathsTechnologyIntegration.jpeg" alt="MathsTechnologyIntegration Img" class="skillsImg">
-                        </div>
-                        <h6 class="category-description">Integrating computational tools with mathematics education to create modern, scalable learning systems.</h6>
-                        <button class="clustersBtn" data-skill-panel="mathTech">View skills</button>
-                    </div>
-
-                    <div class="category-card">
-                        <div class="category-title musicSkills">
-                            <h4 class="skillsTitle">Music Theory & Piano Foundations</h4>
-                            <img src="./Assets/musicBasics.jpeg" alt="AnalyticalAndProfessionalSkills Img" class="skillsImg">
-                        </div>
-                        <h6 class="category-description">Developing foundational musicianship through structured music theory and piano practice, with a focus on harmony, composition, and educational application.</h6>
-                        <button class="clustersBtn" data-skill-panel="music">View skills</button>
-                    </div>
+            <dialog id="skillDialog" class="skill-dialog" aria-labelledby="skillDialogTitle">
+                <div class="dialog-heading">
+                    <h3 id="skillDialogTitle"></h3>
+                    <button id="closeSkillDialog" type="button" aria-label="Close skills">Close</button>
                 </div>
-            </div>
+                <div id="skillDialogContent"></div>
+            </dialog>
 
-            <div class="clustersDiv">
-                <!--Fullstack Skills-->
-                <div class="fullstackModal">
-                    <div class="fullstackCover">
-                        <button class="backToCategoryBtn">BACK</button>
-                        <div class="full-stack-subclusters">
-                            <div class="subcluster-card">
-                                <div class="subcluster-title">
-                                    <h4>Frontend Engineering</h4>
-                                </div>
-                                <div class="skills">
-                                    <h5 class="cluster-subtitle">Skills:</h5>
-                                    <ul><li>UI Architecture</li></ul>
-                                    <ul><li>Responsive Design Principles</li></ul>
-                                    <ul><li>Component-based thinking</li></ul>
-                                    <ul><li>Accessibility mindset</li></ul>
-                                    <ul><li>UX optimization</li></ul>
-                                </div>
-                                <div class="competency-indicators">
-                                    <h5 class="cluster-subtitle">Mastery-Level:</h5>
-                                    <span>Intermediate</span>
-                                </div>
-                                <div class="real-worldApplicationTags">
-                                    <h5 class="cluster-subtitle">Real-World Applications:</h5>
-                                    <span>
-                                        <ul><li>LMS Systems</li></ul>
-                                        <ul><li>Educational Platforms</li></ul>
-                                        <ul><li>Data Analytics Dashboards</li></ul>
-                                        <ul><li>Financial Tools</li></ul>
-                                        <ul><li>Automation Systems</li></ul>
-                                    </span>
-                                </div>
-                            </div>
-
-                            <div class="subcluster-card">
-                                <div class="subcluster-title">
-                                    <h4>Backend Development</h4>
-                                </div>
-                                <div class="skills">
-                                    <h5 class="cluster-subtitle">Skills:</h5>
-                                    <ul><li>API architecture thinking</li></ul>
-                                    <ul><li>Authentication & Authorization logic</li></ul>
-                                    <ul><li>Database structuring principles</li></ul>
-                                    <ul><li>Server-side logic modeling</li></ul>
-                                </div>
-                                <div class="competency-indicators">
-                                    <h5 class="cluster-subtitle">Mastery-Level:</h5>
-                                    <span>Academic Foundation</span>
-                                </div>
-                                <div class="real-worldApplicationTags">
-                                    <h5 class="cluster-subtitle">Real-World Applications:</h5>
-                                    <span>
-                                        <ul><li>LMS Systems</li></ul>
-                                        <ul><li>Educational Platforms</li></ul>
-                                        <ul><li>Data Analytics Dashboards</li></ul>
-                                        <ul><li>Financial Tools</li></ul>
-                                        <ul><li>Automation Systems</li></ul>
-                                    </span>
-                                </div>
-                            </div>
-
-                            <div class="subcluster-card">
-                                <div class="subcluster-title">
-                                    <h4>Database & Data Modeling</h4>
-                                </div>
-                                <div class="skills">
-                                    <h5 class="cluster-subtitle">Skills:</h5>
-                                    <ul><li>Relational modeling</li></ul>
-                                    <ul><li>Query optimization logic</li></ul>
-                                    <ul><li>Data normalization mindset</li></ul>
-                                </div>
-                                <div class="competency-indicators">
-                                    <h5 class="cluster-subtitle">Mastery-Level:</h5>
-                                    <span>Academic Foundation</span>
-                                </div>
-                                <div class="real-worldApplicationTags">
-                                    <h5 class="cluster-subtitle">Real-World Applications:</h5>
-                                    <span>
-                                        <ul><li>LMS Systems</li></ul>
-                                        <ul><li>Educational Platforms</li></ul>
-                                        <ul><li>Data Analytics Dashboards</li></ul>
-                                        <ul><li>Financial Tools</li></ul>
-                                        <ul><li>Automation Systems</li></ul>
-                                    </span>
-                                </div>
-                            </div>
-
-                            <div class="subcluster-card">
-                                <div class="subcluster-title">
-                                    <h4>Dev Workflow & Engineering Discipline</h4>
-                                </div>
-                                <div class="skills">
-                                    <h5 class="cluster-subtitle">Skills:</h5>
-                                    <ul><li>Git workflow thinking</li></ul>
-                                    <ul><li>Version control logic</li></ul>
-                                    <ul><li>Deployment awareness</li></ul>
-                                    <ul><li>Clean code principles</li></ul>
-                                </div>
-                                <div class="competency-indicators">
-                                    <h5 class="cluster-subtitle">Mastery-Level:</h5>
-                                    <span>Applied Knowledge</span>
-                                </div>
-                                <div class="real-worldApplicationTags">
-                                    <h5 class="cluster-subtitle">Real-World Applications:</h5>
-                                    <span>
-                                        <ul><li>LMS Systems</li></ul>
-                                        <ul><li>Educational Platforms</li></ul>
-                                        <ul><li>Data Analytics Dashboards</li></ul>
-                                        <ul><li>Financial Tools</li></ul>
-                                        <ul><li>Automation Systems</li></ul>
-                                    </span>
-                                </div>
-                            </div>
-
-                            <div class="subcluster-card">
-                                <div class="subcluster-title">
-                                    <h4>Programming Foundations</h4>
-                                </div>
-                                <div class="skills">
-                                    <h5 class="cluster-subtitle">Skills:</h5>
-                                    <ul><li>Algorithmic thinking</li></ul>
-                                    <ul><li>Data structures understanding</li></ul>
-                                    <ul><li>Debugging methodology</li></ul>
-                                    <ul><li>Computational logic</li></ul>
-                                </div>
-                                <div class="competency-indicators">
-                                    <h5 class="cluster-subtitle">Mastery-Level:</h5>
-                                    <span>Academic Foundation</span>
-                                </div>
-                                <div class="real-worldApplicationTags">
-                                    <h5 class="cluster-subtitle">Real-World Applications:</h5>
-                                    <span>
-                                        <ul><li>LMS Systems</li></ul>
-                                        <ul><li>Educational Platforms</li></ul>
-                                        <ul><li>Data Analytics Dashboards</li></ul>
-                                        <ul><li>Financial Tools</li></ul>
-                                        <ul><li>Automation Systems</li></ul>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        <button class="backToCategoryBtn">BACK</button>
-                    </div>
-                </div>
-
-                <!--Mathathematics&Quantitative Education Skills-->
-                <div class="mathematicsEducationCover">
-                    <div class="mathematics-subclusters">
-                        <div class="subcluster-card">
-                            <div class="subcluster-title">
-                                <h4>Advanced Mathematical Foundations</h4>
-                            </div>
-                            <div class="skills">
-                                <h5>Skills:</h5>
-                                <ul><li>Calculus & Analysis</li></ul>
-                                <ul><li>Linear Algebra</li></ul>
-                                <ul><li>Probability & Statistics</li></ul>
-                                <ul><li>Differential Equations</li></ul>
-                                <ul><li>Discrete Mathematics</li></ul>
-                            </div>
-                            <div class="competency-indicators">
-                                <h5>Mastery-Level:</h5>
-                                <span>Academic Degree Level & 8+Years Teaching Experience</span>
-                            </div>
-                            <div class="real-worldApplicationTags">
-                                <h5>Real-World Applications:</h5>
-                                <span>
-                                    <ul><li>LMS Systems</li></ul>
-                                    <ul><li>Educational Platforms</li></ul>
-                                    <ul><li>Data Analytics Dashboards</li></ul>
-                                    <ul><li>Financial Tools</li></ul>
-                                    <ul><li>Automation Systems</li></ul>
-                                </span>
-                            </div>
-                        </div>
-
-                        <div class="subcluster-card">
-                            <div class="subcluster-title">
-                                <h4>Pedagogical Expertise</h4>
-                            </div>
-                            <div class="skills">
-                                <h5>Skills:</h5>
-                                <ul><li>Curriculum interpretation (REB-aligned)</li></ul>
-                                <ul><li>Assessment design</li></ul>
-                                <ul><li>Concept simplification strategy</li></ul>
-                                <ul><li>Exam preparation systems</li></ul>
-                                <ul><li>Learning psychology awareness</li></ul>
-                            </div>
-                            <div class="competency-indicators">
-                                <h5>Mastery-Level:</h5>
-                                <span>8+Years Teaching Experience</span>
-                            </div>
-                            <div class="real-worldApplicationTags">
-                                <h5>Real-World Applications:</h5>
-                                <span>
-                                    <ul><li>LMS Systems</li></ul>
-                                    <ul><li>Educational Platforms</li></ul>
-                                </span>
-                            </div>
-                        </div>
-
-                        <div class="subcluster-card">
-                            <div class="subcluster-title">
-                                <h4>Applied Quantitative Skills</h4>
-                            </div>
-                            <div class="skills">
-                                <h5>Skills:</h5>
-                                <ul><li>Mathematical modeling</li></ul>
-                                <ul><li>Statistical reasoning</li></ul>
-                                <ul><li>Financial analysis tools</li></ul>
-                                <ul><li>Problem-solving frameworks</li></ul>
-                            </div>
-                            <div class="competency-indicators">
-                                <h5>Mastery-Level:</h5>
-                                <span>Academic Degree Level & 8+Years Teaching Experience</span>
-                            </div>
-                            <div class="real-worldApplicationTags">
-                                <h5>Real-World Applications:</h5>
-                                <span>
-                                    <ul><li>LMS Systems</li></ul>
-                                    <ul><li>Educational Platforms</li></ul>
-                                    <ul><li>Data Analytics Dashboards</li></ul>
-                                    <ul><li>Financial Tools</li></ul>
-                                    <ul><li>Automation Systems</li></ul>
-                                </span>
-                            </div>
-                        </div>
-
-                        <div class="subcluster-card">
-                            <div class="subcluster-title">
-                                <h4>Educational Technology Integration</h4>
-                            </div>
-                            <div class="skills">
-                                <h5>Skills:</h5>
-                                <ul><li>Digital lesson design</li></ul>
-                                <ul><li>Online content structuring</li></ul>
-                                <ul><li>Educational video systems</li></ul>
-                                <ul><li>Tech-assisted learning strategy</li></ul>
-                            </div>
-                            <div class="competency-indicators">
-                                <h5>Mastery-Level:</h5>
-                                <span>8+Years Teaching Experience</span>
-                            </div>
-                            <div class="real-worldApplicationTags">
-                                <h5>Real-World Applications:</h5>
-                                <span>
-                                    <ul><li>LMS Systems</li></ul>
-                                    <ul><li>Educational Platforms</li></ul>
-                                    <ul><li>Automation Systems</li></ul>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!--Math–Technology Integration Skills-->
-                <div class="mathTechEducationCover">
-                    <div class="mathsTech-subclusters">
-                        <div class="subcluster-card">
-                            <div class="subcluster-title">
-                                <h4>Python for Mathematical Modeling</h4>
-                            </div>
-                            <div class="skills">
-                                <h5 class="cluster-subtitle">Skills:</h5>
-                                <ul><li>Translating mathematical theory into executable code</li></ul>
-                                <ul><li>Building computational simulations</li></ul>
-                                <ul><li>Automating mathematical processes</li></ul>
-                            </div>
-                            <div class="competency-indicators">
-                                <h5 class="cluster-subtitle">Mastery-Level:</h5>
-                                <span>Academic Foundation</span>
-                            </div>
-                            <div class="real-worldApplicationTags">
-                                <h5 class="cluster-subtitle">Real-World Applications:</h5>
-                                <span>
-                                    <ul><li>Student performance prediction models</li></ul>
-                                    <ul><li>Exam analytics systems</li></ul>
-                                    <ul><li>Mathematical simulation tools</li></ul>
-                                    <ul><li>Automated grading prototypes</li></ul>
-                                    <ul><li>Research modeling environments</li></ul>
-                                </span>
-                            </div>
-                        </div>
-
-                        <div class="subcluster-card">
-                            <div class="subcluster-title">
-                                <h4>Data Analysis & Visualization for Mathematics Education</h4>
-                            </div>
-                            <div class="skills">
-                                <h5 class="cluster-subtitle">Skills:</h5>
-                                <ul><li>Statistical analysis of student data</li></ul>
-                                <ul><li>Visualization of learning trends</li></ul>
-                                <ul><li>Quantitative reporting</li></ul>
-                            </div>
-                            <div class="competency-indicators">
-                                <h5 class="cluster-subtitle">Mastery-Level:</h5>
-                                <span>Academic Foundation</span>
-                            </div>
-                            <div class="real-worldApplicationTags">
-                                <h5 class="cluster-subtitle">Real-World Applications:</h5>
-                                <span>
-                                    <ul><li>School performance dashboards</li></ul>
-                                    <ul><li>Exam trend analysis</li></ul>
-                                    <ul><li>Progress tracking systems</li></ul>
-                                    <ul><li>Comparative school analytics</li></ul>
-                                    <ul><li>Educational research reports</li></ul>
-                                </span>
-                            </div>
-                        </div>
-
-                        <div class="subcluster-card">
-                            <div class="subcluster-title">
-                                <h4>Algorithmic Thinking for Curriculum Design</h4>
-                            </div>
-                            <div class="skills">
-                                <h5 class="cluster-subtitle">Skills:</h5>
-                                <ul><li>Structuring lessons like algorithms</li></ul>
-                                <ul><li>Designing step-by-step logical learning flows</li></ul>
-                                <ul><li>Building problem-solving frameworks</li></ul>
-                            </div>
-                            <div class="competency-indicators">
-                                <h5 class="cluster-subtitle">Mastery-Level:</h5>
-                                <span>Academic Foundation</span>
-                            </div>
-                            <div class="real-worldApplicationTags">
-                                <h5 class="cluster-subtitle">Real-World Applications:</h5>
-                                <span>
-                                    <ul><li>Exam-focused revision systems</li></ul>
-                                    <ul><li>Mathematics learning roadmaps</li></ul>
-                                    <ul><li>Concept mastery frameworks</li></ul>
-                                    <ul><li>Problem-solving training modules</li></ul>
-                                    <ul><li>Standardized assessment systems</li></ul>
-                                </span>
-                            </div>
-                        </div>
-
-                        <div class="subcluster-card">
-                            <div class="subcluster-title">
-                                <h4>EdTech Product Architecture</h4>
-                            </div>
-                            <div class="skills">
-                                <h5 class="cluster-subtitle">Skills:</h5>
-                                <ul><li>Designing educational platforms</li></ul>
-                                <ul><li>Mapping user learning journeys</li></ul>
-                                <ul><li>Structuring LMS systems</li></ul>
-                            </div>
-                            <div class="competency-indicators">
-                                <h5 class="cluster-subtitle">Mastery-Level:</h5>
-                                <span>Academic Foundation</span>
-                            </div>
-                            <div class="real-worldApplicationTags">
-                                <h5 class="cluster-subtitle">Real-World Applications:</h5>
-                                <span>
-                                    <ul><li>LMS platforms</li></ul>
-                                    <ul><li>Online math academies</li></ul>
-                                    <ul><li>Course management systems</li></ul>
-                                    <ul><li>Interactive practice environments</li></ul>
-                                    <ul><li>Mobile-first learning apps</li></ul>
-                                </span>
-                            </div>
-                        </div>
-
-                        <div class="subcluster-card">
-                            <div class="subcluster-title">
-                                <h4>Automation & Digital Assessment Systems</h4>
-                            </div>
-                            <div class="skills">
-                                <h5 class="cluster-subtitle">Skills:</h5>
-                                <ul><li>Automating quiz generation</li></ul>
-                                <ul><li>Intelligent feedback systems</li></ul>
-                                <ul><li>Time-efficient evaluation tools</li></ul>
-                            </div>
-                            <div class="competency-indicators">
-                                <h5 class="cluster-subtitle">Mastery-Level:</h5>
-                                <span>Academic Foundation</span>
-                            </div>
-                            <div class="real-worldApplicationTags">
-                                <h5 class="cluster-subtitle">Real-World Applications:</h5>
-                                <span>
-                                    <ul><li>Auto-marking systems</li></ul>
-                                    <ul><li>MCQ generators</li></ul>
-                                    <ul><li>Real-time feedback engines</li></ul>
-                                    <ul><li>Practice test simulators</li></ul>
-                                    <ul><li>Diagnostic testing platforms</li></ul>
-                                </span>
-                            </div>
-                        </div>
-
-                        <div class="subcluster-card">
-                            <div class="subcluster-title">
-                                <h4>Mathematical Visualization & Interactive Learning Tools</h4>
-                            </div>
-                            <div class="skills">
-                                <h5 class="cluster-subtitle">Skills:</h5>
-                                <ul><li>Transforming abstract math into visual models</li></ul>
-                                <ul><li>Interactive simulations</li></ul>
-                                <ul><li>Conceptual animations</li></ul>
-                            </div>
-                            <div class="competency-indicators">
-                                <h5 class="cluster-subtitle">Mastery-Level:</h5>
-                                <span>Academic Foundation</span>
-                            </div>
-                            <div class="real-worldApplicationTags">
-                                <h5 class="cluster-subtitle">Real-World Applications:</h5>
-                                <span>
-                                    <ul><li>Interactive graphing tools</li></ul>
-                                    <ul><li>Geometry visualizers</li></ul>
-                                    <ul><li>Calculus animation modules</li></ul>
-                                    <ul><li>Probability simulators</li></ul>
-                                    <ul><li>Real-Life Maths Lab prototypes</li></ul>
-                                </span>
-                            </div>
-                        </div>
-
-                        <div class="subcluster-card">
-                            <div class="subcluster-title">
-                                <h4>Research & Quantitative Innovation Strategy</h4>
-                            </div>
-                            <div class="skills">
-                                <h5 class="cluster-subtitle">Skills:</h5>
-                                <ul><li>Educational data research</li></ul>
-                                <ul><li>Experimental teaching methods</li></ul>
-                                <ul><li>Analytical improvement systems</li></ul>
-                            </div>
-                            <div class="competency-indicators">
-                                <h5 class="cluster-subtitle">Mastery-Level:</h5>
-                                <span>Academic Foundation</span>
-                            </div>
-                            <div class="real-worldApplicationTags">
-                                <h5 class="cluster-subtitle">Real-World Applications:</h5>
-                                <span>
-                                    <ul><li>Educational impact studies</li></ul>
-                                    <ul><li>Curriculum improvement analysis</li></ul>
-                                    <ul><li>School innovation proposals</li></ul>
-                                    <ul><li>Policy-informed analytics</li></ul>
-                                    <ul><li>Research publications</li></ul>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </section>
 
         <!--CONTACTS SECTION-->
