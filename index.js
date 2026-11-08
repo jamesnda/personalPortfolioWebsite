@@ -31,7 +31,7 @@ document.addEventListener("keydown", event => {
 });
 
 // Light and Dark Modes Designing
-const lightMode = false;
+let lightMode = true;
 const containerDiv = document.querySelector(".containerDiv");
 const aboutSectionId = document.querySelector("#aboutSectionId");
 const servicesSectionId = document.querySelector("#servicesSectionId");
@@ -48,13 +48,9 @@ changeModeBtn.addEventListener("click",function(){
 })
 
 function changeMode(){
-    if (lightMode){
-        console.log("Light mode is: "+lightMode);
-        containerDiv.classList.toggle("lightMode");
-    }else{
-        console.log("Light mode is: "+lightMode);
-        containerDiv.classList.toggle("darkMode");
-    }
+    lightMode = !lightMode;
+    containerDiv.classList.toggle("lightMode", lightMode);
+    containerDiv.classList.toggle("darkMode", !lightMode);
 }
 
 // ABOUT-ME PAGE WITH JS

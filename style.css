@@ -101,6 +101,12 @@ html { scroll-padding-top: 5rem; }
 
     .navDiv.is-open .menuDiv { display: flex; }
     .menuDiv a, #changeModeBtn { text-align: left; }
+    #changeModeBtn {
+        width: 100%;
+        min-height: 44px;
+        padding: .65rem .8rem;
+        border-radius: 5px;
+    }
 }
 
 
@@ -113,24 +119,14 @@ html { scroll-padding-top: 5rem; }
     
 }
 
-#changeModeBtn{
-    background: linear-gradient(to right, #2c7a94, #b74c12);
-    cursor: pointer;
-    padding: 1.5%;
-    border-radius: 100%;
-    border: none;
-    color: black;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight:bold;
-}
-
 /*FOOTER STYLING*/
 .footerSocialMediaDiv{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content:center;
     align-items: center;
-    gap: 30px;
+    gap: clamp(.5rem, 2vw, 1.25rem);
     width: 100%;
     padding: 20px;
     border: none;
@@ -208,6 +204,8 @@ html { scroll-padding-top: 5rem; }
     grid-row: 1;
     width: min(70vw, 280px);
   }
+
+    .heroPortrait img { transform: none; }
 }
 
 .buttonPrimary, .buttonSecondary, .heroLinksBtn{
@@ -257,7 +255,7 @@ html { scroll-padding-top: 5rem; }
     color: #40564c;
 }
 #viewAboutCardBtn{
-    background-color: rgb(121, 121, 123);
+    background-color: rgb(197, 197, 201);
     padding-top: 2%;
     padding-bottom: 2%;
     padding-left: 4%;
@@ -314,10 +312,10 @@ html { scroll-padding-top: 5rem; }
     cursor: pointer;
 }
 .myPotentials{
-    background-color: #545050;
+    background-color: #b8b3b3;
     padding: 2%;
     margin-top: 2%;
-    color: rgb(125, 122, 122);
+    color: rgb(14, 12, 12);
     display: flex;
     flex-direction: column;
     gap: 2%;
@@ -330,7 +328,7 @@ html { scroll-padding-top: 5rem; }
 .highlightCard{
     width: 100%;
   
-    background-color: rgb(13, 12, 12);
+    background-color: rgb(190, 182, 182);
     border-radius: 5px;
     display: flex;
     flex-direction: column;
@@ -343,21 +341,43 @@ html { scroll-padding-top: 5rem; }
 }
 
 .highlightCard:hover{
-    background-color: rgba(239, 238, 235, 0.5);
+    background-color: rgba(222, 221, 220, 0.5);
     color: rgb(76, 76, 236);
     transform: scale(1.01);
     transition: 0.3s;
 }
 #hireMeBtn,#cvBtn{
-    background-color: #bebec5;
+    background-color: #454547;
     width: 8rem;
+    min-height: 2.75rem;
     padding-right: 0.125rem;
     padding-left: 0.125rem;
     padding-top: 0.25rem;
     padding-bottom: 0.25rem;
     border-radius: 0.5rem;
     cursor: pointer;
+    color: rgb(248, 245, 245);
     margin-top: 0.5rem;
+}
+
+#hireMeBtn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+@media (max-width: 360px) {
+    .navDiv { padding-inline: .75rem; }
+    .brand { min-width: 0; gap: .4rem; }
+    .brand img { flex: 0 0 34px; width: 34px; height: 34px; }
+    .brand span {
+        max-width: 8rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: .875rem;
+    }
 }
 /*SERVICES SECTION STYLING*/
 
