@@ -12,7 +12,7 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    padding: 0 10px 10px 10px;
+    padding: calc(64px + 1rem) 10px 10px;
     gap: 1px;
     background: linear-gradient(to right, #2c7a94, #c4dd67);
     
@@ -178,11 +178,16 @@ html { scroll-padding-top: 5rem; }
   width: min(100%, 390px);
   aspect-ratio: 1;
   justify-self: center;
+    border-radius: 50%;
+    overflow: hidden;
 }
 .heroPortrait img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+    object-fit: cover;
+    object-position: center top;
+    transform: scale(1.45);
+    transform-origin: center top;
 }
 
 .heroActions {
@@ -196,7 +201,7 @@ html { scroll-padding-top: 5rem; }
   .homeHero {
     min-height: auto;
     grid-template-columns: 1fr;
-    padding-top: 7rem;
+        padding-top: 3rem;
   }
 
   .heroPortrait {
@@ -205,6 +210,9 @@ html { scroll-padding-top: 5rem; }
   }
 }
 
+.buttonPrimary, .buttonSecondary, .heroLinksBtn{
+    color: rgb(211, 208, 208);
+}
 
 /*ABOUT SECTION STYLING*/
 .aboutDiv{
@@ -213,17 +221,14 @@ html { scroll-padding-top: 5rem; }
 }
 
 .about-section{
-    
     display: flex;
     flex-direction: column;
-    gap: 20px;
-
-
+    gap: 1rem;
 }
 .firstAboutContainer{
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 1.5rem;
 }
 
 .aboutDisplay, .about-highlights{
@@ -232,21 +237,24 @@ html { scroll-padding-top: 5rem; }
     gap: 1rem;
 }
 .aboutCard{
-    background-color: #18191b;
+    background-color: #f7f8f3;
+    border: 1px solid #ccd4ce;
     display: flex;
     flex-direction: column;
     justify-content:space-between;
     gap: 2%;
     padding: 5%;
     border-radius: 5px;
+    color: #17231e;
 }
-.aboutCardTitle,#modalTitle{
-    color: rgb(130, 101, 38);
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+.aboutCardTitle h1, #modalTitle{
+    color: #245c4b;
+    font-family: inherit;
+    font-size: 1.35rem;
+    line-height: 1.25;
 }
 .aboutCardDescription, #modalDescription{
-    color: rgb(128, 128, 128);
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #40564c;
 }
 #viewAboutCardBtn{
     background-color: rgb(121, 121, 123);
@@ -267,6 +275,7 @@ html { scroll-padding-top: 5rem; }
     display: none;
     place-items: center;
     padding: 1rem;
+    z-index: 1100;
 }
 
 .modal-overlay{
@@ -279,33 +288,29 @@ html { scroll-padding-top: 5rem; }
 }
 
 .modal-content{
-    position:relative;
-    background-color: #090808;
-    margin: 3%;
-    margin-left: 25%;
-    padding-top: 5%;
-    padding-bottom: 5%;
-    padding-right: 5%;
-    padding-left: 5%;
+    position: relative;
+    background-color: #f7f8f3;
+    padding: clamp(1.25rem, 4vw, 2rem);
     border-radius: 12px;
-    width: 90%;
-    max-width: 700px;
-    max-height: 90vh;
-    overflow-y:auto;
+    width: min(100%, 700px);
+    max-height: calc(100vh - 2rem);
+    max-height: calc(100dvh - 2rem);
+    overflow-y: auto;
     z-index: 1001;
-    color: white;
-    box-shadow: 9px 2px 34px 5px rgba(234, 42, 125, 0.26);
+    color: #17231e;
+    box-shadow: 0 12px 40px rgb(16 37 31 / 30%);
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
 .close{
-    font-size: 50px;
-    font-weight: 900;
-    color: red;
+    align-self: flex-end;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #245c4b;
     display: flex;
-    justify-content: end;
     cursor: pointer;
 }
 .myPotentials{
@@ -395,7 +400,7 @@ html { scroll-padding-top: 5rem; }
   border: 1px solid #ccd4ce;
   border-top: 4px solid #d27a39;
   border-radius: 6px;
-  background: #fff;
+  background: #ede7e7;
   color: #202923;
 }
 
@@ -553,7 +558,7 @@ html { scroll-padding-top: 5rem; }
     display: grid;
     grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
     gap: 1.25rem;
-    align-items: start;
+    align-items: stretch;
 }
 
 .left-contacts {

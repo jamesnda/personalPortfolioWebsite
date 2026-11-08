@@ -140,7 +140,7 @@ const modal = document.querySelector(".modal");
 viewAboutCardBtn.forEach(viewBtn=>{
     viewBtn.addEventListener("click",(e)=>{
         let id =viewBtn.dataset.id;
-        modal.style.display = "block";
+        modal.style.display = "grid";
 
         let filteredAboutCard = aboutCards.filter(aboutCard=>aboutCard.id==id)[0];
         console.log(filteredAboutCard);
@@ -216,7 +216,7 @@ highlightCards.forEach((card)=>{
                 </div>
         `
 
-        modal.style.display = "block";
+        modal.style.display = "grid";
         modal.querySelector(".close").addEventListener("click",()=>{
             modal.style.display = "none";
         });
@@ -323,7 +323,7 @@ const projects = [
     alt: "Smart Calculator application",
     summary: "An interactive calculation application featuring mathematical, loan, BMI, and currency conversion tools to simplify everyday problem-solving.",
     tools: ["HTML", "CSS", "JavaScript"],
-    demo: null,
+    demo: "https://jamesnda.github.io/smartCalculator/",
     source: null
   },
   {
