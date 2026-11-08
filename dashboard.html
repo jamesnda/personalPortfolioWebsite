@@ -3,334 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome To My Dashboard</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="./style.css">
+    <meta name="theme-color" content="#18352d">
+    <title>Explore Services | James Ndayishimiye</title>
+    <link rel="stylesheet" href="./dashboard.css">
+    <script src="./dashboard.js" defer></script>
 </head>
 <body>
+    <a class="skip-link" href="#mainContent">Skip to content</a>
 
-        <!--DASHBOARD SECTION FOR SOCIAL MEDIA-->
-    <div class="dashboardSection">
-        <div class="dashboardDiv">
-            <div class="dashboardNavbar">
-                <div class="logo"><a href="./index.html"><img src="./Assets/myLoogo.png" alt="myLogoImg" id="logoBtn"></a></div>
-                <div>
-                    <form>
-                        <input type="text" placeholder="Search courses, clients, resources..." class="searchBar">
-                    </form>
-                </div>
-                <div class="notifications"><img src="./Assets/NotificationsIcon.png" alt="notificationImage" id="notifications"></div>
-                <div class="messages"><img src="./Assets/messageIcon.jpeg" alt="MessagesImage" id="messages"></div>
-                <div class="profileDiv">
-                        <img src="./Assets/ProfileIcon.png" alt="Profile Avatar" class="userPhoto">
-                        <span class="userName">James Ndayishimiye</span>
-                        <span class="userRole">Admin</span>
-                        <span class="userLogout">Logout</span>
-                </div>
-            </div>
-            <div class="dashboardContentArea">
-                <div class="dashboardSideBar">
-                    <div class="mainSidebarDashboardMenu">
-                        <div class="dashboardBtn">
-                            <img src="./Assets/dashboardIcon.png" alt="dashboardIcon" class="dashboardIcons">
-                            <span>Dashboard</span>
-                        </div>
-                        <div class="myRoleBtn">
-                            <img src="./Assets/roleIcon.png" alt="myRoleIcon" class="dashboardIcons">
-                            <span>User Role</span>
-                        </div>
-                        <div class="statisticsBtn">
-                            <img src="./Assets/statisticsIcon.png" alt="statisticsIcon" class="dashboardIcons">
-                            <span>Statistics</span>
-                        </div>
-                        <div class="learningHubBtn ">
-                            <img src="./Assets/learningHubIcon.png" alt="learningHubIcon" class="dashboardIcons">
-                            <span>Learning Hub</span>
-                        </div>
-                        <div class="projectsBtn">
-                            <img src="./Assets/projectsIcon.png" alt="projectsHubIcon" class="dashboardIcons">
-                            <span>Projects</span>
-                        </div>
-                        <div class="analyticsBtn">
-                            <img src="./Assets/analyticsIcon.png" alt="AnalyticsIcon" class="dashboardIcons">
-                            <span>Analytics</span>
-                        </div>
-                        <div class="resourcesBtn">
-                            <img src="./Assets/resourcesIcon.png" alt="ResourcesIcon" class="dashboardIcons">
-                            <span>Resources</span>
-                        </div> 
-                    </div>
-
-                    <div class="supportDiv">
-                        <div class="helpDiv">
-                            <img src="./Assets/helpIcon.png" alt="HelpIcon" class="dashboardIcons">
-                            <span>Help</span>
-                        </div>
-                        
-                        <div class="settingsDiv">
-                            <img src="./Assets/settingsIcon.png" alt="SettingsIcon" class="dashboardIcons">
-                            <span>Settings</span>
-                        </div>
-                        
-                        
-                    </div>
-                    
-                </div>
-                <div class="userDashboard">
-                    <div class="roleBasedDashboard">
-                        <div class="superAdminDashboard">
-                            <div class="superAdminMain">
-                                <div class="superAdmin" id="globalOverviewBtn">Global Overview</div>
-                                <div class="superAdmin" id="platformActivityBtn">Platform Activity</div>
-                                <div class="superAdmin" id="businessMatricsBtn">Business Metrics</div>
-                                <div class="superAdmin" id="managementPannelsBtn">Management Panels</div>
-                                <div class="superAdmin" id="strategicToolsBtn">Strategic Tools</div>
-                            </div>
-
-                            <div class="superAdminContent">
-                                <div class="globalOverviewCards">
-                                    <div class="cards">
-                                        <span>Total Users</span>
-                                        <span>203</span>
-                                    </div>
-                                    <div class="cards">
-                                        <span>Active Students</span>
-                                        <span>50</span>
-                                    </div>
-                                    <div class="cards">
-                                        <span>Active Instructors</span>
-                                        <span>12</span>
-                                    </div>
-                                    <div class="cards">
-                                        <span>Total Revenue</span>
-                                        <span>$800/Month</span>
-                                    </div>
-                                    <div class="cards">
-                                        <span>Active Projects</span>
-                                        <span>27</span>
-                                    </div>
-                                </div>
-
-                                <div class="platformActivityCards">
-                                    <div class="cards">
-                                        <span>New signups</span>
-                                        <span>200</span>
-                                    </div>
-                                    <div class="cards">
-                                        <span>Course completions</span>
-                                        <span>92</span>
-                                    </div>
-                                    <div class="cards">
-                                        <span>Messages</span>
-                                        <span>907</span>
-                                    </div>
-                                    <div class="cards">
-                                        <span>System alerts</span>
-                                        <span>7</span>
-                                    </div>
-                                </div>
-
-                                <div class="businessMetricsCards">
-                                    <div class="cards">
-                                        <span>Revenue per service</span>
-                                        <div class="serviceRevenueTable">
-                                            <table>
-                                                <thead>
-                                                    <td>#</td>
-                                                    <td>SERVICE TYPE</td>
-                                                    <td>CLIENTS #</td>
-                                                    <td>INCOME PER A SERVED CLIENT</td>
-                                                    <td>TOTAL SERVICE INCOME</td>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>1</td>
-                                                        <td>Coding Students</td>
-                                                        <td>17</td>
-                                                        <td>200k Rwf</td>
-                                                        <td>17*200k Rwf</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>2</td>
-                                                        <td>Maths Students</td>
-                                                        <td>43</td>
-                                                        <td>150k Rwf</td>
-                                                        <td>43*150k Rwf</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>3</td>
-                                                        <td>Music Students</td>
-                                                        <td>21</td>
-                                                        <td>100k Rwf</td>
-                                                        <td>21*100k Rwf</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>4</td>
-                                                        <td>School Anthems</td>
-                                                        <td>3</td>
-                                                        <td>400k Rwf</td>
-                                                        <td>3*400k Rwf</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>5</td>
-                                                        <td>EdTech Investors</td>
-                                                        <td>7</td>
-                                                        <td>800k Rwf</td>
-                                                        <td>7*800k Rwf</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>6</td>
-                                                        <td>Math-Tech Partners</td>
-                                                        <td>5</td>
-                                                        <td>900k Rwf</td>
-                                                        <td>5*900k Rwf</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>7</td>
-                                                        <td>Business men & women</td>
-                                                        <td>17</td>
-                                                        <td>400k Rwf</td>
-                                                        <td>17*400k Rwf</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>8</td>
-                                                        <td>Companies</td>
-                                                        <td>5</td>
-                                                        <td>500k Rwf</td>
-                                                        <td>5*500k Rwf</td>
-                                                    </tr>
-                                                    
-                                                </tbody>
-                                            </table>
-
-                                        </div>
-                                    </div>
-                                    <div class="cards">
-                                        <span>Top performing courses</span>
-                                        <span></span>
-                                    </div>
-                                    <div class="cards">
-                                        <span>Client conversion rate</span>
-                                    </div>
-                                </div>
-
-                                <div class="managementPannelsCards">
-                                    <div class="cards">
-                                        <span>Users Management</span>
-                                    </div>
-                                    <div class="cards">
-                                        <span>Courses Management</span>
-                                    </div>
-                                    <div class="cards">
-                                        <span>Projects (e.g., school anthems)</span>
-                                    </div>
-                                    <div class="cards">
-                                        <span>Content uploads</span>
-                                    </div>
-                                </div>
-
-                                <div class="strategicToolsCards">
-                                    <div class="cards">
-                                        <span>Analytics (growth charts)</span>
-                                    </div>
-                                    <div class="cards">
-                                        <span>Notifications</span>
-                                    </div>
-                                    <div class="cards">
-                                        <span>Task reminders</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="studentDashboard">
-                            <div class="studentDashMain">
-                                <div class="superAdmin" id="globalOverviewBtn">Learning Overview</div>
-                                <div class="superAdmin" id="platformActivityBtn">Continue Learning</div>
-                                <div class="superAdmin" id="businessMatricsBtn">Performance Tracking</div>
-                                <div class="superAdmin" id="managementPannelsBtn">Resources</div>
-                                <div class="superAdmin" id="strategicToolsBtn">Communication</div>
-                            </div>
-
-                            <div class="studentDashContent">
-                                <div class="learningOverview">
-                                    <div class="cards" id="enrolledCourses">Enrolled Courses</div>
-                                    <div class="cards" id="completedLessons">Completed Lessons</div>
-                                    <div class="cards" id="percentageProgress">Progress %</div>
-                                </div>
-                                <div class="continueLearning">
-                                    <div class="cards">
-                                        <span>Resume last lesson</span>
-                                    </div>
-                                    <div class="cards">
-                                        <span>Upcoming lessons</span>
-                                    </div>
-                                    <div class="cards">
-                                        <span>Assignments</span>
-                                    </div>
-                                </div>
-                                <div class="performanceTracking"></div>
-                                <div class="resources"></div>
-                                <div class="communication"></div>
-                            </div>
-                        </div>
-                        
-
-                    </div>
-
-                    <div class="roleBasedDashboard">
-                        
-                    </div>
-
-                    <div class="roleBasedDashboard">
-                        
-                    </div>
-
-                    <div class="roleBasedDashboard">
-                        
-                    </div>
-
-                    <div class="roleBasedDashboard">
-                        
-                    </div>
-
-                    <div class="roleBasedDashboard">
-                        
-                    </div>
-
-                    <div class="roleBasedDashboard">
-                        
-                    </div>
-                </div>
-            </div>
-        
-            <!--FOOTER SECTION FOR SOCIAL MEDIA-->
-        <div class="footerSocialMediaDiv">
-            <div class="faceBook">
-                <a href="" target="_blank"><button id="fbIcon"><img src="./Assets/fbImg.png" alt="fbImg" class="socialMediaBtn"></button></a>
-            </div>
-            <div class="xTwitter">
-                <a href="" target="_blank"><button id="xIcon"><img src="./Assets/xImg.png" alt="xImg" class="socialMediaBtn"></button></a>
-            </div>
-            <div class="instagram">
-                <a href="" target="_blank"><button id="instIcon"><img src="./Assets/instImg.png" alt="instImg" class="socialMediaBtn"></button></a>
-            </div>
-            <div class="gitHub">
-                <a href="https://github.com/jamesnda" target="_blank"><button id="gitIcon"><img src="./Assets/gitImg.png" alt="gitImg" class="socialMediaBtn"></button></a>
-            </div>
-            <div class="youTube">
-                <a href="https://www.youtube.com/@mr.ndayishimiyejamesmrs.im226" target="_blank"><button id="ytIcon"><img src="./Assets/ytubeImg.png" alt="ytubeImg" class="socialMediaBtn"></button></a>
-            </div>
-            <div class="whatsApp">
-                <a href="https://wa.me/250785795423?text=Hello%2C%20I’m%20James%20Ndayishimiye.%20I’m%20a%20Full-Stack%20Developer%20and%20Math%20Educator." target="_blank"><button id="whtspIcon"><img src="./Assets/whtspImg.png" alt="whtspImg" class="socialMediaBtn"></button></a>
-            </div>
-            <div class="linkedIn">
-                <a href="https://www.linkedin.com/in/ndayishimiye-james-b54592131/" target="_blank"><button id="lnkdIcon"><img src="./Assets/lnkdInImg.png" alt="lnkdInImg" class="socialMediaBtn"></button></a>
-            </div>
-                
+    <header class="site-header">
+        <a class="brand" href="./index.html" aria-label="James Ndayishimiye, portfolio home">
+            <img src="./Assets/myLoogo.png" alt="">
+            <span>James Ndayishimiye</span>
+        </a>
+        <div class="header-actions">
+            <span class="header-label">Portfolio services</span>
+            <a class="header-link" href="./index.html#contactSectionId">Contact</a>
         </div>
-    </div>
-    
+    </header>
 
+    <main class="dashboard-layout" id="mainContent">
+        <aside class="side-rail" aria-label="Dashboard navigation">
+            <p class="rail-label">Explore</p>
+            <nav class="rail-nav">
+                <a class="rail-link is-current" href="#overview" aria-current="page">Overview</a>
+                <a class="rail-link" href="#services">Services</a>
+                <a class="rail-link" href="#projects">Selected work</a>
+            </nav>
+            <div class="rail-note">
+                <span class="note-mark" aria-hidden="true"></span>
+                <p>Mathematics, data, and technology for practical challenges.</p>
+            </div>
+            <a class="rail-contact" href="./index.html#contactSectionId">Start a conversation <span aria-hidden="true">↗</span></a>
+        </aside>
+
+        <div class="dashboard-content">
+            <section class="welcome-section" id="overview" aria-labelledby="pageTitle">
+                <p class="eyebrow">A portfolio built around useful work</p>
+                <h1 id="pageTitle">Find the right way to work together.</h1>
+                <p class="welcome-copy">Choose the path closest to your needs to see relevant services and selected projects.</p>
+
+                <div class="role-picker">
+                    <label for="audienceSelect">I am looking for support as a</label>
+                    <select id="audienceSelect" aria-controls="audienceServices">
+                        <option value="learner">Student or learner</option>
+                        <option value="school">School or education team</option>
+                        <option value="data">Data analysis client</option>
+                        <option value="software">Software client</option>
+                        <option value="partner">Teaching or project partner</option>
+                    </select>
+                    <p class="preview-note">Service preview by visitor type</p>
+                </div>
+            </section>
+
+            <section class="services-section" id="services" aria-labelledby="audienceTitle">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">A good place to begin</p>
+                        <h2 id="audienceTitle"></h2>
+                    </div>
+                    <a class="text-link" href="./index.html#servicesSectionId">All services <span aria-hidden="true">↗</span></a>
+                </div>
+                <p class="audience-description" id="audienceDescription"></p>
+                <div class="service-list" id="audienceServices" aria-live="polite"></div>
+            </section>
+
+            <section class="projects-section" id="projects" aria-labelledby="projectsTitle">
+                <div class="section-heading projects-heading">
+                    <div>
+                        <p class="eyebrow">Selected work</p>
+                        <h2 id="projectsTitle">A few things I’ve built and studied.</h2>
+                    </div>
+                    <p class="project-count" id="projectCount" aria-live="polite"></p>
+                </div>
+
+                <div class="project-controls">
+                    <label class="search-control" for="projectSearch">
+                        <span class="visually-hidden">Search selected work</span>
+                        <input id="projectSearch" type="search" placeholder="Search projects or tools">
+                    </label>
+                    <div class="filter-group" role="group" aria-label="Filter projects">
+                        <button type="button" data-filter="all" aria-pressed="true">All work</button>
+                        <button type="button" data-filter="web" aria-pressed="false">Web</button>
+                        <button type="button" data-filter="data" aria-pressed="false">Data</button>
+                    </div>
+                </div>
+                <div class="project-grid" id="projectGrid" aria-live="polite"></div>
+                <p class="empty-state" id="emptyState" hidden>No projects match that search. Try another title or tool.</p>
+            </section>
+
+            <footer class="dashboard-footer" id="contact">
+                <div>
+                    <p class="eyebrow">Have a challenge in mind?</p>
+                    <h2>Let’s find a practical next step.</h2>
+                </div>
+                <a class="contact-button" href="./index.html#contactSectionId">Get in touch <span aria-hidden="true">↗</span></a>
+            </footer>
+        </div>
+    </main>
 </body>
 </html>
