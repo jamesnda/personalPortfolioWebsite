@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#18352d">
     <title>Explore Services | James Ndayishimiye</title>
     <link rel="stylesheet" href="./dashboard.css">
-    <script src="./dashboard.js" defer></script>
+    <script type="module" src="./dashboard.js"></script>
 </head>
 <body>
     <a class="skip-link" href="#mainContent">Skip to content</a>
@@ -22,11 +22,15 @@
         </div>
     </header>
 
-    <main class="dashboard-layout" id="mainContent">
+    <div class="auth-gate" id="authGate" role="status" aria-live="polite">
+        <p>Checking your account...</p>
+    </div>
+
+    <main class="dashboard-layout" id="mainContent" hidden>
         <aside class="side-rail" aria-label="Dashboard navigation">
             <p class="rail-label">Explore</p>
             <nav class="rail-nav">
-                <a class="rail-link is-current" href="#overview" aria-current="page">Overview</a>
+                <a class="rail-link is-current" href="#overview" aria-current="location">Overview</a>
                 <a class="rail-link" href="#services">Services</a>
                 <a class="rail-link" href="#projects">Selected work</a>
             </nav>
@@ -44,15 +48,10 @@
                 <p class="welcome-copy">Choose the path closest to your needs to see relevant services and selected projects.</p>
 
                 <div class="role-picker">
-                    <label for="audienceSelect">I am looking for support as a</label>
-                    <select id="audienceSelect" aria-controls="audienceServices">
-                        <option value="learner">Student or learner</option>
-                        <option value="school">School or education team</option>
-                        <option value="data">Data analysis client</option>
-                        <option value="software">Software client</option>
-                        <option value="partner">Teaching or project partner</option>
-                    </select>
-                    <p class="preview-note">Service preview by visitor type</p>
+                    <p class="profile-label">Signed in as</p>
+                    <p class="profile-name" id="accountName"></p>
+                    <p class="profile-audience" id="audienceLabel"></p>
+                    <button class="sign-out-button" id="signOutButton" type="button">Sign out</button>
                 </div>
             </section>
 

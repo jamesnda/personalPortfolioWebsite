@@ -1,3 +1,5 @@
+import { isSupabaseConfigured, supabase } from "./supabaseClient.js";
+
 // NAVIGATION SECTION with Vanilla JS
 const siteHeader = document.querySelector(".navDiv");
 const navToggle = document.querySelector("#navToggle");
@@ -603,4 +605,33 @@ blogGrid.innerHTML = blogSubjects.map(subject => `
 `).join("");
 
 // LOGIN PAGE WITH JS
+const loginForm = document.querySelector("#loginForm");
+const loginStatus = document.querySelector("#loginStatus");
+
+loginForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    if (!isSupabaseConfigured) {
+        loginStatus.textContent = "Sign-in is not configured yet. Please try again later.";
+        return;
+    }
+
+    const submitButton = loginForm.querySelector('[type="submit"]');
+    submitButton.disabled = true;
+    loginStatus.textContent = "Signing you in...";
+
+    try {
+        const { error } = await supabase.auth.signInWithPassword({
+            email: loginForm.elements.email.value.trim(),
+            password: loginForm.elements.password.value
+        });
+
+        if (error) throw error;
+        window.location.assign("./dashboard.html");
+    } catch {
+        loginStatus.textContent = "Sign-in failed. Check your email and password, then try again.";
+    } finally {
+        submitButton.disabled = false;
+    }
+});
 

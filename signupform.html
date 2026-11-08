@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Signup Form</title>
+    <title>Create an Account | James Ndayishimiye</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
@@ -14,7 +14,7 @@
 
             <div class="signupContainer">
                 <div class="signupNavBar">
-                    <a href="./index.html"><img src="./Assets/myLoogo.png" alt="myLogoImg" id="logoBtn"></a>
+                    <a class="brand" href="./index.html"><img src="./Assets/myLoogo.png" alt="myLogoImg" id="logoBtn"></a>
                     <p><span class="myFirstName">James </span><span class="myLastName">Ndayishimiye</span></p>
                 </div>
                 
@@ -23,13 +23,14 @@
                         <span class="signupHeader">SIGNUP</span>
                         <div class="formCover">
                             <form id="signupForm" class="signupFormStyle">
-                                <label for="role">I am a…</label>
-                                <select id="role" name="role" required>
-                                    <option value="">Select a role</option>
-                                    <option value="student">Student</option>
-                                    <option value="educator">Educator</option>
-                                    <option value="client">Business client</option>
-                                    <option value="other">Other</option>
+                                <label for="audience">I am signing up as a…</label>
+                                <select id="audience" name="audience" required>
+                                    <option value="">Select an audience</option>
+                                    <option value="learner">Student or learner</option>
+                                    <option value="school">School or education team</option>
+                                    <option value="data">Data analysis client</option>
+                                    <option value="software">Software client</option>
+                                    <option value="partner">Teaching or project partner</option>
                                 </select>
 
                                 <label for="fullName">Full name</label>
@@ -60,59 +61,6 @@
                 </div>
             </div>
         </div>
+    <script type="module" src="./signup.js"></script>
 </body>
-<script>
-    import { supabase } from "./supabaseClient.js";
-
-const signupForm = document.querySelector("#signupForm");
-const signupStatus = document.querySelector("#signupStatus");
-
-signupForm.addEventListener("submit", async (event) => {
-    event.preventDefault();
-
-    const form = event.currentTarget;
-    const password = form.elements.password.value;
-
-    if (password !== form.elements.confirmPassword.value) {
-        signupStatus.textContent = "The passwords do not match.";
-        form.elements.confirmPassword.focus();
-        return;
-    }
-
-    const submitButton = form.querySelector('[type="submit"]');
-    submitButton.disabled = true;
-    signupStatus.textContent = "Creating your account...";
-
-    try {
-        const { data, error } = await supabase.auth.signUp({
-            email: form.elements.email.value.trim(),
-            password,
-            options: {
-                data: {
-                    full_name: form.elements.fullName.value.trim(),
-                    phone: form.elements.phone.value.trim(),
-                    requested_role: form.elements.role.value
-                }
-            }
-        });
-
-        if (error) throw error;
-
-        if (data.session) {
-            window.location.assign("./dashboard.html");
-        } else {
-            signupStatus.textContent =
-                "Account created. Check your email to confirm it, then sign in.";
-        }
-    } catch (error) {
-        signupStatus.textContent =
-            error.message || "Account creation failed. Please try again.";
-    } finally {
-        submitButton.disabled = false;
-    }
-});
-
-
-
-</script>
 </html>

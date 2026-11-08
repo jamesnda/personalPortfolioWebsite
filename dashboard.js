@@ -1,3 +1,5 @@
+import { isSupabaseConfigured, supabase } from "./supabaseClient.js";
+
 const audienceProfiles = {
     learner: {
         heading: "Build your skills step by step.",
@@ -90,10 +92,14 @@ const projects = [
     }
 ];
 
-const audienceSelect = document.querySelector("#audienceSelect");
 const audienceTitle = document.querySelector("#audienceTitle");
 const audienceDescription = document.querySelector("#audienceDescription");
 const audienceServices = document.querySelector("#audienceServices");
+const authGate = document.querySelector("#authGate");
+const mainContent = document.querySelector("#mainContent");
+const accountName = document.querySelector("#accountName");
+const audienceLabel = document.querySelector("#audienceLabel");
+const signOutButton = document.querySelector("#signOutButton");
 const projectGrid = document.querySelector("#projectGrid");
 const projectSearch = document.querySelector("#projectSearch");
 const projectCount = document.querySelector("#projectCount");
@@ -143,7 +149,6 @@ function renderProjects() {
     emptyState.hidden = visibleProjects.length > 0;
 }
 
-audienceSelect.addEventListener("change", () => renderAudience(audienceSelect.value));
 projectSearch.addEventListener("input", renderProjects);
 
 document.querySelector(".filter-group").addEventListener("click", event => {
@@ -164,9 +169,59 @@ document.querySelectorAll(".rail-link").forEach(link => {
             item.removeAttribute("aria-current");
         });
         link.classList.add("is-current");
-        link.setAttribute("aria-current", "page");
+        link.setAttribute("aria-current", "location");
     });
 });
 
-renderAudience(audienceSelect.value);
-renderProjects();
+async function initializeDashboard() {
+    if (!isSupabaseConfigured) {
+        authGate.innerHTML = 'Sign-in is not configured yet. <a href="./index.html#loginId">Return to sign in</a>.';
+        return;
+    }
+
+    const { data: userData, error: userError } = await supabase.auth.getUser();
+    const user = userData?.user;
+    if (userError || !user) {
+        authGate.innerHTML = 'Please sign in to continue. <a href="./index.html#loginId">Go to sign in</a>.';
+        return;
+    }
+
+    const { data: profile, error: profileError } = await supabase
+        .from("profiles")
+        .select("full_name, audience")
+        .eq("id", user.id)
+        .single();
+
+    if (profileError || !audienceProfiles[profile?.audience]) {
+        authGate.innerHTML = 'We could not load your account profile. Please contact support or <a href="./index.html#loginId">return to sign in</a>.';
+        return;
+    }
+
+    accountName.textContent = profile.full_name || user.email;
+    audienceLabel.textContent = {
+        learner: "Student or learner",
+        school: "School or education team",
+        data: "Data analysis client",
+        software: "Software client",
+        partner: "Teaching or project partner"
+    }[profile.audience];
+
+    renderAudience(profile.audience);
+    renderProjects();
+    authGate.hidden = true;
+    mainContent.hidden = false;
+}
+
+signOutButton.addEventListener("click", async () => {
+    signOutButton.disabled = true;
+    const { error } = await supabase.auth.signOut();
+    if (error) {
+        signOutButton.disabled = false;
+        return;
+    }
+    window.location.replace("./index.html#loginId");
+});
+
+initializeDashboard().catch(() => {
+    authGate.innerHTML = 'We could not verify your account. Please <a href="./index.html#loginId">sign in again</a>.';
+});

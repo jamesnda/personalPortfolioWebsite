@@ -800,6 +800,10 @@ textarea.form-input {
     gap: 1rem;
 }
 
+#newPasswordForm[hidden] {
+    display: none;
+}
+
 .login-form-input,
 #realLoginBtn {
     box-sizing: border-box;

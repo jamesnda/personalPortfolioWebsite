@@ -33,6 +33,8 @@ button, input, select { font: inherit; }
     color: white;
 }
 .skip-link:focus { transform: translateY(0); }
+.auth-gate { width: min(100% - 2rem, 40rem); margin: 3rem auto; padding: 1.25rem; border-left: 4px solid var(--coral); background: white; color: var(--ink); line-height: 1.6; }
+[hidden] { display: none !important; }
 
 .site-header {
     position: relative;
@@ -75,9 +77,11 @@ h1, h2, h3 { color: var(--ink); }
 .welcome-section h1 { max-width: 16ch; margin: .55rem 0 0; font-family: Georgia, "Times New Roman", serif; font-size: clamp(2.2rem, 4vw, 3.6rem); font-weight: 500; line-height: 1.05; }
 .welcome-copy { max-width: 58ch; margin: .2rem 0 0; color: var(--muted); line-height: 1.7; }
 .role-picker { grid-column: 2; grid-row: 1 / span 3; padding: 1.1rem; border: 1px solid var(--line); border-top: 4px solid var(--lime); background: var(--surface); }
-.role-picker label { display: block; margin-bottom: .6rem; font-size: .88rem; font-weight: 700; }
-.role-picker select { width: 100%; min-height: 46px; padding: .65rem 2rem .65rem .75rem; border: 1px solid #aebbb0; border-radius: 4px; background: white; color: var(--ink); }
-.preview-note { margin: .65rem 0 0; color: var(--muted); font-size: .77rem; }
+.profile-label { margin: 0 0 .4rem; color: var(--muted); font-size: .78rem; font-weight: 700; text-transform: uppercase; }
+.profile-name { margin: 0; font-size: 1.05rem; font-weight: 700; }
+.profile-audience { margin: .3rem 0 1rem; color: var(--muted); font-size: .88rem; }
+.sign-out-button { min-height: 40px; padding: .55rem .75rem; border: 1px solid #b9c5ba; border-radius: 4px; background: white; color: var(--forest); font-weight: 700; cursor: pointer; }
+.sign-out-button:hover { background: #edf1e9; }
 
 .services-section, .projects-section { padding-top: 2.5rem; }
 .section-heading { display: flex; align-items: end; justify-content: space-between; gap: 1rem; }
