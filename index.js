@@ -309,11 +309,11 @@ const projects = [
   {
     title: "MCC-Initiative",
     category: "web",
-    image: "./Assets/MathAndTechforTomorrow.png",
+    image: "./Assets/mccImg.png",
     alt: "Math-Coding and Creativity Initiative",
     summary: "A youth-focused initiative inspiring creativity and innovation through Mathematics, Programming, and technology-driven learning.",
     tools: ["HTML", "CSS", "JavaScript"],
-    demo: null,
+    demo: "https://jamesnda.github.io/Math-Coding-and-Creativity-Platform/",
     source: null
   },
   {
