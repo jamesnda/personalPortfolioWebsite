@@ -162,7 +162,7 @@ html { scroll-padding-top: 5rem; }
   width: min(100% - 2rem, 1150px);
   min-height: 85vh;
   margin-inline: auto;
-  padding: clamp(5rem, 10vh, 8rem) 0 3rem;
+  padding: 3rem clamp(1rem, 4vw, 3rem);
   display: grid;
   grid-template-columns: minmax(0, 1.2fr) minmax(220px, 0.8fr);
   align-items: center;
@@ -209,7 +209,7 @@ html { scroll-padding-top: 5rem; }
 /*ABOUT SECTION STYLING*/
 .aboutDiv{
     width: 100%;
-    padding: 50px;
+    padding: 3rem clamp(1rem, 4vw, 3rem);
 }
 
 .about-section{
@@ -344,16 +344,21 @@ html { scroll-padding-top: 5rem; }
     transition: 0.3s;
 }
 #hireMeBtn,#cvBtn{
-    background-color: #0f0b58;
+    background-color: #bebec5;
     width: 8rem;
     padding-right: 0.125rem;
     padding-left: 0.125rem;
     padding-top: 0.25rem;
     padding-bottom: 0.25rem;
     border-radius: 0.5rem;
+    cursor: pointer;
+    margin-top: 0.5rem;
 }
 /*SERVICES SECTION STYLING*/
 
+.myServices{
+    padding: 3rem clamp(1rem, 4vw, 3rem);
+}
 .serviceFilters {
   display: flex;
   flex-wrap: wrap;
@@ -403,6 +408,9 @@ html { scroll-padding-top: 5rem; }
 }
 
 /*PROJECT SECTION STYLING*/
+.myProjects{
+    padding: 3rem clamp(1rem, 4vw, 3rem);
+}
 .projectGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 290px), 1fr));
@@ -518,76 +526,6 @@ html { scroll-padding-top: 5rem; }
 .skill-group {
     padding-block: 0.75rem;
     border-top: 1px solid #ccc;
-}
-/*Styling Full-stack Subclusters*/
-
-.fullstackModal,.mathematicsEducationCover,.mathTechEducationCover{
-    display: none;
-}
-.fullstackCover{
-    display: flex;
-    flex-direction: column;
-}
-.full-stack-subclusters,.mathsTech-subclusters,.mathematics-subclusters{
-    background-color:white;
-    padding:20px;
-    display: grid;
-    gap: 20px;
-    grid-template-columns: repeat(3,1fr);
-}
-.backToCategoryBtn{
-    background-color: navy;
-    color: white;
-    height: 30px;
-}
-.backToCategoryBtn:hover{
-    background-color: rgb(63, 230, 99);
-    color: red;
-    cursor: pointer;
-}
-.subcluster-card{
-    background-color: rgb(200, 195, 195);
-    border-radius: 5px;
-    padding: 20px;
-    font-size: 18px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    height: 450px;
-}
-
-.subcluster-title{
-    color: #7777fa;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-.cluster-subtitle{
-    font-size: 20px;
-}
-
-ul{
-    padding-left: 30px;
-}
-
-.category-title{
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-}
-.skillsTitle{
-    font-size: 18px;
-    color: yellow;
-}
-
-.skillsImg{
-    display: block;
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
 }
 
 /*CONTACTS SECTION STYLING*/
@@ -778,7 +716,7 @@ textarea.form-input {
 
 .loginDiv {
     min-height: 100vh;
-    padding: 1rem;
+    padding: 3rem clamp(1rem, 4vw, 3rem);
 }
 
 .loginContainer {

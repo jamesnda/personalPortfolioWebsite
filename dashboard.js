@@ -1,4 +1,8 @@
-import { isSupabaseConfigured, supabase } from "./supabaseClient.js";
+import {
+    isSupabaseConfigured,
+    supabase,
+    supabaseConfigurationMessage
+} from "./supabaseClient.js";
 
 const audienceProfiles = {
     learner: {
@@ -175,7 +179,7 @@ document.querySelectorAll(".rail-link").forEach(link => {
 
 async function initializeDashboard() {
     if (!isSupabaseConfigured) {
-        authGate.innerHTML = 'Sign-in is not configured yet. <a href="./index.html#loginId">Return to sign in</a>.';
+        authGate.textContent = supabaseConfigurationMessage;
         return;
     }
 

@@ -1,4 +1,8 @@
-import { isSupabaseConfigured, supabase } from "./supabaseClient.js";
+import {
+    isSupabaseConfigured,
+    supabase,
+    supabaseConfigurationMessage
+} from "./supabaseClient.js";
 
 const signupForm = document.querySelector("#signupForm");
 const signupStatus = document.querySelector("#signupStatus");
@@ -7,7 +11,7 @@ signupForm.addEventListener("submit", async (event) => {
     event.preventDefault();
 
     if (!isSupabaseConfigured) {
-        signupStatus.textContent = "Account creation is not configured yet. Please try again later.";
+        signupStatus.textContent = supabaseConfigurationMessage;
         return;
     }
 

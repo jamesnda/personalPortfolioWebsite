@@ -1,4 +1,8 @@
-import { isSupabaseConfigured, supabase } from "./supabaseClient.js";
+import {
+    isSupabaseConfigured,
+    supabase,
+    supabaseConfigurationMessage
+} from "./supabaseClient.js";
 
 const requestForm = document.querySelector("#requestResetForm");
 const newPasswordForm = document.querySelector("#newPasswordForm");
@@ -11,7 +15,7 @@ function showPasswordForm() {
 }
 
 if (!isSupabaseConfigured) {
-    resetStatus.textContent = "Password recovery is not configured yet. Please try again later.";
+    resetStatus.textContent = supabaseConfigurationMessage;
 } else {
     supabase.auth.onAuthStateChange((event, session) => {
         if (event === "PASSWORD_RECOVERY" && session) showPasswordForm();

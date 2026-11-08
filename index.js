@@ -1,4 +1,8 @@
-import { isSupabaseConfigured, supabase } from "./supabaseClient.js";
+import {
+    isSupabaseConfigured,
+    supabase,
+    supabaseConfigurationMessage
+} from "./supabaseClient.js";
 
 // NAVIGATION SECTION with Vanilla JS
 const siteHeader = document.querySelector(".navDiv");
@@ -612,7 +616,7 @@ loginForm.addEventListener("submit", async (event) => {
     event.preventDefault();
 
     if (!isSupabaseConfigured) {
-        loginStatus.textContent = "Sign-in is not configured yet. Please try again later.";
+        loginStatus.textContent = supabaseConfigurationMessage;
         return;
     }
 
