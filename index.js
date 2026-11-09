@@ -299,7 +299,7 @@ const projects = [
     alt: "M-TECH School learning platform",
     summary: "A learning platform delivering practical knowledge in Mathematics, Data Analysis, and Software Development to empower  and professionals with future-ready skills.",
     tools: ["HTML", "CSS", "JavaScript"],
-    demo: "https://jamesnda.github.io/webschoolProject/",
+    demo: "https://jamesnda.github.io/mtech/",
     source: null
   },
   {
@@ -327,7 +327,7 @@ const projects = [
     category: "data",
     image: "./Assets/AfriCareMedicalCostStudyDashboard.png",
     alt: "AfriCare Health Solutions data analysis dashboard",
-    summary: "A health-based data analysis project applying data cleaning, statistical analysis, regression, and interactive dashboards to generate insights and support data-driven school improvement.",
+    summary: "A health-based data analysis project applying data cleaning, statistical analysis, regression, and interactive dashboards to generate insights and support data-driven healthcare improvement.",
     tools: ["R", "Python", "STATA", "Power BI"],
     demo: null,
     source: null
