@@ -309,7 +309,7 @@ const projects = [
     alt: "Math-Coding and Creativity Initiative",
     summary: "A youth-focused initiative inspiring creativity and innovation through Mathematics, Programming, and technology-driven learning.",
     tools: ["HTML", "CSS", "JavaScript"],
-    demo: "https://jamesnda.github.io/Math-Coding-and-Creativity-Platform/",
+    demo: "https://jamesnda.github.io/Math-Coding-and-Creativity-Platform/MCC-HTML/mathCodingAndCreativity.html",
     source: null
   },
   {
