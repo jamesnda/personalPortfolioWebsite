@@ -293,13 +293,13 @@ renderServices();
 
 const projects = [
   {
-    title: "M- TECH School",
+    title: "Smart Calculator",
     category: "web",
-    image: "./Assets/mtechSchImg.png",
-    alt: "M-TECH School learning platform",
-    summary: "A learning platform delivering practical knowledge in Mathematics, Data Analysis, and Software Development to empower  and professionals with future-ready skills.",
+    image: "./Assets/smartCalcImg.png",
+    alt: "Smart Calculator application",
+    summary: "An interactive calculation application featuring mathematical, loan, BMI, and currency conversion tools to simplify everyday problem-solving.",
     tools: ["HTML", "CSS", "JavaScript"],
-    demo: "https://jamesnda.github.io/mtech/",
+    demo: "https://jamesnda.github.io/smartCalculator/",
     source: null
   },
   {
@@ -313,13 +313,13 @@ const projects = [
     source: null
   },
   {
-    title: "Smart Calculator",
+    title: "M- TECH School",
     category: "web",
-    image: "./Assets/smartCalcImg.png",
-    alt: "Smart Calculator application",
-    summary: "An interactive calculation application featuring mathematical, loan, BMI, and currency conversion tools to simplify everyday problem-solving.",
+    image: "./Assets/mtechSchImg.png",
+    alt: "M-TECH School learning platform",
+    summary: "A learning platform delivering practical knowledge in Mathematics, Data Analysis, and Software Development to empower  and professionals with future-ready skills.",
     tools: ["HTML", "CSS", "JavaScript"],
-    demo: "https://jamesnda.github.io/smartCalculator/",
+    demo: "https://jamesnda.github.io/mtech/",
     source: null
   },
   {
