@@ -295,7 +295,7 @@ const projects = [
   {
     title: "Smart Calculator",
     category: "web",
-    image: "./Assets/smartCalcImg.png",
+    image: "./Assets/smartCalc.png",
     alt: "Smart Calculator application",
     summary: "An interactive calculation application featuring mathematical, loan, BMI, and currency conversion tools to simplify everyday problem-solving.",
     tools: ["HTML", "CSS", "JavaScript"],
